@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 /*
  * Keeps track of the player's state in terms of their relationships
  */
 
 public class StateManager : MonoBehaviour
 {
-
-    public enum State_Type { Cops, Family, Rival };
-    public enum Action_Type { Decrement, Increment };
-
     private const int value_range = 3;
 
     [SerializeField]
@@ -29,8 +26,8 @@ public class StateManager : MonoBehaviour
     private int Previous_Family = 0;
 
     [Header("Debug")]
-    public State_Type Debug_State;
-    public Action_Type Debug_Action;
+    public Constants.Faction Debug_State;
+    public Constants.Modifier Debug_Action;
 
     //Singleton vars
     private static StateManager _instance;
@@ -69,17 +66,17 @@ public class StateManager : MonoBehaviour
         }
     }
 
-    public int GetState(State_Type Type)
+    public int GetState(Constants.Faction Type)
     {
-        if(Type == State_Type.Cops)
+        if(Type == Constants.Faction.Cops)
         {
             return Cop_State;
         }
-        else if(Type == State_Type.Family)
+        else if(Type == Constants.Faction.Family)
         {
             return Family_State;
         }
-        else if(Type == State_Type.Rival)
+        else if(Type == Constants.Faction.Rival)
         {
             return Rivals_State;
         }
@@ -89,7 +86,7 @@ public class StateManager : MonoBehaviour
         }
     }
 
-    public void SetState(State_Type type, int value)
+    public void SetState(Constants.Faction type, int value)
     {
         if(value > value_range || value < (-1 * value_range))
         {
@@ -97,60 +94,60 @@ public class StateManager : MonoBehaviour
             return;
         }
 
-        if(type == State_Type.Cops)
+        if(type == Constants.Faction.Cops)
         {
             Cop_State = value;
             Previous_Cops = value;
         }
-        else if(type == State_Type.Family)
+        else if(type == Constants.Faction.Family)
         {
             Family_State = value;
             Previous_Family = value;
         }
-        else if(type == State_Type.Rival)
+        else if(type == Constants.Faction.Rival)
         {
             Rivals_State = value;
             Previous_Rivals = value;
         }
     }
 
-    public void SetState(State_Type type, Action_Type action)
+    public void SetState(Constants.Faction type, Constants.Modifier action)
     {
-        if(type == State_Type.Cops)
+        if(type == Constants.Faction.Cops)
         {
-            if(action == Action_Type.Decrement)
+            if(action == Constants.Modifier.Decrement)
             {
                 Cop_State--;
                 Previous_Cops = Cop_State;
             }
-            else if(action == Action_Type.Increment)
+            else if(action == Constants.Modifier.Increment)
             {
                 Cop_State++;
                 Previous_Cops = Cop_State;
             }
         }
-        else if (type == State_Type.Family)
+        else if (type == Constants.Faction.Family)
         {
-            if (action == Action_Type.Decrement)
+            if (action == Constants.Modifier.Decrement)
             {
                 Family_State--;
                 Previous_Family = Family_State;
             }
-            else if (action == Action_Type.Increment)
+            else if (action == Constants.Modifier.Increment)
             {
                 Family_State++;
                 Previous_Family = Family_State;
 
             }
         }
-        else if (type == State_Type.Rival)
+        else if (type == Constants.Faction.Rival)
         {
-            if (action == Action_Type.Decrement)
+            if (action == Constants.Modifier.Decrement)
             {
                 Rivals_State--;
                 Previous_Rivals = Rivals_State;
             }
-            else if (action == Action_Type.Increment)
+            else if (action == Constants.Modifier.Increment)
             {
                 Rivals_State++;
                 Previous_Rivals = Rivals_State;
