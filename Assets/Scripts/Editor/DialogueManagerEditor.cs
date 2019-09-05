@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEditor;
 
-[CustomEditor(typeof(DialogueManager))]
+[CustomEditor(typeof(ConversationManager))]
 public class DialogueManagerEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -10,15 +10,17 @@ public class DialogueManagerEditor : Editor
         DrawDefaultInspector();
         if (GUILayout.Button("Next Line"))
         {
-            DialogueManager.Instance.NextLine();
+            ConversationManager.Instance.NextLine();
         }
 
-        //if (GUILayout.Button("Positive Choice"))
-        //{
-        //}
+        if (GUILayout.Button("Choice A"))
+        {
+            ConversationManager.Instance.NextNode(Constants.Choice.A);
+        }
 
-        //if (GUILayout.Button("Negative Choice"))
-        //{
-        //}
+        if (GUILayout.Button("Choice B"))
+        {
+            ConversationManager.Instance.NextNode(Constants.Choice.B);
+        }
     }
 }

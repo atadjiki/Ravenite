@@ -25,6 +25,8 @@ public class StateManager : MonoBehaviour
     private int Previous_Rivals = 0;
     private int Previous_Family = 0;
 
+    private HashSet<Flags.Choices> Choices;
+
     [Header("Debug")]
     public Constants.Faction Debug_State;
     public Constants.Modifier Debug_Action;
@@ -45,6 +47,13 @@ public class StateManager : MonoBehaviour
         {
             _instance = this;
         }
+
+        Build();
+    }
+
+    private void Build()
+    {
+        Choices = new HashSet<Flags.Choices>();
     }
 
     private void Update()
@@ -165,6 +174,22 @@ public class StateManager : MonoBehaviour
                   "Cops:    " + Cop_State + "\n" +
                   "Family:    " + Family_State + "\n" +
                   "Rivals:    " + Rivals_State + "\n");
+    }
+
+    public void PrintFlags()
+    {
+        string flags = "";
+        foreach(Flags.Choices Choice in Choices)
+        {
+            flags += Choice.ToString() + " \n";
+        }
+        Debug.Log("Flags\n" + flags);
+    }
+
+    public void AddChoiceFlag(Flags.Choices Flag)
+    {
+        Choices.Add(Flag);
+        Debug.Log("Flag added: " + Flag.ToString());
     }
 
 

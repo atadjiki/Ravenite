@@ -16,7 +16,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 1.3
     min: 0
     max: 4
   stepCount:
@@ -25,13 +25,13 @@ MonoBehaviour:
     min: 2
     max: 32
   radius:
-    m_OverrideState: 0
-    m_Value: 2
+    m_OverrideState: 1
+    m_Value: 4
     min: 0.25
     max: 5
   fullResolution:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   maximumRadiusInPixels:
     m_OverrideState: 0
     m_Value: 40
@@ -116,7 +116,7 @@ MonoBehaviour:
     showEyeDropper: 1
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 150
+    m_Value: 1193.71
     min: 1
   baseHeight:
     m_OverrideState: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
     m_Value: 10
   anisotropy:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.38
     min: -1
     max: 1
   globalLightProbeDimmer:
@@ -170,14 +170,14 @@ MonoBehaviour:
   active: 1
   m_AdvancedMode: 0
   skyType:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 2
   skyAmbientMode:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   fogType:
-    m_OverrideState: 0
-    m_Value: 3
+    m_OverrideState: 1
+    m_Value: 2
 --- !u!114 &114527594671542966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 12
+    m_Value: 11.42
   multiplier:
     m_OverrideState: 0
     m_Value: 1
@@ -296,5 +296,5 @@ MonoBehaviour:
     showAlpha: 1
     showEyeDropper: 1
   enableSunDisk:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0

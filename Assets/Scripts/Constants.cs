@@ -13,6 +13,21 @@
     {
         Character, Player
     }
+
+    public enum Choice
+    {
+        A,B
+    }
+
+    public enum Text_Type
+    {
+        Dialogue, ChoiceA, ChoiceB
+    }
+
+    public enum Conversation_Mode
+    {
+        Dialogue, Choice
+    }
 }
 
 

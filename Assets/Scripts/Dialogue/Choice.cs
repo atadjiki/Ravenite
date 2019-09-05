@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Choice : Dialogue
+public class Choice : MonoBehaviour
 {
-    public Constants.Faction AffectedFaction;
-    public Constants.Modifier Modifier;
+    public Choice A;
+    public Choice B;
+
+    public string Text;
+
+    public Flags.Choices Flag;
+
 }
