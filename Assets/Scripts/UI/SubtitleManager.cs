@@ -10,9 +10,9 @@ public class SubtitleManager : MonoBehaviour
 
     public static SubtitleManager Instance { get { return _instance; } }
 
-    public TextMeshProUGUI dialogueText;
-    public TextMeshProUGUI choiceAText;
-    public TextMeshProUGUI choiceBText;
+    public GameObject dialogueText;
+    public GameObject choiceAText;
+    public GameObject choiceBText;
 
     public bool TypewriterEffect = false;
     public float type_speed = 0.15f;
@@ -33,15 +33,15 @@ public class SubtitleManager : MonoBehaviour
     {
         if (type == Constants.Text_Type.ChoiceA)
         {
-            StartCoroutine(Typewriter(choiceAText, text));
+            StartCoroutine(Typewriter(choiceAText.GetComponent<TextMeshProUGUI>(), text));
         }
         else if (type == Constants.Text_Type.ChoiceB)
         {
-            StartCoroutine(Typewriter(choiceBText, text));
+            StartCoroutine(Typewriter(choiceBText.GetComponent<TextMeshProUGUI>(), text));
         }
         else if(type == Constants.Text_Type.Dialogue)
         {
-            StartCoroutine(Typewriter(dialogueText, text));
+            StartCoroutine(Typewriter(dialogueText.GetComponent<TextMeshProUGUI>(), text));
         }
         
     }
@@ -50,15 +50,15 @@ public class SubtitleManager : MonoBehaviour
     {
         if (type == Constants.Text_Type.ChoiceA)
         {
-            StartCoroutine(SegmentedTypewriter(choiceAText, textA, textB));
+            StartCoroutine(SegmentedTypewriter(choiceAText.GetComponent<TextMeshProUGUI>(), textA, textB));
         }
         else if (type == Constants.Text_Type.ChoiceB)
         {
-            StartCoroutine(SegmentedTypewriter(choiceBText, textA, textB));
+            StartCoroutine(SegmentedTypewriter(choiceBText.GetComponent<TextMeshProUGUI>(), textA, textB));
         }
         else if (type == Constants.Text_Type.Dialogue)
         {
-            StartCoroutine(SegmentedTypewriter(dialogueText, textA, textB));
+            StartCoroutine(SegmentedTypewriter(dialogueText.GetComponent<TextMeshProUGUI>(), textA, textB));
         }
     }
 
@@ -66,34 +66,34 @@ public class SubtitleManager : MonoBehaviour
     {
         if (type == Constants.Text_Type.ChoiceA)
         {
-            choiceAText.text = "";
+            choiceAText.GetComponent<TextMeshProUGUI>().text = "";
         }
         else if (type == Constants.Text_Type.ChoiceB)
         {
-            choiceBText.text = "";
+            choiceBText.GetComponent<TextMeshProUGUI>().text = "";
         }
         else if (type == Constants.Text_Type.Dialogue)
         {
-            dialogueText.text = "";
+            dialogueText.GetComponent<TextMeshProUGUI>().text = "";
         }
     }
 
     public void ClearAll()
     {
-        choiceAText.text = "";
-        choiceBText.text = "";
-        dialogueText.text = "";
+        choiceAText.GetComponent<TextMeshProUGUI>().text = "";
+        choiceBText.GetComponent<TextMeshProUGUI>().text = "";
+        dialogueText.GetComponent<TextMeshProUGUI>().text = "";
     }
 
     public void ToggleChoices(bool flag)
     {
-        choiceAText.enabled = flag;
-        choiceBText.enabled = flag;
+        choiceAText.SetActive(flag);
+        choiceBText.SetActive(flag); 
     }
 
     public void ToggleDialogue(bool flag)
     {
-        dialogueText.enabled = flag;
+        dialogueText.SetActive(flag);
     }
 
     public void SubtitleMode()
