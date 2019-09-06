@@ -110,31 +110,48 @@ public class ConversationManager : MonoBehaviour
                 Debug.Log("Not in choice mode!");
             }
         }
-        else
+
+        //do another check to validate the choice tree
+        if(CurrentConversation.AreChoicesAvailable() == false)
         {
-            Debug.Log("No choices available! Invite next conversation!");
-            UIManager.Instance.SwitchToPromptPanel();
+            Debug.Log("No choices available! Waiting for next conversation!");
+
+            if (AreConversationsAvailable())
+            {
+                UIManager.Instance.SwitchToPromptPanel();
+            }
+            else
+            {
+                UIManager.Instance.AllOff();
+            }
+            
             InConversation = false;
         }
+
+    }
+
+    public bool AreConversationsAvailable()
+    {
+        return Index == -1 || Index + 1 <= Conversations.Length - 1;
     }
 
     public void NextConversation()
     {
-        UIManager.Instance.SwitchToTextPanel();
 
-        if (Index == -1 || Index + 1 < Conversations.Length-1)
+        if (AreConversationsAvailable())
         {
             Index++;
             CurrentConversation = Conversations[Index];
+            UIManager.Instance.SwitchToTextPanel();
+            SetCurrentChoices();
+            SetCurrentDialogue();
+            InConversation = true;
         }
         else
         {
             Debug.Log("No more conversations!");
+            UIManager.Instance.AllOff();
         }
-
-        SetCurrentChoices();
-        SetCurrentDialogue();
-        InConversation = true;
     }
 
     private void SetCurrentDialogue()

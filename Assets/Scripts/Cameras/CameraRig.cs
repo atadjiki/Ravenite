@@ -78,14 +78,4 @@ public class CameraRig : MonoBehaviour
             SwitchToStart();
         }
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            SwitchToMain();
-        }
-    }
-
-
 }

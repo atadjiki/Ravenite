@@ -46,4 +46,11 @@ public class UIManager : MonoBehaviour
         Prompt_Panel.SetActive(true);
     }
 
+    public void AllOff()
+    {
+        Text_Panel.SetActive(false);
+        Start_Panel.SetActive(false);
+        Prompt_Panel.SetActive(false);
+    }
+
 }

@@ -8,6 +8,8 @@ public class InputManager : MonoBehaviour
     public KeyCode Advance = KeyCode.Space;
     public KeyCode ChoiceA = KeyCode.A;
     public KeyCode ChoiceB = KeyCode.B;
+    public KeyCode MainCam = KeyCode.Tab;
+    public KeyCode LedgerView = KeyCode.L;
 
     // Update is called once per frame
     void Update()
@@ -36,6 +38,16 @@ public class InputManager : MonoBehaviour
             if (Input.GetKeyDown(ChoiceB))
             {
                 ConversationManager.Instance.NextNode(Constants.Choice.B);
+            }
+
+            if (Input.GetKeyDown(MainCam))
+            {
+                CameraRig.Instance.SwitchToMain();
+            }
+
+            if (Input.GetKeyDown(LedgerView))
+            {
+                CameraRig.Instance.ToggleLedgerCamera();
             }
 
         }
