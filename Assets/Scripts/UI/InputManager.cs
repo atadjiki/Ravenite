@@ -5,26 +5,41 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
 
-    public KeyCode AdvanceDialogue = KeyCode.Space;
+    public KeyCode Advance = KeyCode.Space;
     public KeyCode ChoiceA = KeyCode.A;
     public KeyCode ChoiceB = KeyCode.B;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(AdvanceDialogue))
+
+        if (StateManager.Instance.Started)
         {
-            ConversationManager.Instance.NextLine();
+            if (Input.GetKeyDown(Advance))
+            {
+                if (ConversationManager.Instance.InConversation == false)
+                {
+                    ConversationManager.Instance.NextConversation();
+                }
+                else
+                {
+                    ConversationManager.Instance.NextLine();
+                }
+
+            }
+
+            if (Input.GetKeyDown(ChoiceA))
+            {
+                ConversationManager.Instance.NextNode(Constants.Choice.A);
+            }
+
+            if (Input.GetKeyDown(ChoiceB))
+            {
+                ConversationManager.Instance.NextNode(Constants.Choice.B);
+            }
+
         }
 
-        if (Input.GetKeyDown(ChoiceA))
-        {
-            ConversationManager.Instance.NextNode(Constants.Choice.A);
-        }
-
-        if (Input.GetKeyDown(ChoiceB))
-        {
-            ConversationManager.Instance.NextNode(Constants.Choice.B);
-        }
+       
     }
 }

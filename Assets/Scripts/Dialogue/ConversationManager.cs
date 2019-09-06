@@ -13,6 +13,8 @@ public class ConversationManager : MonoBehaviour
 
     public Constants.Conversation_Mode Mode;
 
+    public bool InConversation = false;
+
     //Singleton vars
     private static ConversationManager _instance;
 
@@ -37,27 +39,21 @@ public class ConversationManager : MonoBehaviour
     {
 
         Conversations = GetComponentsInChildren<Conversation>();
-        Index = 0;
+        Index = -1;
 
         Debug.Log("Registered " + Conversations.Length + " conversations");
+    }
 
-        if (Conversations.Length > 0)
-        {
-            CurrentConversation = Conversations[Index];
-        }
-
-        CurrentChoice = CurrentConversation.GetCurrentChoice();
-        CurrentDialogue = CurrentConversation.GetCurrentDialogue();
-
+    public void SetDefaultDialogue()
+    {
         if (Mode == Constants.Conversation_Mode.Dialogue)
         {
             SetCurrentDialogue();
         }
-        else if(Mode == Constants.Conversation_Mode.Choice)
+        else if (Mode == Constants.Conversation_Mode.Choice)
         {
             SetCurrentChoices();
         }
-        
     }
 
     public void NextLine()
@@ -66,6 +62,7 @@ public class ConversationManager : MonoBehaviour
         {
             if (ConversationManager.Instance.Mode == Constants.Conversation_Mode.Dialogue)
             {
+                Debug.Log("Next Line!");
                 CurrentConversation.NextLine();
                 SetCurrentDialogue();
             }
@@ -115,15 +112,17 @@ public class ConversationManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("No choices available!");
-            NextConversation();
-
+            Debug.Log("No choices available! Invite next conversation!");
+            UIManager.Instance.SwitchToPromptPanel();
+            InConversation = false;
         }
     }
 
     public void NextConversation()
     {
-        if (Index + 1 < Conversations.Length-1)
+        UIManager.Instance.SwitchToTextPanel();
+
+        if (Index == -1 || Index + 1 < Conversations.Length-1)
         {
             Index++;
             CurrentConversation = Conversations[Index];
@@ -132,6 +131,10 @@ public class ConversationManager : MonoBehaviour
         {
             Debug.Log("No more conversations!");
         }
+
+        SetCurrentChoices();
+        SetCurrentDialogue();
+        InConversation = true;
     }
 
     private void SetCurrentDialogue()

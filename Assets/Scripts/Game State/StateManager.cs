@@ -31,6 +31,8 @@ public class StateManager : MonoBehaviour
     public Constants.Faction Debug_State;
     public Constants.Modifier Debug_Action;
 
+    public bool Started = false;
+
     //Singleton vars
     private static StateManager _instance;
 
@@ -54,6 +56,7 @@ public class StateManager : MonoBehaviour
     private void Build()
     {
         Choices = new HashSet<Flags.Choices>();
+        StartMenu();
     }
 
     private void Update()
@@ -192,5 +195,18 @@ public class StateManager : MonoBehaviour
         Debug.Log("Flag added: " + Flag.ToString());
     }
 
+    public void StartGame()
+    {
+        Started = true;
+        CameraRig.Instance.SwitchToMain();
+        UIManager.Instance.SwitchToPromptPanel();
 
+    }
+
+    public void StartMenu()
+    {
+        Started = false;
+        CameraRig.Instance.SwitchToStart();
+        UIManager.Instance.SwitchToStartPanel();
+    }
 }

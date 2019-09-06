@@ -12,7 +12,7 @@ public class CameraRig : MonoBehaviour
 
     public CinemachineVirtualCamera Main;
     public CinemachineVirtualCamera Ledger;
-    public CinemachineVirtualCamera Gramophone;
+    public CinemachineVirtualCamera Start;
 
     private void Awake()
     {
@@ -31,28 +31,28 @@ public class CameraRig : MonoBehaviour
 
     private void Build()
     {
-        SwitchToMain();
+        SwitchToStart();
     }
 
     public void SwitchToMain()
     {
         Ledger.enabled = false;
-        Gramophone.enabled = false;
+        Start.enabled = false;
         Main.enabled = true;
     }
 
     public void SwitchToLedger()
     {
         Main.enabled = false;
-        Gramophone.enabled = false;
+        Start.enabled = false;
         Ledger.enabled = true;
     }
 
-    public void SwitchToGramophone()
+    public void SwitchToStart()
     {
         Main.enabled = false;
         Ledger.enabled = false;
-        Gramophone.enabled = true;
+        Start.enabled = true;
     }
 
     public void ToggleLedgerCamera()
@@ -67,15 +67,15 @@ public class CameraRig : MonoBehaviour
         }
     }
 
-    public void ToggleGramophoneCamera()
+    public void ToggleStartCamera()
     {
-        if (Gramophone.enabled)
+        if (Start.enabled)
         {
             SwitchToMain();
         }
         else
         {
-            SwitchToGramophone();
+            SwitchToStart();
         }
     }
 
