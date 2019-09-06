@@ -85,6 +85,18 @@ public class ConversationManager : MonoBehaviour
         }
     }
 
+    public void ChoiceAPressed()
+    {
+        Debug.Log("Choice A Pressed");
+        NextNode(Constants.Choice.A);
+    }
+
+    public void ChoiceBPressed()
+    {
+        Debug.Log("Choice B Pressed");
+        NextNode(Constants.Choice.B);
+    }
+
     public void NextNode(Constants.Choice choice)
     {
 
