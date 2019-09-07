@@ -10,14 +10,48 @@ public class LedgerUpdater : MonoBehaviour
     public Image CopsImage;
     public Image RivalsImage;
 
-    void Start()
+    //Singleton vars
+    private static LedgerUpdater _instance;
+
+    public static LedgerUpdater Instance { get { return _instance; } }
+
+
+    private void Awake()
     {
-        
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+
+        Build();
     }
 
-   
-    void Update()
+    public void Build()
     {
-        
+        SetFill(Constants.Faction.Cops);
+        SetFill(Constants.Faction.Neighborhood);
+        SetFill(Constants.Faction.Rivals);
+        SetFill(Constants.Faction.Rivals);
+
+    }
+
+    public void SetFill(Constants.Faction Faction)
+    {
+        if (Faction == Constants.Faction.Neighborhood)
+        {
+            NeighborhoodImage.fillAmount = StateManager.Instance.GetNormalizedValue(Constants.Faction.Neighborhood);
+        }
+        else if (Faction == Constants.Faction.Cops)
+        {
+            CopsImage.fillAmount = StateManager.Instance.GetNormalizedValue(Constants.Faction.Cops);
+        }
+        else if (Faction == Constants.Faction.Rivals)
+        {
+            RivalsImage.fillAmount = StateManager.Instance.GetNormalizedValue(Constants.Faction.Rivals);
+        }
     }
 }

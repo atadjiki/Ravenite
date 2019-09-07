@@ -1,6 +1,6 @@
 ﻿namespace Constants
 {
-    public enum Faction { Cops, Family, Rival, Player };
+    public enum Faction { Cops, Neighborhood, Rivals, Player };
     public enum Modifier { Decrement, Increment, None };
 
     //list of names

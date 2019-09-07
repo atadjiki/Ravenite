@@ -9,21 +9,21 @@ using UnityEngine;
 
 public class StateManager : MonoBehaviour
 {
-    private const int value_range = 3;
+    private const float value_range = 3;
 
     [SerializeField]
     [Range(-1*value_range,value_range)]
-    private int Cop_State = 0;
+    private float Cop_State = 0;
     [SerializeField]
     [Range(-1 * value_range, value_range)]
-    private int Family_State = 0;
+    private float Neighborhood_State = 0;
     [SerializeField]
     [Range(-1 * value_range, value_range)]
-    private int Rivals_State = 0;
+    private float Rivals_State = 0;
 
-    private int Previous_Cops = 0;
-    private int Previous_Rivals = 0;
-    private int Previous_Family = 0;
+    private float Previous_Cops = 0;
+    private float Previous_Rivals = 0;
+    private float Previous_Neighborhood = 0;
 
     private HashSet<Flags.Choices> Choices;
 
@@ -63,32 +63,33 @@ public class StateManager : MonoBehaviour
     {
         if(Previous_Cops != Cop_State)
         {
-            PrintStates();
             Previous_Cops = Cop_State;
+            LedgerUpdater.Instance.SetFill(Constants.Faction.Cops);
+
         }
-        else if(Previous_Family != Family_State)
+        else if(Previous_Neighborhood != Neighborhood_State)
         {
-            PrintStates();
-            Previous_Family = Family_State;
+            Previous_Neighborhood = Neighborhood_State;
+            LedgerUpdater.Instance.SetFill(Constants.Faction.Neighborhood);
         }
         else if (Previous_Rivals != Rivals_State)
         {
-            PrintStates();
             Previous_Rivals = Rivals_State;
+            LedgerUpdater.Instance.SetFill(Constants.Faction.Rivals);
         }
     }
 
-    public int GetState(Constants.Faction Type)
+    public float GetState(Constants.Faction Type)
     {
         if(Type == Constants.Faction.Cops)
         {
             return Cop_State;
         }
-        else if(Type == Constants.Faction.Family)
+        else if(Type == Constants.Faction.Neighborhood)
         {
-            return Family_State;
+            return Neighborhood_State;
         }
-        else if(Type == Constants.Faction.Rival)
+        else if(Type == Constants.Faction.Rivals)
         {
             return Rivals_State;
         }
@@ -110,16 +111,21 @@ public class StateManager : MonoBehaviour
         {
             Cop_State = value;
             Previous_Cops = value;
+            LedgerUpdater.Instance.SetFill(Constants.Faction.Cops);
+
         }
-        else if(type == Constants.Faction.Family)
+        else if(type == Constants.Faction.Neighborhood)
         {
-            Family_State = value;
-            Previous_Family = value;
+            Neighborhood_State = value;
+            Previous_Neighborhood = value;
+            LedgerUpdater.Instance.SetFill(Constants.Faction.Neighborhood);
+
         }
-        else if(type == Constants.Faction.Rival)
+        else if(type == Constants.Faction.Rivals)
         {
             Rivals_State = value;
             Previous_Rivals = value;
+            LedgerUpdater.Instance.SetFill(Constants.Faction.Rivals);
         }
     }
 
@@ -130,43 +136,45 @@ public class StateManager : MonoBehaviour
             if(action == Constants.Modifier.Decrement)
             {
                 Cop_State--;
-                Previous_Cops = Cop_State;
             }
             else if(action == Constants.Modifier.Increment)
             {
                 Cop_State++;
-                Previous_Cops = Cop_State;
             }
+            Cop_State = CapValue(Cop_State);
+            Previous_Cops = Cop_State;
+            LedgerUpdater.Instance.SetFill(Constants.Faction.Cops);
         }
-        else if (type == Constants.Faction.Family)
+        else if (type == Constants.Faction.Neighborhood)
         {
             if (action == Constants.Modifier.Decrement)
             {
-                Family_State--;
-                Previous_Family = Family_State;
+                Neighborhood_State--; 
             }
             else if (action == Constants.Modifier.Increment)
             {
-                Family_State++;
-                Previous_Family = Family_State;
-
+                Neighborhood_State++;
             }
+
+            Neighborhood_State = CapValue(Neighborhood_State);
+            Previous_Neighborhood = Neighborhood_State;
+            LedgerUpdater.Instance.SetFill(Constants.Faction.Neighborhood);
         }
-        else if (type == Constants.Faction.Rival)
+        else if (type == Constants.Faction.Rivals)
         {
             if (action == Constants.Modifier.Decrement)
             {
                 Rivals_State--;
-                Previous_Rivals = Rivals_State;
             }
             else if (action == Constants.Modifier.Increment)
             {
                 Rivals_State++;
-                Previous_Rivals = Rivals_State;
             }
-        }
 
-        PrintStates();
+            Rivals_State = CapValue(Rivals_State);
+            Previous_Rivals = Rivals_State;
+            LedgerUpdater.Instance.SetFill(Constants.Faction.Rivals);
+        }
     }
 
     public void PrintStates()
@@ -175,7 +183,7 @@ public class StateManager : MonoBehaviour
         Debug.Log("States\n" +
                   "------\n" +
                   "Cops:    " + Cop_State + "\n" +
-                  "Family:    " + Family_State + "\n" +
+                  "Family:    " + Neighborhood_State + "\n" +
                   "Rivals:    " + Rivals_State + "\n");
     }
 
@@ -208,5 +216,41 @@ public class StateManager : MonoBehaviour
         Started = false;
         CameraRig.Instance.SwitchToStart();
         UIManager.Instance.SwitchToStartPanel();
+    }
+
+    public float GetNormalizedValue(Constants.Faction Faction)
+    {
+        if(Faction == Constants.Faction.Neighborhood)
+        {
+            return (Neighborhood_State+value_range) / (2*value_range);
+        }
+        else if(Faction == Constants.Faction.Cops)
+        {
+            return (Cop_State + value_range) / (2 * value_range);
+        }
+        else if(Faction == Constants.Faction.Rivals)
+        {
+            return (Rivals_State + value_range) / (2 * value_range);
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    private float CapValue(float value)
+    {
+        if(value > value_range)
+        {
+            return value_range;
+        }
+        else if(value < -1 * value_range)
+        {
+            return  -1 * value_range;
+        }
+        else
+        {
+            return value;
+        }
     }
 }
