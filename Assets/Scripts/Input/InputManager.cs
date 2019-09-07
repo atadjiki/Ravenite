@@ -28,7 +28,6 @@ public class InputManager : MonoBehaviour
                 {
                     ConversationManager.Instance.NextLine();
                 }
-
             }
 
             if (Input.GetKeyDown(ChoiceA))
@@ -49,6 +48,7 @@ public class InputManager : MonoBehaviour
             if (Input.GetKeyDown(LedgerView))
             {
                 CameraRig.Instance.ToggleLedgerCamera();
+
             }
 
             if (Input.GetKey(Zoom))

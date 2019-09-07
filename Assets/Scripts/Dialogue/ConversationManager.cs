@@ -65,6 +65,7 @@ public class ConversationManager : MonoBehaviour
                 Debug.Log("Next Line!");
                 CurrentConversation.NextLine();
                 SetCurrentDialogue();
+                AudioManager.Instance.PlayClick();
             }
             else
             {
@@ -104,6 +105,7 @@ public class ConversationManager : MonoBehaviour
                 CurrentConversation.NextNode(choice);
                 SetCurrentChoices();
                 StateManager.Instance.AddChoiceFlag(CurrentChoice.Flag);
+                AudioManager.Instance.PlayClick();
             }
             else
             {

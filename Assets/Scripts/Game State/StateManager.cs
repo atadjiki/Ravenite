@@ -208,6 +208,7 @@ public class StateManager : MonoBehaviour
         Started = true;
         CameraRig.Instance.SwitchToMain();
         UIManager.Instance.SwitchToPromptPanel();
+        AudioManager.Instance.StartMusic();
 
     }
 

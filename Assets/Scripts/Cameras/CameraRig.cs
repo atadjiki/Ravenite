@@ -52,6 +52,7 @@ public class CameraRig : MonoBehaviour
         Main.enabled = false;
         Start.enabled = false;
         Ledger.enabled = true;
+        AudioManager.Instance.PlayLedger();
     }
 
     public void SwitchToStart()
