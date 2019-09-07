@@ -14,6 +14,11 @@ public class CameraRig : MonoBehaviour
     public CinemachineVirtualCamera Ledger;
     public CinemachineVirtualCamera Start;
 
+    public float zoom_in_speed = 0.5f;
+    public float zoom_out_speed = 1f;
+    public float fov_max = 20;
+    public float fov_min = 53;
+
     private void Awake()
     {
 
@@ -31,6 +36,7 @@ public class CameraRig : MonoBehaviour
 
     private void Build()
     {
+        Main.m_Lens.FieldOfView = fov_min;
         SwitchToStart();
     }
 
@@ -78,4 +84,24 @@ public class CameraRig : MonoBehaviour
             SwitchToStart();
         }
     }
+
+    public void MainCameraZoomIn()
+    {
+        
+        if (Main.enabled)
+        {
+             Main.m_Lens.FieldOfView = Mathf.Lerp(Main.m_Lens.FieldOfView, fov_max, Time.deltaTime * zoom_in_speed);
+        }
+    }
+
+    public void MainCameraZoomOut()
+    {
+        if (Main.enabled)
+        {
+
+            Main.m_Lens.FieldOfView = Mathf.Lerp(Main.m_Lens.FieldOfView, fov_min, Time.deltaTime * zoom_out_speed);
+            
+        }
+    }
+
 }

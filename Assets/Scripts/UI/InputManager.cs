@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour
     public KeyCode ChoiceB = KeyCode.B;
     public KeyCode MainCam = KeyCode.Tab;
     public KeyCode LedgerView = KeyCode.L;
+    public KeyCode Zoom = KeyCode.LeftShift;
 
     // Update is called once per frame
     void Update()
@@ -50,8 +51,16 @@ public class InputManager : MonoBehaviour
                 CameraRig.Instance.ToggleLedgerCamera();
             }
 
-        }
+            if (Input.GetKey(Zoom))
+            {
+                 
+                CameraRig.Instance.MainCameraZoomIn();
+            }
+            else
+            {
+                CameraRig.Instance.MainCameraZoomOut();
+            }
 
-       
+        }
     }
 }
