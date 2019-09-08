@@ -29,7 +29,7 @@ public class RecordPlayer : MonoBehaviour
         bs = bs + (1f * p);
         blendshapedelta();
         phonograph.SetBlendShapeWeight(0, bs);
-        Debug.Log(bs);
+       // Debug.Log(bs);
 
 
     }
