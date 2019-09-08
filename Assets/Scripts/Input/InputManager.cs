@@ -12,6 +12,11 @@ public class InputManager : MonoBehaviour
     public KeyCode LedgerView = KeyCode.L;
     public KeyCode Zoom = KeyCode.LeftShift;
 
+    private void Awake()
+    {
+        Debug.Log(this.gameObject.name + " Initialized");
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -20,7 +25,7 @@ public class InputManager : MonoBehaviour
         {
             if (Input.GetKeyDown(Advance))
             {
-                if (ConversationManager.Instance.InConversation == false)
+                if (StateManager.Instance.InConversation == false)
                 {
                     ConversationManager.Instance.NextConversation();
                 }

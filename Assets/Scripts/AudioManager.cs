@@ -35,11 +35,12 @@ public class AudioManager : MonoBehaviour
         }
 
         Build();
+        Debug.Log(this.gameObject.name + " Initialized");
     }
 
     public void Build()
     {
-
+        
         Music.loop = true;
         Ambience.loop = true;
         FXSource.loop = false;

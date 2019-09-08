@@ -32,11 +32,13 @@ public class CameraRig : MonoBehaviour
         }
 
         Build();
+        Debug.Log(this.gameObject.name + " Initialized");
     }
 
     private void Build()
     {
         Main.m_Lens.FieldOfView = fov_min;
+        DisableAll();
         SwitchToStart();
     }
 
@@ -60,6 +62,13 @@ public class CameraRig : MonoBehaviour
         Main.enabled = false;
         Ledger.enabled = false;
         Start.enabled = true;
+    }
+
+    public void DisableAll()
+    {
+        Main.enabled = false;
+        Ledger.enabled = false;
+        Start.enabled = false;
     }
 
     public void ToggleLedgerCamera()

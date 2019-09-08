@@ -32,6 +32,8 @@ public class StateManager : MonoBehaviour
     public Constants.Modifier Debug_Action;
 
     public bool Started = false;
+    public bool InConversation = false;
+    public bool WaitTimerStarted = false;
 
     //Singleton vars
     private static StateManager _instance;
@@ -51,6 +53,7 @@ public class StateManager : MonoBehaviour
         }
 
         Build();
+        Debug.Log(this.gameObject.name + " Initialized");
     }
 
     private void Build()
@@ -61,13 +64,18 @@ public class StateManager : MonoBehaviour
 
     private void Update()
     {
-        if(Previous_Cops != Cop_State)
+        ValidateStates();
+    }
+
+    public void ValidateStates()
+    {
+        if (Previous_Cops != Cop_State)
         {
             Previous_Cops = Cop_State;
             LedgerUpdater.Instance.SetFill(Constants.Faction.Cops);
 
         }
-        else if(Previous_Neighborhood != Neighborhood_State)
+        else if (Previous_Neighborhood != Neighborhood_State)
         {
             Previous_Neighborhood = Neighborhood_State;
             LedgerUpdater.Instance.SetFill(Constants.Faction.Neighborhood);
@@ -207,8 +215,9 @@ public class StateManager : MonoBehaviour
     {
         Started = true;
         CameraRig.Instance.SwitchToMain();
-        UIManager.Instance.SwitchToPromptPanel();
         AudioManager.Instance.StartMusic();
+        UIManager.Instance.AllOff();
+        ConversationManager.Instance.ConvoWaitTimer();
 
     }
 

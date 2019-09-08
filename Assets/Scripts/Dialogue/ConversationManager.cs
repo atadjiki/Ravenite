@@ -13,7 +13,12 @@ public class ConversationManager : MonoBehaviour
 
     public Constants.Conversation_Mode Mode;
 
-    public bool InConversation = false;
+    [SerializeField]
+    private float ConvoWaitMin = 9;
+    [SerializeField]
+    private float ConvoWaitMax = 15;
+
+
 
     //Singleton vars
     private static ConversationManager _instance;
@@ -33,6 +38,7 @@ public class ConversationManager : MonoBehaviour
         }
 
         Build();
+        Debug.Log(this.gameObject.name + " Initialized");
     }
 
     private void Build()
@@ -117,17 +123,9 @@ public class ConversationManager : MonoBehaviour
         if(CurrentConversation.AreChoicesAvailable() == false)
         {
             Debug.Log("No choices available! Waiting for next conversation!");
-
-            if (AreConversationsAvailable())
-            {
-                UIManager.Instance.SwitchToPromptPanel();
-            }
-            else
-            {
-                UIManager.Instance.AllOff();
-            }
-            
-            InConversation = false;
+            UIManager.Instance.AllOff();
+            StateManager.Instance.InConversation = false;
+            ConvoWaitTimer();
         }
 
     }
@@ -147,7 +145,7 @@ public class ConversationManager : MonoBehaviour
             UIManager.Instance.SwitchToTextPanel();
             SetCurrentChoices();
             SetCurrentDialogue();
-            InConversation = true;
+            StateManager.Instance.InConversation = true;
         }
         else
         {
@@ -198,5 +196,22 @@ public class ConversationManager : MonoBehaviour
         {
             return CurrentConversation.WithCharacter.ToString();
         }
+    }
+
+    public void ConvoWaitTimer()
+    {
+        StartCoroutine(WaitTimer());
+    }
+
+    private IEnumerator WaitTimer()
+    {
+       
+        float WaitTime = Random.Range(ConvoWaitMin, ConvoWaitMax);
+
+        Debug.Log(WaitTime + " seconds until next conversation is available");
+
+        yield return new WaitForSeconds(WaitTime);
+
+        UIManager.Instance.SwitchToPromptPanel();
     }
 }

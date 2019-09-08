@@ -23,6 +23,8 @@ public class UIManager : MonoBehaviour
         {
             _instance = this;
         }
+
+        Debug.Log(this.name + " Initialized");
     }
 
     public void SwitchToStartPanel() 
