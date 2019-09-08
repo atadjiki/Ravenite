@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public GameObject Text_Panel;
     public GameObject Start_Panel;
     public GameObject Prompt_Panel;
+    public GameObject Music_Select_Panel;
 
     private void Awake()
     {
@@ -27,23 +28,38 @@ public class UIManager : MonoBehaviour
 
     public void SwitchToStartPanel() 
     {
-        Text_Panel.SetActive(false);
-        Prompt_Panel.SetActive(false);
+        AllOff();
         Start_Panel.SetActive(true);
     }
 
     public void SwitchToTextPanel()
     {
+        AllOff();
         Text_Panel.SetActive(true);
-        Start_Panel.SetActive(false);
-        Prompt_Panel.SetActive(false);
     }
 
     public void SwitchToPromptPanel()
     {
-        Text_Panel.SetActive(false);
-        Start_Panel.SetActive(false);
+        AllOff();
         Prompt_Panel.SetActive(true);
+    }
+
+    public void SwitchToMusicSelectPanel()
+    {
+        AllOff();
+        Music_Select_Panel.SetActive(true);
+    }
+
+    public void ToggleMusicSelectUI()
+    {
+        if(Music_Select_Panel.activeSelf)
+        {
+            Music_Select_Panel.SetActive(false);
+        }
+        else
+        {
+            Music_Select_Panel.SetActive(true);
+        }
     }
 
     public void AllOff()
@@ -51,6 +67,7 @@ public class UIManager : MonoBehaviour
         Text_Panel.SetActive(false);
         Start_Panel.SetActive(false);
         Prompt_Panel.SetActive(false);
+        Music_Select_Panel.SetActive(false);
     }
 
 }

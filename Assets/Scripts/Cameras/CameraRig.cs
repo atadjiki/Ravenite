@@ -12,6 +12,7 @@ public class CameraRig : MonoBehaviour
 
     public CinemachineVirtualCamera Main;
     public CinemachineVirtualCamera Ledger;
+    public CinemachineVirtualCamera Phono;
     public CinemachineVirtualCamera Start;
 
     public float zoom_in_speed = 0.5f;
@@ -40,25 +41,36 @@ public class CameraRig : MonoBehaviour
         SwitchToStart();
     }
 
-    public void SwitchToMain()
+    public void AllOff()
     {
         Ledger.enabled = false;
         Start.enabled = false;
+        Phono.enabled = false;
+        Main.enabled = false;
+    }
+
+    public void SwitchToMain()
+    {
+        AllOff();
         Main.enabled = true;
     }
 
     public void SwitchToLedger()
     {
-        Main.enabled = false;
-        Start.enabled = false;
+        AllOff();
         Ledger.enabled = true;
         AudioManager.Instance.PlayLedger();
     }
 
+    public void SwitchToPhono()
+    {
+        AllOff();
+        Phono.enabled = true;
+    }
+
     public void SwitchToStart()
     {
-        Main.enabled = false;
-        Ledger.enabled = false;
+        AllOff();
         Start.enabled = true;
     }
 
@@ -71,6 +83,18 @@ public class CameraRig : MonoBehaviour
         else
         {
             SwitchToLedger();
+        }
+    }
+
+    public void TogglePhonoCamera()
+    {
+        if (Phono.enabled)
+        {
+            SwitchToMain();
+        }
+        else
+        {
+            SwitchToPhono();
         }
     }
 
