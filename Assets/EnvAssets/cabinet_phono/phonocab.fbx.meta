@@ -3,7 +3,17 @@ guid: d15f4e364c037ab4e8fda79ea11d6553
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Phonograph
+    second: {fileID: 2100000, guid: c4ac81d7b77475b459e7c1b009f6368f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cabinet
+    second: {fileID: 2100000, guid: c2f04551540262f4fa8592ed88da407d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -87,7 +97,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
