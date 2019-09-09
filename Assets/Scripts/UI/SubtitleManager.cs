@@ -18,7 +18,11 @@ public class SubtitleManager : MonoBehaviour
     public TextMeshProUGUI choiceBText;
 
     public bool TypewriterEffect = false;
-    public float type_speed = 0.15f;
+    public bool TypewriterSound = false;
+    public float type_delay_min = 0.03f;
+    public float type_delay_max = 0.09f;
+    public float wait_time = 1.0f;
+    private bool waiting = false;
 
     private void Awake()
     {
@@ -118,6 +122,9 @@ public class SubtitleManager : MonoBehaviour
     IEnumerator SegmentedTypewriter(TextMeshProUGUI textMesh, string textA, string textB)
     {
 
+        waiting = true;
+        float type_delay = Random.Range(type_delay_min, type_delay_max);
+
         if (TypewriterEffect)
         {
             int count = 0;
@@ -130,20 +137,27 @@ public class SubtitleManager : MonoBehaviour
                 typed += textB[count];
                 count++;
                 textMesh.text = textA + typed;
-                yield return new WaitForSeconds(type_speed);
+                AudioManager.Instance.PlayTypeWriter();
+                yield return new WaitForSeconds(type_delay);
             }
         }
         else
         {
             textMesh.text = textA + textB;
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(wait_time);
         }
+
+        waiting = false;
 
         
     }
 
     IEnumerator Typewriter(TextMeshProUGUI textMesh, string text)
     {
+
+        waiting = true;
+        float type_delay = Random.Range(type_delay_min, type_delay_max);
+
         if (TypewriterEffect)
         {
             int count = 0;
@@ -154,14 +168,22 @@ public class SubtitleManager : MonoBehaviour
                 typed += text[count];
                 count++;
                 textMesh.text = typed;
-                yield return new WaitForSeconds(type_speed);
+                AudioManager.Instance.PlayTypeWriter();
+                yield return new WaitForSeconds(type_delay);
             }
         }
         else
         {
             textMesh.text = text;
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(wait_time);
         }
+
+        waiting = false;
         
+    }
+
+    public bool IsWaiting()
+    {
+        return waiting;
     }
 }

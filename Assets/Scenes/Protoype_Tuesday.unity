@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 84.93085, g: 108.99931, b: 140.45013, a: 1}
+  m_IndirectSpecularColor: {r: 84.93085, g: 108.99931, b: 140.45036, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -210,7 +210,7 @@ ParticleSystem:
     type: 3}
   m_PrefabInstance: {fileID: 203784716}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &992789136
+--- !u!114 &1017781426
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -497,6 +497,21 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 9208548205838402972}
+    - target: {fileID: 922084995780817788, guid: 4de393feb6d71bf4f951526c9b09d1e7,
+        type: 3}
+      propertyPath: TypewriterEffect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 922084995780817788, guid: 4de393feb6d71bf4f951526c9b09d1e7,
+        type: 3}
+      propertyPath: type_speed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 922084995780817788, guid: 4de393feb6d71bf4f951526c9b09d1e7,
+        type: 3}
+      propertyPath: TypewriterSound
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5714323380259948505, guid: 4de393feb6d71bf4f951526c9b09d1e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4de393feb6d71bf4f951526c9b09d1e7, type: 3}
@@ -816,12 +831,12 @@ PrefabInstance:
     - target: {fileID: 117942419954082258, guid: 09d23e7c3e6b89e48b06d65d66443519,
         type: 3}
       propertyPath: m_FocalLength
-      value: 24.068275
+      value: 24.077858
       objectReference: {fileID: 0}
     - target: {fileID: 117942419954082258, guid: 09d23e7c3e6b89e48b06d65d66443519,
         type: 3}
       propertyPath: field of view
-      value: 53
+      value: 52.98179
       objectReference: {fileID: 0}
     - target: {fileID: 2037262940900625344, guid: 09d23e7c3e6b89e48b06d65d66443519,
         type: 3}
@@ -881,5 +896,10 @@ PrefabInstance:
       propertyPath: Lamp
       value: 
       objectReference: {fileID: 8300000, guid: 6a5ef29c14947094abd554720f8eba48, type: 3}
+    - target: {fileID: 4805306239271771665, guid: 09d23e7c3e6b89e48b06d65d66443519,
+        type: 3}
+      propertyPath: Typewriter
+      value: 
+      objectReference: {fileID: 8300000, guid: 968cdc50f78bde54aa7e224a5ba42939, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09d23e7c3e6b89e48b06d65d66443519, type: 3}

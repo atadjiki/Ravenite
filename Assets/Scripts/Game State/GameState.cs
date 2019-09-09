@@ -96,13 +96,15 @@ public class GameState : MonoBehaviour
     public void Next()
     {
 
+       
+
         if (GameState.Instance.InConversation == false)
         {
             GameState.Instance.StartNextConversation();
             UIManager.Instance.SwitchToTextPanel();
         }
         else if(ConversationManager.Instance.Mode == Constants.Conversation_Mode.Dialogue
-            && GameState.Instance.InConversation)
+            && GameState.Instance.InConversation && SubtitleManager.Instance.IsWaiting() == false)
         {
             NextLine();
         }

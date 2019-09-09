@@ -19,6 +19,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip RecordPlayer;
     public AudioClip Lamp;
 
+    public AudioClip Typewriter;
+
     public Record[] Songs;
     private Record CurrentSong;
     private int SongIndex;
@@ -109,6 +111,12 @@ public class AudioManager : MonoBehaviour
     public void PlayRecordSound()
     {
         FXSource.clip = RecordPlayer;
+        FXSource.Play();
+    }
+
+    public void PlayTypeWriter()
+    {
+        FXSource.clip = Typewriter;
         FXSource.Play();
     }
 
