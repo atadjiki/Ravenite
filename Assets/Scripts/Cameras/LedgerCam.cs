@@ -6,7 +6,6 @@ public class LedgerCam : MonoBehaviour
 {
     void OnMouseDown()
     {
-        CameraRig.Instance.ToggleLedgerCamera();
-        AudioManager.Instance.PlayClick();
+        GameState.Instance.ToggleLedgerMode();
     }
 }

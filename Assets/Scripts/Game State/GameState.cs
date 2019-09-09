@@ -41,13 +41,7 @@ public class GameState : MonoBehaviour
         StartMenu();
     }
 
-    //Prep Start Menu
-    public void StartMenu()
-    {
-        Started = false;
-        CameraRig.Instance.SwitchToStart();
-        UIManager.Instance.SwitchToStartPanel();
-    }
+   
 
     //Start Game
     public void StartGame()
@@ -76,7 +70,7 @@ public class GameState : MonoBehaviour
     {
         AudioManager.Instance.PlayClick();
         ConversationManager.Instance.NextConversation();
-        UIManager.Instance.SwitchToTextPanel();
+       // UIManager.Instance.SwitchToTextPanel();
         SpawnCharacterModel();
         CameraRig.Instance.LookAtCharacter();
         
@@ -139,9 +133,75 @@ public class GameState : MonoBehaviour
 
         yield return new WaitForSeconds(WaitTime);
 
-        UIManager.Instance.SwitchToPromptPanel();
         AudioManager.Instance.PlayDoorKnock();
         WaitTimerStarted = false;
+    }
+
+    //views
+
+    //Prep Start Menu
+    public void StartMenu()
+    {
+        Started = false;
+        CameraRig.Instance.SwitchToStart();
+        UIManager.Instance.SwitchToStartPanel();
+    }
+
+    public void SwitchToMainView()
+    {
+        CameraRig.Instance.SwitchToMain();
+
+        if (GameState.Instance.InConversation)
+        {
+            UIManager.Instance.SwitchToTextPanel();
+        }
+        else if (GameState.Instance.WaitTimerStarted)
+        {
+            UIManager.Instance.AllOff();
+        }
+        else
+        {
+            UIManager.Instance.SwitchToPromptPanel();
+        }
+    }
+
+
+    public void TogglePhonoMode()
+    {
+        if(InConversation == false && CameraRig.Instance.Phono.enabled == false)
+        {
+            CameraRig.Instance.TogglePhonoCamera();
+            AudioManager.Instance.PlayClick();
+            UIManager.Instance.SwitchToMusicSelectPanel();
+        }
+        else 
+        {
+            SwitchToMainView();
+        }
+    }
+
+    public void ToggleLedgerMode()
+    {
+        if(CameraRig.Instance.Ledger.enabled == false)
+        {
+            CameraRig.Instance.ToggleLedgerCamera();
+            AudioManager.Instance.PlayClick();
+            UIManager.Instance.AllOff();
+        }
+        else
+        {
+            SwitchToMainView();
+        }
+    }
+
+    public void CameraZoomIn()
+    {
+        CameraRig.Instance.MainCameraZoomIn();
+    }
+
+    public void CameraZoomOut()
+    {
+        CameraRig.Instance.MainCameraZoomOut();
     }
 
 }

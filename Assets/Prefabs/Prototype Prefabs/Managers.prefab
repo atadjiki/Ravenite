@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &181562064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 181562065}
+  - component: {fileID: 181562066}
+  m_Layer: 0
+  m_Name: GameState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &181562065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181562064}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4805306240622538964}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &181562066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181562064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c59751b6df43c418eee17f017d2632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Started: 0
+  InConversation: 0
+  WaitTimerStarted: 0
+  ConvoWaitMin: 4
+  ConvoWaitMax: 10
+  CharacterModel: {fileID: 0}
 --- !u!1 &117942419954082257
 GameObject:
   m_ObjectHideFlags: 0
@@ -28,13 +77,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117942419954082257}
-  m_LocalRotation: {x: -0.01219245, y: 0.5265861, z: -0.04475075, w: 0.84885556}
-  m_LocalPosition: {x: 1.165, y: 2.502, z: -0.261}
+  m_LocalRotation: {x: -0.023353709, y: 0.5847152, z: 0.016843228, w: 0.81072754}
+  m_LocalPosition: {x: -0.15, y: 2.44, z: -0.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9109599348380543222}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -3.3000002, y: 0, z: 0}
 --- !u!20 &117942419954082258
 Camera:
   m_ObjectHideFlags: 0
@@ -51,7 +100,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 32.96973
+  m_FocalLength: 23.999998
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -60,7 +109,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 53.130108
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -272,6 +321,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4919756492287646119}
   - component: {fileID: 6509648864627358722}
+  - component: {fileID: 838470077357119980}
+  - component: {fileID: 1298181208079838932}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -311,6 +362,40 @@ MonoBehaviour:
   MainCam: 9
   LedgerView: 108
   Zoom: 304
+--- !u!114 &838470077357119980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289834502177812307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!114 &1298181208079838932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289834502177812307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
 --- !u!1 &1853115759824290119
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 3
   MemberOf: 3
+  CharacterModel: {fileID: 0}
 --- !u!1 &2269244911760843322
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,8 +898,6 @@ MonoBehaviour:
   CurrentDialogue: {fileID: 0}
   CurrentChoice: {fileID: 0}
   Mode: 0
-  ConvoWaitMin: 9
-  ConvoWaitMax: 15
 --- !u!1 &4805306239271771667
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,7 +949,7 @@ MonoBehaviour:
   FXSource: {fileID: 4805306238717999658}
   Click: {fileID: 8300000, guid: d508f70da5508ca4fbfc1737f5492ac1, type: 3}
   Ledger: {fileID: 8300000, guid: b96b3ca1aed0de2459893df1d41c1142, type: 3}
-  DoorKnock: {fileID: 0}
+  DoorKnock: {fileID: 8300000, guid: e05ce28aaee1864498bf7c307abff3a8, type: 3}
 --- !u!1 &4805306239453068118
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +1047,7 @@ MonoBehaviour:
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_HorizontalAxis:
-    Value: 90
+    Value: 140
     m_MaxSpeed: 50
     m_AccelTime: 0.1
     m_DecelTime: 0.1
@@ -1123,8 +1207,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4805306239971284350}
+  - component: {fileID: 4828664181690282193}
   m_Layer: 0
-  m_Name: StateManager
+  m_Name: ReputationManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1144,6 +1229,23 @@ Transform:
   m_Father: {fileID: 4805306240622538964}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4828664181690282193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4805306239971284345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530800980826a6f4695f5331b7626ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cop_State: 0
+  Neighborhood_State: 0
+  Rivals_State: 0
+  Debug_State: 0
+  Debug_Action: 0
 --- !u!1 &4805306240187512829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,6 +1386,7 @@ Transform:
   - {fileID: 4297248498539451277}
   - {fileID: 4919756492287646119}
   - {fileID: 4805306239271771666}
+  - {fileID: 181562065}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1590,8 +1693,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0febb9a784f6bdd439ee2269e71b8fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  A: {fileID: 0}
-  B: {fileID: 0}
+  A: {fileID: 5590599905269470965, guid: 19c4a747f2793d4479e19204a40bd375, type: 3}
+  B: {fileID: 5590599904263960465, guid: 19c4a747f2793d4479e19204a40bd375, type: 3}
   Text: Test Choice B2
   Flag: 5
 --- !u!1 &5590200595465527049
@@ -1637,8 +1740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0febb9a784f6bdd439ee2269e71b8fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  A: {fileID: 0}
-  B: {fileID: 0}
+  A: {fileID: 5590599905269470965, guid: 19c4a747f2793d4479e19204a40bd375, type: 3}
+  B: {fileID: 5590599904263960465, guid: 19c4a747f2793d4479e19204a40bd375, type: 3}
   Text: Test Choice B1
   Flag: 4
 --- !u!1 &5590200595966571061
@@ -1906,6 +2009,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 1
   MemberOf: 1
+  CharacterModel: {fileID: 4663891574804567899, guid: 8236f84e0ee586848a55837b68f2d396,
+    type: 3}
 --- !u!1 &8451884717794957349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1951,6 +2056,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 2
   MemberOf: 2
+  CharacterModel: {fileID: 4663891574804567899, guid: 8236f84e0ee586848a55837b68f2d396,
+    type: 3}
 --- !u!1 &8520624974096420236
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,6 +2226,11 @@ MonoBehaviour:
   zoom_out_speed: 3
   fov_max: 20
   fov_min: 53
+  LerpTime: 2
+  Step: 0.1
+  Current_Step: 0
+  Horizontal: 140
+  Vertical: 0
 --- !u!1 &8918078466299380183
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,6 +2276,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 0
   MemberOf: 0
+  CharacterModel: {fileID: 4663891574804567899, guid: 8236f84e0ee586848a55837b68f2d396,
+    type: 3}
 --- !u!1 &8995624379528287192
 GameObject:
   m_ObjectHideFlags: 0

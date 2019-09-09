@@ -12,6 +12,11 @@ public class AudioManager : MonoBehaviour
     public AudioClip Ledger;
     public AudioClip DoorKnock;
 
+    public AudioClip DoorOpen;
+    public AudioClip DoorClose;
+    public AudioClip Cigarette;
+    public AudioClip RecordPlayer;
+
     //Singleton vars
     private static AudioManager _instance;
 
