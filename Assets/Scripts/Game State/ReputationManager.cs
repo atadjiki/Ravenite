@@ -49,7 +49,7 @@ public class ReputationManager : MonoBehaviour
         }
 
         Build();
-        Debug.Log(this.gameObject.name + " Initialized");
+        //Debug.Log(this.gameObject.name + " Initialized");
     }
 
     private void Build()
@@ -134,6 +134,9 @@ public class ReputationManager : MonoBehaviour
 
     public void SetState(Constants.Faction type, Constants.Modifier action)
     {
+
+        Debug.Log(type + " " + action);
+
         if(type == Constants.Faction.Cops)
         {
             if(action == Constants.Modifier.Decrement)
@@ -204,6 +207,7 @@ public class ReputationManager : MonoBehaviour
     {
         Choices.Add(Flag);
         Debug.Log("Flag added: " + Flag.ToString());
+        ProcessFlag(Flag);
     }
 
     public float GetNormalizedValue(Constants.Faction Faction)
@@ -239,6 +243,37 @@ public class ReputationManager : MonoBehaviour
         else
         {
             return value;
+        }
+    }
+
+    public void ProcessFlag(Flags.Choices Flag)
+    {
+        if (Flag == Flags.Choices.TestChoiceA)
+        {
+            //can add snowball logic here
+            SetState(Constants.Faction.Neighborhood, Constants.Modifier.Decrement);
+        }
+        else if (Flag == Flags.Choices.TestChoiceB)
+        {
+
+        }
+        else if (Flag == Flags.Choices.TestChoiceA1)
+        {
+            SetState(Constants.Faction.Cops, Constants.Modifier.Increment);
+        }
+        else if (Flag == Flags.Choices.TestChoiceA2)
+        {
+            SetState(Constants.Faction.Rivals, Constants.Modifier.Decrement);
+            SetState(Constants.Faction.Cops, Constants.Modifier.Decrement);
+        }
+        else if (Flag == Flags.Choices.TestChoiceB1)
+        {
+
+           
+        }
+        else if (Flag == Flags.Choices.TestChoiceB2)
+        {
+
         }
     }
 }

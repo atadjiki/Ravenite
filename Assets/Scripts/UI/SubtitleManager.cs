@@ -35,7 +35,7 @@ public class SubtitleManager : MonoBehaviour
             _instance = this;
         }
 
-        Debug.Log(this.name + " Initialized");
+        //Debug.Log(this.name + " Initialized");
     }
 
     public void SetText(Constants.Text_Type type, string text)

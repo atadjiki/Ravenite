@@ -40,7 +40,7 @@ public class CameraRig : MonoBehaviour
         }
 
         Build();
-        Debug.Log(this.gameObject.name + " Initialized");
+        //Debug.Log(this.gameObject.name + " Initialized");
     }
 
     private void Build()

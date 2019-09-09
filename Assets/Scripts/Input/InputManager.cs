@@ -13,11 +13,6 @@ public class InputManager : MonoBehaviour
     public KeyCode MusicView = KeyCode.M;
     public KeyCode Zoom = KeyCode.LeftShift;
 
-    private void Awake()
-    {
-        Debug.Log(this.gameObject.name + " Initialized");
-    }
-
     // Update is called once per frame
     void Update()
     {

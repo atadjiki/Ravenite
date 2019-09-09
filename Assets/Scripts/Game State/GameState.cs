@@ -33,7 +33,7 @@ public class GameState : MonoBehaviour
         }
 
         Build();
-        Debug.Log(this.gameObject.name + " Initialized");
+        //Debug.Log(this.gameObject.name + " Initialized");
     }
 
     void Build()

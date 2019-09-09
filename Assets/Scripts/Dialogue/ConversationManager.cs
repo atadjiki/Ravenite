@@ -31,7 +31,6 @@ public class ConversationManager : MonoBehaviour
         }
 
         Build();
-        Debug.Log(this.gameObject.name + " Initialized");
     }
 
     private void Build()
@@ -61,14 +60,12 @@ public class ConversationManager : MonoBehaviour
         {
             if (ConversationManager.Instance.Mode == Constants.Conversation_Mode.Dialogue)
             {
-                Debug.Log("Next Line!");
                 CurrentConversation.NextLine();
                 SetCurrentDialogue();
                 return true;
             }
             else
             {
-                Debug.Log("Not in dialogue mode!");
                 return false;
             }
         }
@@ -113,7 +110,6 @@ public class ConversationManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Not in choice mode!");
                 flag = false;
             }
         }
@@ -142,13 +138,13 @@ public class ConversationManager : MonoBehaviour
 
     public void ChoiceAPressed()
     {
-        Debug.Log("Choice A Pressed");
+        //Debug.Log("Choice A Pressed");
         NextNode(Constants.Choice.A);
     }
 
     public void ChoiceBPressed()
     {
-        Debug.Log("Choice B Pressed");
+        //Debug.Log("Choice B Pressed");
         NextNode(Constants.Choice.B);
     }
 
@@ -182,7 +178,7 @@ public class ConversationManager : MonoBehaviour
 
         if(CurrentDialogue == null) { return;  }
 
-        Debug.Log(GetSpeakingName() + ": " + CurrentDialogue.Text);
+        //Debug.Log(GetSpeakingName() + ": " + CurrentDialogue.Text);
         SubtitleManager.Instance.SetSegmentedText(Constants.Text_Type.Dialogue, GetSpeakingName() + ": ", CurrentDialogue.Text);
     }
 
@@ -196,12 +192,12 @@ public class ConversationManager : MonoBehaviour
 
         if(CurrentChoice.A != null)
         {
-           Debug.Log("New choice: " + CurrentChoice.A.Flag.ToString());
+           //Debug.Log("New choice: " + CurrentChoice.A.Flag.ToString());
            SubtitleManager.Instance.SetText(Constants.Text_Type.ChoiceA, CurrentChoice.A.Text);
         }
         if (CurrentChoice.B != null)
         {
-            Debug.Log("New choice: " + CurrentChoice.B.Flag.ToString());
+            //Debug.Log("New choice: " + CurrentChoice.B.Flag.ToString());
             SubtitleManager.Instance.SetText(Constants.Text_Type.ChoiceB, CurrentChoice.B.Text);
         }
     }

@@ -23,7 +23,7 @@ public class CharacterManager : MonoBehaviour
         }
 
         Build();
-        Debug.Log(this.gameObject.name + " Initialized");
+        //Debug.Log(this.gameObject.name + " Initialized");
     }
 
     void Build()

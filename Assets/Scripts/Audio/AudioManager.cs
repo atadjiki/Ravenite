@@ -44,7 +44,7 @@ public class AudioManager : MonoBehaviour
         }
 
         Build();
-        Debug.Log(this.gameObject.name + " Initialized");
+        //Debug.Log(this.gameObject.name + " Initialized");
     }
 
     public void Build()
@@ -169,7 +169,7 @@ public class AudioManager : MonoBehaviour
         CurrentSong = Songs[SongIndex];
         Music.clip = CurrentSong.Clip;
         Music.Play();
-        Debug.Log("Playing: " + CurrentSong.name);
+        Debug.Log("Playing: " + CurrentSong.Title);
     }
 
     public bool IsPreviousAvailable()
