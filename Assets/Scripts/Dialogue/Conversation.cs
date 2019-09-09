@@ -55,6 +55,17 @@ public class Conversation : MonoBehaviour
         Debug.Log("Registered " + CurrentDialogueSet.Dialogue.Length + " lines of dialogue in current conversation");
     }
 
+    public void NextChoiceTree()
+    {
+        if (AreChoiceTreesAvailable())
+        {
+            TreeIndex++;
+            CurrentChoiceTree = ChoiceTrees[TreeIndex];
+        }
+
+        Debug.Log("New Choice Tree: " + CurrentChoiceTree.name);
+    }
+
     public void NextDialogueSet()
     {
         if(AreDialogueSetsAvailable())
@@ -62,8 +73,6 @@ public class Conversation : MonoBehaviour
             SetIndex++;
             CurrentDialogueSet = DialogueSets[SetIndex];
         }
-
-       
 
         InitializeDialogueLine();
 
@@ -114,6 +123,18 @@ public class Conversation : MonoBehaviour
     public bool AreDialogueSetsAvailable()
     {
         if(SetIndex < DialogueSets.Length - 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool AreChoiceTreesAvailable()
+    {
+        if(TreeIndex < ChoiceTrees.Length - 1)
         {
             return true;
         }

@@ -88,6 +88,12 @@ public class GameState : MonoBehaviour
         CameraRig.Instance.LookAtCharacter();
     }
 
+    public void StartNextChoiceTree()
+    {
+        UIManager.Instance.SwitchToTextPanel();
+        CameraRig.Instance.LookAtCharacter();
+    }
+
     public void SpawnCharacterModel()
     {
         CharacterModel = Instantiate<GameObject>(CharacterManager.Instance.GetCharacter(ConversationManager.Instance.CurrentConversation.WithCharacter).CharacterModel);

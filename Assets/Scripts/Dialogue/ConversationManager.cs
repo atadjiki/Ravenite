@@ -81,6 +81,14 @@ public class ConversationManager : MonoBehaviour
                 Mode = Constants.Conversation_Mode.Choice;
                 SetCurrentChoices();
             }
+            else if(Mode == Constants.Conversation_Mode.Dialogue && CurrentConversation.AreChoiceTreesAvailable())
+            {
+                Debug.Log("No dialogue available! Switching to the next choice tree");
+                Mode = Constants.Conversation_Mode.Choice;
+                CurrentConversation.NextChoiceTree();
+                SetCurrentChoices();
+                GameState.Instance.StartNextChoiceTree();
+            }
             else if(Mode == Constants.Conversation_Mode.Dialogue && CurrentConversation.AreChoicesAvailable() == false)
             {
                 GameState.Instance.ConversationFinished();
@@ -89,18 +97,6 @@ public class ConversationManager : MonoBehaviour
 
             return false;
         }
-    }
-
-    public void ChoiceAPressed()
-    {
-        Debug.Log("Choice A Pressed");
-        NextNode(Constants.Choice.A);
-    }
-
-    public void ChoiceBPressed()
-    {
-        Debug.Log("Choice B Pressed");
-        NextNode(Constants.Choice.B);
     }
 
     public bool NextNode(Constants.Choice choice)
@@ -142,6 +138,18 @@ public class ConversationManager : MonoBehaviour
 
         return flag;
 
+    }
+
+    public void ChoiceAPressed()
+    {
+        Debug.Log("Choice A Pressed");
+        NextNode(Constants.Choice.A);
+    }
+
+    public void ChoiceBPressed()
+    {
+        Debug.Log("Choice B Pressed");
+        NextNode(Constants.Choice.B);
     }
 
     public bool AreConversationsAvailable()
