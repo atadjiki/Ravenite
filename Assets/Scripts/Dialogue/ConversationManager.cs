@@ -74,11 +74,17 @@ public class ConversationManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("No dialogue available!");
-            if(Mode == Constants.Conversation_Mode.Dialogue)
+            
+            if(Mode == Constants.Conversation_Mode.Dialogue && CurrentConversation.AreChoicesAvailable())
             {
+                Debug.Log("No dialogue available! Switching to choice mode");
                 Mode = Constants.Conversation_Mode.Choice;
                 SetCurrentChoices();
+            }
+            else if(Mode == Constants.Conversation_Mode.Dialogue && CurrentConversation.AreChoicesAvailable() == false)
+            {
+                GameState.Instance.ConversationFinished();
+                Debug.Log("No dialogue available! Ending conversation");
             }
 
             return false;
@@ -117,11 +123,21 @@ public class ConversationManager : MonoBehaviour
         }
 
         //do another check to validate the choice tree
-        if(CurrentConversation.AreChoicesAvailable() == false)
+        if(CurrentConversation.AreChoicesAvailable() == false && CurrentConversation.AreDialogueSetsAvailable() == false)
         {
             GameState.Instance.ConversationFinished();
             NextConversation();
             flag = false;
+        }
+        else if (CurrentConversation.AreChoicesAvailable() == false && CurrentConversation.AreDialogueSetsAvailable() == true)
+        {
+            //move to next dialogue set
+            CurrentConversation.NextDialogueSet();
+            Mode = Constants.Conversation_Mode.Dialogue;
+            flag = false;
+            GameState.Instance.StartNextDialogueSet();
+            SetCurrentDialogue();
+            
         }
 
         return flag;

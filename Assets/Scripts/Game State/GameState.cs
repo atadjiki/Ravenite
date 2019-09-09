@@ -57,7 +57,7 @@ public class GameState : MonoBehaviour
     //Current Conversation Finished
     public void ConversationFinished()
     {
-        Debug.Log("No choices available! Waiting for next conversation!");
+        Debug.Log("No dialogue or choices available! Waiting for next conversation!");
         UIManager.Instance.AllOff();
         InConversation = false;
         DespawnCharacterModel();
@@ -80,6 +80,12 @@ public class GameState : MonoBehaviour
         AudioManager.Instance.PlayDoorOpen();
         
         InConversation = true;
+    }
+
+    public void StartNextDialogueSet()
+    {
+        UIManager.Instance.SwitchToTextPanel();
+        CameraRig.Instance.LookAtCharacter();
     }
 
     public void SpawnCharacterModel()
