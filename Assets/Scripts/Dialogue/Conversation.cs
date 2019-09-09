@@ -11,16 +11,14 @@ public class Conversation : MonoBehaviour
     //Dialogue variables
     private DialogueSet[] DialogueSets; //collection of arrays containing lines of dialogue
     public DialogueSet CurrentDialogueSet; //the current dialogue array
-    public Dialogue CurrentDialogueLine; //the current index within the current dialogue array
+    public ChoiceTree CurrentChoiceTree;
 
     public int SetIndex = 0; //index of current set
     public int LineIndex = 0; //index of current line in current set
+    public int TreeIndex = 0;
 
-    //Choice making variables
-    private Choice CurrentRoot;
-    private Choice CurrentChoice;
-
-
+    private ChoiceTree[] ChoiceTrees;
+    
 
     private void Awake()
     {
@@ -38,19 +36,21 @@ public class Conversation : MonoBehaviour
         InitializeDialogueLine();
 
         //choice tree
-        CurrentRoot = GetComponentInChildren<Choice>();
-        CurrentChoice = CurrentRoot;
+
+        ChoiceTrees = GetComponentsInChildren<ChoiceTree>();
+
+        Debug.Log("Registered " + ChoiceTrees.Length + " choice trees");
+
+        if(ChoiceTrees.Length > 0)
+        {
+            CurrentChoiceTree = ChoiceTrees[TreeIndex];
+        }
     }
 
     public void InitializeDialogueLine()
     {
 
         LineIndex = 0;
-
-        if (CurrentDialogueSet.Dialogue.Length > 0)
-        {
-            CurrentDialogueLine = CurrentDialogueSet.Dialogue[LineIndex];
-        }
 
         Debug.Log("Registered " + CurrentDialogueSet.Dialogue.Length + " lines of dialogue in current conversation");
     }
@@ -77,7 +77,6 @@ public class Conversation : MonoBehaviour
         if (IsDialogueAvailable())
         {
             LineIndex++;
-            CurrentDialogueLine = CurrentDialogueSet.Dialogue[LineIndex];
         }
 
         return;
@@ -89,11 +88,11 @@ public class Conversation : MonoBehaviour
 
         if (Choice == Constants.Choice.A)
         {
-            CurrentChoice = CurrentChoice.A;
+            CurrentChoiceTree.CurrentChoice = CurrentChoiceTree.CurrentChoice.A;
         }
         else if (Choice == Constants.Choice.B)
         {
-            CurrentChoice = CurrentChoice.B;
+            CurrentChoiceTree.CurrentChoice = CurrentChoiceTree.CurrentChoice.B;
         }
 
         return;
@@ -126,7 +125,7 @@ public class Conversation : MonoBehaviour
 
     public bool AreChoicesAvailable()
     {
-        if(CurrentChoice.A != null || CurrentChoice.B != null)
+        if(CurrentChoiceTree.CurrentChoice.A != null || CurrentChoiceTree.CurrentChoice.B != null)
         {
             return true;
         }
@@ -143,11 +142,11 @@ public class Conversation : MonoBehaviour
 
     public Dialogue GetCurrentDialogue()
     {
-        return CurrentDialogueLine;
+        return CurrentDialogueSet.Dialogue[LineIndex];
     }
 
     public Choice GetCurrentChoice()
     {
-        return CurrentChoice;
+        return CurrentChoiceTree.CurrentChoice;
     }
 }
