@@ -18,6 +18,8 @@ public class GameState : MonoBehaviour
     [SerializeField]
     private float ConvoWaitMax = 10;
 
+    public GameObject CharacterModel;
+
 
     private void Awake()
     {
@@ -53,6 +55,7 @@ public class GameState : MonoBehaviour
         Started = true;
         CameraRig.Instance.SwitchToMain();
         AudioManager.Instance.StartMusic();
+        AudioManager.Instance.PlayClick();
         UIManager.Instance.AllOff();
         ConvoWaitTimer();
 
@@ -64,6 +67,7 @@ public class GameState : MonoBehaviour
         Debug.Log("No choices available! Waiting for next conversation!");
         UIManager.Instance.AllOff();
         InConversation = false;
+        DespawnCharacterModel();
         ConvoWaitTimer();
     }
 
@@ -73,7 +77,20 @@ public class GameState : MonoBehaviour
         AudioManager.Instance.PlayClick();
         ConversationManager.Instance.NextConversation();
         UIManager.Instance.SwitchToTextPanel();
-        GameState.Instance.InConversation = true;
+        SpawnCharacterModel();
+        CameraRig.Instance.LookAt(CharacterModel.transform);
+        
+        InConversation = true;
+    }
+
+    public void SpawnCharacterModel()
+    {
+        CharacterModel = Instantiate<GameObject>(CharacterManager.Instance.GetCharacter(ConversationManager.Instance.CurrentConversation.WithCharacter).CharacterModel);
+    }
+
+    public void DespawnCharacterModel()
+    {
+        Destroy(CharacterModel);
     }
 
     public void Next()
@@ -115,7 +132,7 @@ public class GameState : MonoBehaviour
 
     private IEnumerator WaitTimer()
     {
-
+        WaitTimerStarted = true;
         float WaitTime = Random.Range(ConvoWaitMin, ConvoWaitMax);
 
         Debug.Log(WaitTime + " seconds until next conversation is available");
@@ -124,6 +141,7 @@ public class GameState : MonoBehaviour
 
         UIManager.Instance.SwitchToPromptPanel();
         AudioManager.Instance.PlayDoorKnock();
+        WaitTimerStarted = false;
     }
 
 }
