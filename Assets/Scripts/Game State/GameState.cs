@@ -74,8 +74,8 @@ public class GameState : MonoBehaviour
     //Start Next Conversation
     public void StartNextConversation()
     {
-        AudioManager.Instance.PlayClick();
         ConversationManager.Instance.NextConversation();
+        AudioManager.Instance.PlayClick();
         SpawnCharacterModel();
         CameraRig.Instance.LookAtCharacter();
         AudioManager.Instance.PlayDoorOpen();

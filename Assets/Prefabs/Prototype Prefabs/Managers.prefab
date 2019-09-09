@@ -953,12 +953,15 @@ MonoBehaviour:
   Ambience: {fileID: 4805306240755677068}
   FXSource: {fileID: 4805306238717999658}
   Click: {fileID: 8300000, guid: d508f70da5508ca4fbfc1737f5492ac1, type: 3}
-  Ledger: {fileID: 8300000, guid: b96b3ca1aed0de2459893df1d41c1142, type: 3}
+  LedgerOpen: {fileID: 8300000, guid: b96b3ca1aed0de2459893df1d41c1142, type: 3}
+  LedgerClose: {fileID: 8300000, guid: 52e1f40ee271b1744bf9388c8ffddbf0, type: 3}
   DoorKnock: {fileID: 8300000, guid: e05ce28aaee1864498bf7c307abff3a8, type: 3}
   DoorOpen: {fileID: 8300000, guid: 053ab0f2f53a18446a360d5f0a6b2d15, type: 3}
   DoorClose: {fileID: 8300000, guid: 7c4f52bbdc181c1419370f1ea60ea6e6, type: 3}
   Cigarette: {fileID: 8300000, guid: b73be1746a7f0c84f93c036a373446c1, type: 3}
   RecordPlayer: {fileID: 8300000, guid: cc0f6387ce99fbe4094e1597a8cd8946, type: 3}
+  Lamp: {fileID: 8300000, guid: 6a5ef29c14947094abd554720f8eba48, type: 3}
+  Typewriter: {fileID: 8300000, guid: 968cdc50f78bde54aa7e224a5ba42939, type: 3}
   Songs:
   - {fileID: 4926199590163058951}
   - {fileID: 4972313087396192908}

@@ -541,8 +541,11 @@ MonoBehaviour:
   dialogueText: {fileID: 922084996562486776}
   choiceAText: {fileID: 922084996287556682}
   choiceBText: {fileID: 922084997257978236}
-  TypewriterEffect: 0
-  type_speed: 0.1
+  TypewriterEffect: 1
+  TypewriterSound: 1
+  type_delay_min: 0.03
+  type_delay_max: 0.09
+  wait_time: 1
 --- !u!114 &922084995780817787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3131,13 +3134,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 883980686703412187}
-    characterCount: 10
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 3
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 2
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0

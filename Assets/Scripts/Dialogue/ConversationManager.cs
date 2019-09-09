@@ -120,6 +120,7 @@ public class ConversationManager : MonoBehaviour
         if(CurrentConversation.AreChoicesAvailable() == false)
         {
             GameState.Instance.ConversationFinished();
+            NextConversation();
             flag = false;
         }
 
@@ -129,7 +130,7 @@ public class ConversationManager : MonoBehaviour
 
     public bool AreConversationsAvailable()
     {
-        return Index == -1 || Index + 1 <= Conversations.Length - 1;
+        return Index == -1 || Index + 1 < Conversations.Length - 1;
     }
 
     public void NextConversation()
