@@ -96,8 +96,6 @@ public class GameState : MonoBehaviour
     public void Next()
     {
 
-        
-
         if (GameState.Instance.InConversation == false)
         {
             GameState.Instance.StartNextConversation();
