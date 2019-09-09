@@ -78,7 +78,7 @@ public class GameState : MonoBehaviour
         ConversationManager.Instance.NextConversation();
         UIManager.Instance.SwitchToTextPanel();
         SpawnCharacterModel();
-        CameraRig.Instance.LookAt(CharacterModel.transform);
+        CameraRig.Instance.LookAtCharacter();
         
         InConversation = true;
     }

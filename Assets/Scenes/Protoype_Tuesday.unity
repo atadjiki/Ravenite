@@ -182,7 +182,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 9208548205952593742}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1134605900
+--- !u!224 &1536758840 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3376456935994397457, guid: 4de393feb6d71bf4f951526c9b09d1e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3376456937225881385}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1538407705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,12 +264,6 @@ MonoBehaviour:
   enableSunDisk:
     m_OverrideState: 0
     m_Value: 0
---- !u!224 &1536758840 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3376456935994397457, guid: 4de393feb6d71bf4f951526c9b09d1e7,
-    type: 3}
-  m_PrefabInstance: {fileID: 3376456937225881385}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &84725787454763966 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7999934777839321911, guid: db5d986360cd64d4f890fb3b0a8f1917,
@@ -561,6 +561,56 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3376456936421698606, guid: 4de393feb6d71bf4f951526c9b09d1e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376456936051899672, guid: 4de393feb6d71bf4f951526c9b09d1e7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -550
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376456936051899675, guid: 4de393feb6d71bf4f951526c9b09d1e7,
+        type: 3}
+      propertyPath: m_text
+      value: 'Someone is here to see you. Press space to begin the conversation. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376456936051899675, guid: 4de393feb6d71bf4f951526c9b09d1e7,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 513
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376456936051899675, guid: 4de393feb6d71bf4f951526c9b09d1e7,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 67
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376456936051899675, guid: 4de393feb6d71bf4f951526c9b09d1e7,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376456936051899675, guid: 4de393feb6d71bf4f951526c9b09d1e7,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376456936051899675, guid: 4de393feb6d71bf4f951526c9b09d1e7,
+        type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376456936051899675, guid: 4de393feb6d71bf4f951526c9b09d1e7,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376456936051899675, guid: 4de393feb6d71bf4f951526c9b09d1e7,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4de393feb6d71bf4f951526c9b09d1e7, type: 3}
 --- !u!4 &4423860145517977498 stripped
@@ -839,5 +889,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4663891574804567899, guid: 8236f84e0ee586848a55837b68f2d396,
         type: 3}
+    - target: {fileID: 4805306239453068116, guid: 09d23e7c3e6b89e48b06d65d66443519,
+        type: 3}
+      propertyPath: m_HorizontalAxis.Value
+      value: 140
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09d23e7c3e6b89e48b06d65d66443519, type: 3}

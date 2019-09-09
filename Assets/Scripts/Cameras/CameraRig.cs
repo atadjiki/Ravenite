@@ -20,6 +20,12 @@ public class CameraRig : MonoBehaviour
     public float fov_max = 20;
     public float fov_min = 53;
 
+    public float LerpTime = 2;
+    public float Step = 0.1f;
+    public float Current_Step = 0;
+    public float Horizontal = 140;
+    public float Vertical = 0;
+
     private void Awake()
     {
 
@@ -138,7 +144,7 @@ public class CameraRig : MonoBehaviour
         }
     }
 
-    public void LookAt(Transform target)
+    public void LookAtCharacter()
     {
         if (Main.enabled)
         {
@@ -148,12 +154,6 @@ public class CameraRig : MonoBehaviour
 
     IEnumerator LerpLookAt()
     {
-        float LerpTime = 5;
-        float Step = 0.1f;
-        float Current_Step = 0;
-        float Horizontal = 140;
-        float Vertical = 0;
-
         while(Current_Step < LerpTime)
         {
 
