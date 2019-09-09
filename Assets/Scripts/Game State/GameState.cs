@@ -62,7 +62,13 @@ public class GameState : MonoBehaviour
         UIManager.Instance.AllOff();
         InConversation = false;
         DespawnCharacterModel();
-        ConvoWaitTimer();
+        AudioManager.Instance.PlayDoorClose();
+
+        if (ConversationManager.Instance.AreConversationsAvailable())
+        {
+            ConvoWaitTimer();
+        }
+        
     }
 
     //Start Next Conversation
@@ -70,9 +76,9 @@ public class GameState : MonoBehaviour
     {
         AudioManager.Instance.PlayClick();
         ConversationManager.Instance.NextConversation();
-       // UIManager.Instance.SwitchToTextPanel();
         SpawnCharacterModel();
         CameraRig.Instance.LookAtCharacter();
+        AudioManager.Instance.PlayDoorOpen();
         
         InConversation = true;
     }
@@ -89,9 +95,13 @@ public class GameState : MonoBehaviour
 
     public void Next()
     {
+
+        
+
         if (GameState.Instance.InConversation == false)
         {
             GameState.Instance.StartNextConversation();
+            UIManager.Instance.SwitchToTextPanel();
         }
         else if(ConversationManager.Instance.Mode == Constants.Conversation_Mode.Dialogue
             && GameState.Instance.InConversation)
@@ -135,6 +145,7 @@ public class GameState : MonoBehaviour
 
         AudioManager.Instance.PlayDoorKnock();
         WaitTimerStarted = false;
+        SetCorrectMainPanel();
     }
 
     //views
@@ -145,6 +156,26 @@ public class GameState : MonoBehaviour
         Started = false;
         CameraRig.Instance.SwitchToStart();
         UIManager.Instance.SwitchToStartPanel();
+    }
+
+    public void SetCorrectMainPanel()
+    {
+        if (CameraRig.Instance.Main.enabled)
+        {
+            if (GameState.Instance.InConversation)
+            {
+                UIManager.Instance.SwitchToTextPanel();
+            }
+            else if (GameState.Instance.WaitTimerStarted)
+            {
+                UIManager.Instance.AllOff();
+            }
+            else
+            {
+                UIManager.Instance.SwitchToPromptPanel();
+            }
+        }
+        
     }
 
     public void SwitchToMainView()
@@ -204,4 +235,40 @@ public class GameState : MonoBehaviour
         CameraRig.Instance.MainCameraZoomOut();
     }
 
+    public void PreviousTrack()
+    {
+        AudioManager.Instance.PreviousTrack();
+        AudioManager.Instance.PlayRecordSound();
+    }
+
+    public void NextTrack()
+    {
+        AudioManager.Instance.NextTrack();
+        AudioManager.Instance.PlayRecordSound();
+    }
+
+    public void ToggleMusic()
+    {
+       AudioManager.Instance.ToggleMusic();
+    }
+
+    public bool IsMusicPlaying()
+    {
+       return  AudioManager.Instance.MusicOn;
+    }
+
+    public bool IsPreviousAvailable()
+    {
+        return AudioManager.Instance.IsPreviousAvailable();
+    }
+
+    public bool IsNextAvailable()
+    {
+        return AudioManager.Instance.IsNextAvailable();
+    }
+
+    public string FetchCurrentSong()
+    {
+        return AudioManager.Instance.FetchSongTitle();
+    }
 }

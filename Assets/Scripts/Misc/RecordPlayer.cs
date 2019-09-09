@@ -24,14 +24,15 @@ public class RecordPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        recordT.Rotate(0, 3, 0);
-        tBT.Rotate(0, 0, 1);
-        bs = bs + (1f * p);
-        blendshapedelta();
-        phonograph.SetBlendShapeWeight(0, bs);
-       // Debug.Log(bs);
 
-
+        if (GameState.Instance.IsMusicPlaying())
+        {
+            recordT.Rotate(0, 3, 0);
+            tBT.Rotate(0, 0, 1);
+            bs = bs + (1f * p);
+            blendshapedelta();
+            phonograph.SetBlendShapeWeight(0, bs);
+        }
     }
 
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -13,6 +14,13 @@ public class UIManager : MonoBehaviour
     public GameObject Start_Panel;
     public GameObject Prompt_Panel;
     public GameObject Music_Select_Panel;
+
+    public GameObject PreviousButton;
+    public GameObject NextButton;
+    public GameObject SongLabel;
+    public TextMeshProUGUI ToggleText;
+    public TextMeshProUGUI SongTitle;
+
 
     private void Awake()
     {
@@ -60,4 +68,24 @@ public class UIManager : MonoBehaviour
         Music_Select_Panel.SetActive(false);
     }
 
+    private void Update()
+    {
+
+        PreviousButton.SetActive(GameState.Instance.IsPreviousAvailable());
+        NextButton.SetActive(GameState.Instance.IsNextAvailable());
+        SongLabel.SetActive(GameState.Instance.IsMusicPlaying());
+        SongTitle.text = GameState.Instance.FetchCurrentSong();
+
+        if (GameState.Instance.IsMusicPlaying())
+        {
+            ToggleText.text = "Music On";
+        }
+        else
+        {
+            ToggleText.text = "Music Off";
+        }
+
+        
+
+    }
 }

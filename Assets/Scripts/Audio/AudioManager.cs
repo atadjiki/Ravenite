@@ -1,0 +1,185 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class AudioManager : MonoBehaviour
+{
+    public AudioSource Music;
+    public AudioSource Ambience;
+    public AudioSource FXSource;
+
+    public AudioClip Click;
+    public AudioClip Ledger;
+    public AudioClip DoorKnock;
+
+    public AudioClip DoorOpen;
+    public AudioClip DoorClose;
+    public AudioClip Cigarette;
+    public AudioClip RecordPlayer;
+
+    public Record[] Songs;
+    private Record CurrentSong;
+    private int SongIndex;
+    public bool MusicOn;
+
+    //Singleton vars
+    private static AudioManager _instance;
+
+    public static AudioManager Instance { get { return _instance; } }
+
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+
+        Build();
+        Debug.Log(this.gameObject.name + " Initialized");
+    }
+
+    public void Build()
+    {
+
+        Music.loop = false;
+        MusicOn = true;
+        Ambience.loop = true;
+        FXSource.loop = false;
+
+        Ambience.Play();
+        PickRandomTrack();
+        PlaySelected();
+    }
+
+    public void PlayLedger()
+    {
+        FXSource.clip = Ledger;
+        FXSource.Play();
+    }
+
+    public void PlayClick()
+    {
+        FXSource.clip = Click;
+        FXSource.Play();
+    }
+
+    public void PlayDoorKnock()
+    {
+        FXSource.clip = DoorKnock;
+        FXSource.Play();
+    }
+
+    public void PlayDoorOpen()
+    {
+        FXSource.clip = DoorOpen;
+        FXSource.Play();
+    }
+
+    public void PlayDoorClose()
+    {
+        FXSource.clip = DoorClose;
+        FXSource.Play();
+    }
+
+    public void PlayRecordSound()
+    {
+        FXSource.clip = RecordPlayer;
+        FXSource.Play();
+    }
+
+    public void StartMusic()
+    {
+        Music.Play();
+    }
+
+    public void ToggleMusic()
+    {
+        if (MusicOn)
+        {
+            MusicOn = false;
+            Music.Pause();
+        }
+        else
+        {
+            MusicOn = true;
+            Music.UnPause();
+        }
+    }
+
+    public void PreviousTrack()
+    {
+        if(SongIndex - 1 < 0){return;}
+
+        SongIndex--;
+
+        PlaySelected();
+
+    }
+
+    public void NextTrack()
+    {
+        if (SongIndex + 1 > Songs.Length-1){return;}
+
+        SongIndex++;
+
+        PlaySelected();
+    }
+
+    public void PickRandomTrack()
+    {
+        SongIndex = Random.Range(0, Songs.Length - 1);
+        
+    }
+
+    public void PlaySelected()
+    {
+        CurrentSong = Songs[SongIndex];
+        Music.clip = CurrentSong.Clip;
+        Music.Play();
+        Debug.Log("Playing: " + CurrentSong.name);
+    }
+
+    public bool IsPreviousAvailable()
+    {
+        if(SongIndex == 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public bool IsNextAvailable()
+    {
+        if(SongIndex == Songs.Length - 1)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public string FetchSongTitle()
+    {
+        return "'" + CurrentSong.Title + "' - " + CurrentSong.Artist;
+    }
+
+
+    void Update()
+    {
+        if (!Music.isPlaying && MusicOn)
+        {
+            PickRandomTrack();
+            PlaySelected();
+        }
+    }
+}
