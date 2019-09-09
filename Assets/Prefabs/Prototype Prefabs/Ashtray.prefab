@@ -310,6 +310,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ashtraycig
       objectReference: {fileID: 0}
+    - target: {fileID: -6336625041371033417, guid: dadf0e9776272e1489a32115e1994c8d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5907fcb0677abda40a79f44d6d0f9a24, type: 2}
     - target: {fileID: -4216859302048453862, guid: dadf0e9776272e1489a32115e1994c8d,
         type: 3}
       propertyPath: m_LocalPosition.x
