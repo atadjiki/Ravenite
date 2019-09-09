@@ -58,7 +58,7 @@ public class ConversationManager : MonoBehaviour
     {
         if (CurrentConversation.IsDialogueAvailable())
         {
-            if (ConversationManager.Instance.Mode == Constants.Conversation_Mode.Dialogue)
+            if (Mode == Constants.Conversation_Mode.Dialogue)
             {
                 CurrentConversation.NextLine();
                 SetCurrentDialogue();
@@ -102,7 +102,7 @@ public class ConversationManager : MonoBehaviour
 
         if (CurrentConversation.AreChoicesAvailable())
         {
-            if (ConversationManager.Instance.Mode == Constants.Conversation_Mode.Choice)
+            if (Mode == Constants.Conversation_Mode.Choice)
             {
                 CurrentConversation.NextNode(choice);
                 SetCurrentChoices();
@@ -138,13 +138,11 @@ public class ConversationManager : MonoBehaviour
 
     public void ChoiceAPressed()
     {
-        //Debug.Log("Choice A Pressed");
         NextNode(Constants.Choice.A);
     }
 
     public void ChoiceBPressed()
     {
-        //Debug.Log("Choice B Pressed");
         NextNode(Constants.Choice.B);
     }
 
