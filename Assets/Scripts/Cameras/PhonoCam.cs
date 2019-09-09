@@ -6,6 +6,6 @@ public class PhonoCam : MonoBehaviour
 {
     void OnMouseDown()
     {
-        GameState.Instance.TogglePhonoMode();
+        CameraRig.Instance.ToggleStartCamera();
     }
 }

@@ -168,35 +168,4 @@ public class CameraRig : MonoBehaviour
         }
     }
 
-    //private void Update()
-    //{
-    //    if (Main.enabled)
-    //    {
-    //        if (GameState.Instance.InConversation)
-    //        {
-    //            UIManager.Instance.SwitchToTextPanel();
-    //        }
-    //        else if (GameState.Instance.WaitTimerStarted)
-    //        {
-    //            UIManager.Instance.AllOff();
-    //        }
-    //        else
-    //        {
-    //            UIManager.Instance.SwitchToPromptPanel();
-    //        }
-    //    }
-    //    else if (Start.enabled)
-    //    {
-    //        UIManager.Instance.SwitchToStartPanel();
-    //    }
-    //    else if (Phono.enabled)
-    //    {
-    //        UIManager.Instance.SwitchToMusicSelectPanel();
-    //    }
-    //    else if (Ledger.enabled)
-    //    {
-    //        UIManager.Instance.AllOff();
-    //    }
-    //}
-
 }

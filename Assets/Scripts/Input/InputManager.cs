@@ -10,7 +10,6 @@ public class InputManager : MonoBehaviour
     public KeyCode ChoiceB = KeyCode.B;
     public KeyCode MainCam = KeyCode.Tab;
     public KeyCode LedgerView = KeyCode.L;
-    public KeyCode MusicView = KeyCode.M;
     public KeyCode Zoom = KeyCode.LeftShift;
 
     private void Awake()
@@ -41,28 +40,23 @@ public class InputManager : MonoBehaviour
 
             if (Input.GetKeyDown(MainCam))
             {
-                GameState.Instance.SwitchToMainView();
+                CameraRig.Instance.SwitchToMain();
             }
 
             if (Input.GetKeyDown(LedgerView))
             {
-                GameState.Instance.ToggleLedgerMode();
+                CameraRig.Instance.ToggleLedgerCamera();
 
-            }
-
-            if (Input.GetKeyDown(MusicView))
-            {
-                GameState.Instance.TogglePhonoMode();
             }
 
             if (Input.GetKey(Zoom))
             {
-
-                GameState.Instance.CameraZoomIn();
+                 
+                CameraRig.Instance.MainCameraZoomIn();
             }
             else
             {
-                GameState.Instance.CameraZoomOut();
+                CameraRig.Instance.MainCameraZoomOut();
             }
 
         }

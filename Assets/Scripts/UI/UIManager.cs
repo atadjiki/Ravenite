@@ -60,6 +60,18 @@ public class UIManager : MonoBehaviour
         Music_Select_Panel.SetActive(true);
     }
 
+    public void ToggleMusicSelectUI()
+    {
+        if(Music_Select_Panel.activeSelf)
+        {
+            Music_Select_Panel.SetActive(false);
+        }
+        else
+        {
+            Music_Select_Panel.SetActive(true);
+        }
+    }
+
     public void AllOff()
     {
         Text_Panel.SetActive(false);
