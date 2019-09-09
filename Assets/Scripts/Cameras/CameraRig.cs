@@ -138,9 +138,34 @@ public class CameraRig : MonoBehaviour
         }
     }
 
-    public void TurnOffCameraAiming()
+    public void LookAt(Transform target)
     {
-        
+        if (Main.enabled)
+        {
+            StartCoroutine(LerpLookAt());
+        }
+    }
+
+    IEnumerator LerpLookAt()
+    {
+        float LerpTime = 5;
+        float Step = 0.1f;
+        float Current_Step = 0;
+        float Horizontal = 140;
+        float Vertical = 0;
+
+        while(Current_Step < LerpTime)
+        {
+
+            Main.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.Value =
+                Mathf.Lerp(Main.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.Value, Horizontal, Step);
+
+            Main.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.Value =
+                Mathf.Lerp(Main.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.Value, Vertical, Step);
+
+            Current_Step += Step;
+            yield return new WaitForEndOfFrame();
+        }
     }
 
 }

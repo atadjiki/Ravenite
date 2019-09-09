@@ -6,4 +6,5 @@ public class Character : MonoBehaviour
 {
     public Constants.Character_Names Name;
     public Constants.Faction MemberOf;
+    public GameObject CharacterModel;
 }
