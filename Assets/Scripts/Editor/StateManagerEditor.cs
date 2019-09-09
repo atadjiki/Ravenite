@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEditor;
 
-[CustomEditor(typeof(StateManager))]
+[CustomEditor(typeof(ReputationManager))]
 public class StateManagerEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -10,17 +10,17 @@ public class StateManagerEditor : Editor
         DrawDefaultInspector();
         if (GUILayout.Button("Modify State"))
         {
-            StateManager.Instance.SetState(StateManager.Instance.Debug_State, StateManager.Instance.Debug_Action);
+            ReputationManager.Instance.SetState(ReputationManager.Instance.Debug_State, ReputationManager.Instance.Debug_Action);
         }
 
         if(GUILayout.Button("Print Flags"))
         {
-            StateManager.Instance.PrintFlags();
+            ReputationManager.Instance.PrintFlags();
         }
 
         if (GUILayout.Button("Print States"))
         {
-            StateManager.Instance.PrintStates();
+            ReputationManager.Instance.PrintStates();
         }
     }
 }
