@@ -6,8 +6,6 @@ public class PhonoInteraction : MonoBehaviour
 {
     void OnMouseDown()
     {
-        CameraRig.Instance.TogglePhonoCamera();
-        UIManager.Instance.ToggleMusicSelectUI();
-        AudioManager.Instance.PlayClick();
+        GameState.Instance.TogglePhonoMode();
     }
 }
