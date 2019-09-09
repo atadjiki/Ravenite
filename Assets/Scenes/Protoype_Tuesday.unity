@@ -703,6 +703,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7937730597225712723, guid: db5d986360cd64d4f890fb3b0a8f1917,
+        type: 3}
+      propertyPath: AnimationLength
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937730597225712723, guid: db5d986360cd64d4f890fb3b0a8f1917,
+        type: 3}
+      propertyPath: MaxWaitTime
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db5d986360cd64d4f890fb3b0a8f1917, type: 3}
 --- !u!1001 &9208548205952593742
@@ -811,6 +821,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 117942419954082261, guid: 09d23e7c3e6b89e48b06d65d66443519,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.3000002
       objectReference: {fileID: 0}
     - target: {fileID: 117942419954082258, guid: 09d23e7c3e6b89e48b06d65d66443519,
         type: 3}
