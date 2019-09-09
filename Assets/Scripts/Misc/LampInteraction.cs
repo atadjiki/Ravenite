@@ -13,7 +13,12 @@ public class LampInteraction : MonoBehaviour
 
     void OnMouseDown()
     {
-        AudioManager.Instance.PlayClick();
+        GameState.Instance.DoLamp();
+        
+    }
+
+    public void PlayEffect()
+    {
         effect.Swichting();
     }
 }

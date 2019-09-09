@@ -6,11 +6,17 @@ public class AshtrayInteraction : MonoBehaviour
 {
     public GameObject Cigarette;
     private CigaretteInteraction interaction;
+    public ParticleSystem SmokeEffect;
     void OnMouseDown()
     {
-        //GameState.Instance.TogglePhonoMode();
-        AudioManager.Instance.PlayClick();
+        GameState.Instance.DoCigaretteEffect();
+        
+    }
+
+    public void PlayEffect()
+    {
         interaction = Cigarette.GetComponent<CigaretteInteraction>();
         interaction.PlayAnimation();
+        SmokeEffect.Play();
     }
 }

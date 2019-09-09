@@ -214,13 +214,16 @@ public class GameState : MonoBehaviour
         if(CameraRig.Instance.Ledger.enabled == false)
         {
             CameraRig.Instance.ToggleLedgerCamera();
-            AudioManager.Instance.PlayClick();
+            AudioManager.Instance.PlayLedgerOpen();
             UIManager.Instance.AllOff();
         }
         else
         {
             SwitchToMainView();
+            AudioManager.Instance.PlayLedgerClose();
         }
+
+        
     }
 
     public void CameraZoomIn()
@@ -268,5 +271,17 @@ public class GameState : MonoBehaviour
     public string FetchCurrentSong()
     {
         return AudioManager.Instance.FetchSongTitle();
+    }
+
+    public void DoCigaretteEffect()
+    {
+        AudioManager.Instance.PlayCigarette();
+        GameObject.FindObjectOfType<AshtrayInteraction>().PlayEffect();
+    }
+
+    public void DoLamp()
+    {
+        AudioManager.Instance.PlayLamp();
+        GameObject.FindObjectOfType<LampInteraction>().PlayEffect();
     }
 }

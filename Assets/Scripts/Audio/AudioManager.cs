@@ -9,13 +9,15 @@ public class AudioManager : MonoBehaviour
     public AudioSource FXSource;
 
     public AudioClip Click;
-    public AudioClip Ledger;
+    public AudioClip LedgerOpen;
+    public AudioClip LedgerClose;
     public AudioClip DoorKnock;
 
     public AudioClip DoorOpen;
     public AudioClip DoorClose;
     public AudioClip Cigarette;
     public AudioClip RecordPlayer;
+    public AudioClip Lamp;
 
     public Record[] Songs;
     private Record CurrentSong;
@@ -56,9 +58,21 @@ public class AudioManager : MonoBehaviour
         PlaySelected();
     }
 
-    public void PlayLedger()
+    public void PlayLedgerOpen()
     {
-        FXSource.clip = Ledger;
+        FXSource.clip = LedgerOpen;
+        FXSource.Play();
+    }
+
+    public void PlayLedgerClose()
+    {
+        FXSource.clip = LedgerClose;
+        FXSource.Play();
+    }
+
+    public void PlayLamp()
+    {
+        FXSource.clip = Lamp;
         FXSource.Play();
     }
 
@@ -83,6 +97,12 @@ public class AudioManager : MonoBehaviour
     public void PlayDoorClose()
     {
         FXSource.clip = DoorClose;
+        FXSource.Play();
+    }
+
+    public void PlayCigarette()
+    {
+        FXSource.clip = Cigarette;
         FXSource.Play();
     }
 

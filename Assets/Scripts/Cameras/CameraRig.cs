@@ -67,7 +67,6 @@ public class CameraRig : MonoBehaviour
     {
         AllOff();
         Ledger.enabled = true;
-        AudioManager.Instance.PlayLedger();
     }
 
     public void SwitchToPhono()
