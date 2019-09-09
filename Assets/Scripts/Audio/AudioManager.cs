@@ -44,7 +44,6 @@ public class AudioManager : MonoBehaviour
         }
 
         Build();
-        //Debug.Log(this.gameObject.name + " Initialized");
     }
 
     public void Build()

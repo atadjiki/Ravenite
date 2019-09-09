@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cigarette: {fileID: 6421622237521896764}
+  SmokeEffect: {fileID: 0}
 --- !u!95 &2097586369
 Animator:
   serializedVersion: 3
@@ -395,7 +396,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3966411510138914195}
+    m_TransformParent: {fileID: 964930076276658884}
     m_Modifications:
     - target: {fileID: 5875189778540253781, guid: e104215d521d1244381fbb85c48ce3c5,
         type: 3}
@@ -405,17 +406,17 @@ PrefabInstance:
     - target: {fileID: 5875189778540253778, guid: e104215d521d1244381fbb85c48ce3c5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.0023283886
       objectReference: {fileID: 0}
     - target: {fileID: 5875189778540253778, guid: e104215d521d1244381fbb85c48ce3c5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0016654254
       objectReference: {fileID: 0}
     - target: {fileID: 5875189778540253778, guid: e104215d521d1244381fbb85c48ce3c5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.0067808973
       objectReference: {fileID: 0}
     - target: {fileID: 5875189778540253778, guid: e104215d521d1244381fbb85c48ce3c5,
         type: 3}
@@ -440,7 +441,7 @@ PrefabInstance:
     - target: {fileID: 5875189778540253778, guid: e104215d521d1244381fbb85c48ce3c5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5875189778540253778, guid: e104215d521d1244381fbb85c48ce3c5,
         type: 3}
