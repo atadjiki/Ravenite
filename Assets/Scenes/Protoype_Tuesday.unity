@@ -121,7 +121,13 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &164391700
+--- !u!224 &1536758840 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 922084995780817776, guid: 4de393feb6d71bf4f951526c9b09d1e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 922084996710311752}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1889034423
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,12 +203,6 @@ MonoBehaviour:
   enableSunDisk:
     m_OverrideState: 0
     m_Value: 0
---- !u!224 &1536758840 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 922084995780817776, guid: 4de393feb6d71bf4f951526c9b09d1e7,
-    type: 3}
-  m_PrefabInstance: {fileID: 922084996710311752}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1889544146 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 883980686703412187, guid: 4de393feb6d71bf4f951526c9b09d1e7,
