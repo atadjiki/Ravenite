@@ -13,13 +13,6 @@ public class ConversationManager : MonoBehaviour
 
     public Constants.Conversation_Mode Mode;
 
-    [SerializeField]
-    private float ConvoWaitMin = 9;
-    [SerializeField]
-    private float ConvoWaitMax = 15;
-
-
-
     //Singleton vars
     private static ConversationManager _instance;
 
@@ -62,7 +55,7 @@ public class ConversationManager : MonoBehaviour
         }
     }
 
-    public void NextLine()
+    public bool NextLine()
     {
         if (CurrentConversation.IsDialogueAvailable())
         {
@@ -71,11 +64,12 @@ public class ConversationManager : MonoBehaviour
                 Debug.Log("Next Line!");
                 CurrentConversation.NextLine();
                 SetCurrentDialogue();
-                AudioManager.Instance.PlayClick();
+                return true;
             }
             else
             {
                 Debug.Log("Not in dialogue mode!");
+                return false;
             }
         }
         else
@@ -86,6 +80,8 @@ public class ConversationManager : MonoBehaviour
                 Mode = Constants.Conversation_Mode.Choice;
                 SetCurrentChoices();
             }
+
+            return false;
         }
     }
 
@@ -101,8 +97,9 @@ public class ConversationManager : MonoBehaviour
         NextNode(Constants.Choice.B);
     }
 
-    public void NextNode(Constants.Choice choice)
+    public bool NextNode(Constants.Choice choice)
     {
+        bool flag = false;
 
         if (CurrentConversation.AreChoicesAvailable())
         {
@@ -110,23 +107,23 @@ public class ConversationManager : MonoBehaviour
             {
                 CurrentConversation.NextNode(choice);
                 SetCurrentChoices();
-                StateManager.Instance.AddChoiceFlag(CurrentChoice.Flag);
-                AudioManager.Instance.PlayClick();
+                flag = true;
             }
             else
             {
                 Debug.Log("Not in choice mode!");
+                flag = false;
             }
         }
 
         //do another check to validate the choice tree
         if(CurrentConversation.AreChoicesAvailable() == false)
         {
-            Debug.Log("No choices available! Waiting for next conversation!");
-            UIManager.Instance.AllOff();
-            StateManager.Instance.InConversation = false;
-            ConvoWaitTimer();
+            GameState.Instance.ConversationFinished();
+            flag = false;
         }
+
+        return flag;
 
     }
 
@@ -137,15 +134,13 @@ public class ConversationManager : MonoBehaviour
 
     public void NextConversation()
     {
-
         if (AreConversationsAvailable())
         {
             Index++;
             CurrentConversation = Conversations[Index];
-            UIManager.Instance.SwitchToTextPanel();
+            
             SetCurrentChoices();
             SetCurrentDialogue();
-            StateManager.Instance.InConversation = true;
         }
         else
         {
@@ -196,22 +191,5 @@ public class ConversationManager : MonoBehaviour
         {
             return CurrentConversation.WithCharacter.ToString();
         }
-    }
-
-    public void ConvoWaitTimer()
-    {
-        StartCoroutine(WaitTimer());
-    }
-
-    private IEnumerator WaitTimer()
-    {
-       
-        float WaitTime = Random.Range(ConvoWaitMin, ConvoWaitMax);
-
-        Debug.Log(WaitTime + " seconds until next conversation is available");
-
-        yield return new WaitForSeconds(WaitTime);
-
-        UIManager.Instance.SwitchToPromptPanel();
     }
 }

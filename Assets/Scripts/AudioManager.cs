@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField]
-    private AudioSource Music;
-    [SerializeField]
-    private AudioSource Ambience;
+    public AudioSource Music;
+    public AudioSource Ambience;
+    public AudioSource FXSource;
 
-    [SerializeField]
-    private AudioSource FXSource;
-
-    [SerializeField]
-    private AudioClip Click;
-    [SerializeField]
-    private AudioClip Ledger;
+    public AudioClip Click;
+    public AudioClip Ledger;
+    public AudioClip DoorKnock;
 
     //Singleton vars
     private static AudioManager _instance;
@@ -50,12 +45,20 @@ public class AudioManager : MonoBehaviour
 
     public void PlayLedger()
     {
-        FXSource.PlayOneShot(Ledger);
+        FXSource.clip = Ledger;
+        FXSource.Play();
     }
 
     public void PlayClick()
     {
-        FXSource.PlayOneShot(Click);
+        FXSource.clip = Click;
+        FXSource.Play();
+    }
+
+    public void PlayDoorKnock()
+    {
+        FXSource.clip = DoorKnock;
+        FXSource.Play();
     }
 
     public void StartMusic()

@@ -21,28 +21,21 @@ public class InputManager : MonoBehaviour
     void Update()
     {
 
-        if (StateManager.Instance.Started)
+        if (GameState.Instance.Started)
         {
             if (Input.GetKeyDown(Advance))
             {
-                if (StateManager.Instance.InConversation == false)
-                {
-                    ConversationManager.Instance.NextConversation();
-                }
-                else
-                {
-                    ConversationManager.Instance.NextLine();
-                }
+                GameState.Instance.Next();
             }
 
             if (Input.GetKeyDown(ChoiceA))
             {
-                ConversationManager.Instance.NextNode(Constants.Choice.A);
+                GameState.Instance.NextChoice(Constants.Choice.A);
             }
 
             if (Input.GetKeyDown(ChoiceB))
             {
-                ConversationManager.Instance.NextNode(Constants.Choice.B);
+                GameState.Instance.NextChoice(Constants.Choice.B);
             }
 
             if (Input.GetKeyDown(MainCam))

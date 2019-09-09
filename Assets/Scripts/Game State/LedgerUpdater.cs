@@ -43,15 +43,15 @@ public class LedgerUpdater : MonoBehaviour
     {
         if (Faction == Constants.Faction.Neighborhood)
         {
-            NeighborhoodImage.fillAmount = StateManager.Instance.GetNormalizedValue(Constants.Faction.Neighborhood);
+            NeighborhoodImage.fillAmount = ReputationManager.Instance.GetNormalizedValue(Constants.Faction.Neighborhood);
         }
         else if (Faction == Constants.Faction.Cops)
         {
-            CopsImage.fillAmount = StateManager.Instance.GetNormalizedValue(Constants.Faction.Cops);
+            CopsImage.fillAmount = ReputationManager.Instance.GetNormalizedValue(Constants.Faction.Cops);
         }
         else if (Faction == Constants.Faction.Rivals)
         {
-            RivalsImage.fillAmount = StateManager.Instance.GetNormalizedValue(Constants.Faction.Rivals);
+            RivalsImage.fillAmount = ReputationManager.Instance.GetNormalizedValue(Constants.Faction.Rivals);
         }
     }
 }
