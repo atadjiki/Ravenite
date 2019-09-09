@@ -48,7 +48,6 @@ public class GameState : MonoBehaviour
     {
         Started = true;
         CameraRig.Instance.SwitchToMain();
-        AudioManager.Instance.StartMusic();
         AudioManager.Instance.PlayClick();
         UIManager.Instance.AllOff();
         ConvoWaitTimer();
@@ -96,8 +95,6 @@ public class GameState : MonoBehaviour
     public void Next()
     {
 
-       
-
         if (GameState.Instance.InConversation == false)
         {
             GameState.Instance.StartNextConversation();
@@ -107,6 +104,10 @@ public class GameState : MonoBehaviour
             && GameState.Instance.InConversation && SubtitleManager.Instance.IsWaiting() == false)
         {
             NextLine();
+        }
+        else if(SubtitleManager.Instance.IsWaiting())
+        {
+            Debug.Log("Can't skip, waiting for dialogue!");
         }
     }
 
@@ -120,11 +121,22 @@ public class GameState : MonoBehaviour
 
     public void NextChoice(Constants.Choice Choice)
     {
-        if (ConversationManager.Instance.NextNode(Choice))
+
+        if (SubtitleManager.Instance.IsWaiting())
         {
-            ReputationManager.Instance.AddChoiceFlag(ConversationManager.Instance.CurrentChoice.Flag);
-            AudioManager.Instance.PlayClick();
+            Debug.Log("Can't skip, waiting for choice!");
         }
+        else if(ConversationManager.Instance.Mode == Constants.Conversation_Mode.Choice
+            && InConversation && SubtitleManager.Instance.IsWaiting() == false)
+        {
+            if (ConversationManager.Instance.NextNode(Choice))
+            {
+                ReputationManager.Instance.AddChoiceFlag(ConversationManager.Instance.CurrentChoice.Flag);
+                AudioManager.Instance.PlayClick();
+            }
+        }
+
+        
     }
 
 
@@ -206,6 +218,22 @@ public class GameState : MonoBehaviour
             UIManager.Instance.SwitchToMusicSelectPanel();
         }
         else 
+        {
+            SwitchToMainView();
+        }
+    }
+
+    public void ToggleCredits()
+    {
+       
+        if (InConversation == false && CameraRig.Instance.Credits.enabled == false)
+        {
+            Debug.Log("Toggle credits");
+            CameraRig.Instance.ToggleCreditsCamera();
+            AudioManager.Instance.PlayClick();
+            UIManager.Instance.SwitchToCreditsPanel();
+        }
+        else
         {
             SwitchToMainView();
         }

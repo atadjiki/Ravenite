@@ -14,6 +14,7 @@ public class CameraRig : MonoBehaviour
     public CinemachineVirtualCamera Ledger;
     public CinemachineVirtualCamera Phono;
     public CinemachineVirtualCamera Start;
+    public CinemachineVirtualCamera Credits;
 
     public float zoom_in_speed = 0.5f;
     public float zoom_out_speed = 1f;
@@ -55,6 +56,7 @@ public class CameraRig : MonoBehaviour
         Start.enabled = false;
         Phono.enabled = false;
         Main.enabled = false;
+        Credits.enabled = false;
     }
 
     public void SwitchToMain()
@@ -79,6 +81,12 @@ public class CameraRig : MonoBehaviour
     {
         AllOff();
         Start.enabled = true;
+    }
+
+    public void SwitchToCredits()
+    {
+        AllOff();
+        Credits.enabled = true;
     }
 
     public void DisableAll()
@@ -109,6 +117,18 @@ public class CameraRig : MonoBehaviour
         else
         {
             SwitchToPhono();
+        }
+    }
+
+    public void ToggleCreditsCamera()
+    {
+        if (Credits.enabled)
+        {
+            SwitchToMain();
+        }
+        else
+        {
+            SwitchToCredits();
         }
     }
 
@@ -166,36 +186,5 @@ public class CameraRig : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
     }
-
-    //private void Update()
-    //{
-    //    if (Main.enabled)
-    //    {
-    //        if (GameState.Instance.InConversation)
-    //        {
-    //            UIManager.Instance.SwitchToTextPanel();
-    //        }
-    //        else if (GameState.Instance.WaitTimerStarted)
-    //        {
-    //            UIManager.Instance.AllOff();
-    //        }
-    //        else
-    //        {
-    //            UIManager.Instance.SwitchToPromptPanel();
-    //        }
-    //    }
-    //    else if (Start.enabled)
-    //    {
-    //        UIManager.Instance.SwitchToStartPanel();
-    //    }
-    //    else if (Phono.enabled)
-    //    {
-    //        UIManager.Instance.SwitchToMusicSelectPanel();
-    //    }
-    //    else if (Ledger.enabled)
-    //    {
-    //        UIManager.Instance.AllOff();
-    //    }
-    //}
 
 }
