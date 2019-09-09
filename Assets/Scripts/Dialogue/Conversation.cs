@@ -9,42 +9,49 @@ public class Conversation : MonoBehaviour
     public Constants.Character_Names WithCharacter;
 
     //Dialogue variables
-    private Dialogue[] Dialogue;
-    private Dialogue CurrentDialogue;
-    public int Index = 0;
-    private int Length;
+    private DialogueSet[] DialogueSets; //collection of arrays containing lines of dialogue
+    public DialogueSet CurrentDialogueSet; //the current dialogue array
+    private Dialogue CurrentDialogueLine; //the current index within the current dialogue array
+
+    public int SetIndex = 0; //index of current set
+    public int LineIndex = 0; //index of current line in current set
 
     //Choice making variables
-    private Choice Root;
+    private Choice CurrentRoot;
     private Choice CurrentChoice;
 
 
 
     private void Awake()
     {
+
+        DialogueSets = GetComponentsInChildren<DialogueSet>();
+
         //setup dialogue stuff
-        Dialogue = GetComponentsInChildren<Dialogue>();
-        Length = Dialogue.Length;
-
-        Debug.Log("Registered " + Dialogue.Length + " lines of dialogue in conversation");
-
-        if (Length > 0)
+        if(DialogueSets.Length > 0)
         {
-            CurrentDialogue = Dialogue[Index];
+            CurrentDialogueSet = DialogueSets[SetIndex];
+        }
+        
+        Debug.Log("Registered " + CurrentDialogueSet.Dialogue.Length + " lines of dialogue in conversation");
+
+        if (CurrentDialogueSet.Dialogue.Length > 0)
+        {
+            CurrentDialogueLine = CurrentDialogueSet.Dialogue[LineIndex];
         }
 
         //choice tree
-        Root = GetComponentInChildren<Choice>();
-        CurrentChoice = Root;
+        CurrentRoot = GetComponentInChildren<Choice>();
+        CurrentChoice = CurrentRoot;
     }
 
     public void NextLine()
     {
 
-        if (Index < Length - 1)
+        if (LineIndex <CurrentDialogueSet.Dialogue.Length - 1)
         {
-            Index++;
-            CurrentDialogue = Dialogue[Index];
+            LineIndex++;
+            CurrentDialogueLine = CurrentDialogueSet.Dialogue[LineIndex];
         }
 
         return;
@@ -53,7 +60,7 @@ public class Conversation : MonoBehaviour
 
     public Dialogue GetCurrentDialogue()
     {
-        return CurrentDialogue;
+        return CurrentDialogueLine;
     }
 
     public Choice GetCurrentChoice()
@@ -80,7 +87,7 @@ public class Conversation : MonoBehaviour
 
     public bool IsDialogueAvailable()
     {
-        if(Index < Length-1)
+        if(LineIndex < CurrentDialogueSet.Dialogue.Length-1)
         {
             return true;
         }
