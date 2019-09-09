@@ -5,13 +5,13 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
 
-    public KeyCode Advance = KeyCode.Space;
-    public KeyCode ChoiceA = KeyCode.A;
-    public KeyCode ChoiceB = KeyCode.B;
-    public KeyCode MainCam = KeyCode.Tab;
-    public KeyCode LedgerView = KeyCode.L;
-    public KeyCode MusicView = KeyCode.M;
-    public KeyCode Zoom = KeyCode.LeftShift;
+    public static KeyCode Advance = KeyCode.Space;
+    public static KeyCode ChoiceA = KeyCode.A;
+    public static KeyCode ChoiceB = KeyCode.B;
+    public static KeyCode MainCam = KeyCode.Tab;
+    public static KeyCode LedgerView = KeyCode.L;
+    public static KeyCode MusicView = KeyCode.M;
+    public static KeyCode Zoom = KeyCode.LeftShift;
 
     // Update is called once per frame
     void Update()

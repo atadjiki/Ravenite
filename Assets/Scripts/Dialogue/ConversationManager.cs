@@ -172,34 +172,49 @@ public class ConversationManager : MonoBehaviour
 
     private void SetCurrentDialogue()
     {
-        SubtitleManager.Instance.SubtitleMode();
 
         CurrentDialogue = CurrentConversation.GetCurrentDialogue();
 
         if(CurrentDialogue == null) { return;  }
 
-        //Debug.Log(GetSpeakingName() + ": " + CurrentDialogue.Text);
-        SubtitleManager.Instance.SetSegmentedText(Constants.Text_Type.Dialogue, GetSpeakingName() + ": ", CurrentDialogue.Text);
+        SubtitleManager.Instance.SetText(GetSpeakingName() + ": " + CurrentDialogue.Text);
     }
 
     private void SetCurrentChoices()
     {
-        SubtitleManager.Instance.ChoiceMode();
 
         CurrentChoice = CurrentConversation.GetCurrentChoice();
 
-        if(CurrentChoice == null) { return;  }
+        string result = "";
+        string ChoiceAControl;
+        string ChoiceBControl;
 
-        if(CurrentChoice.A != null)
+        if (CurrentChoice == null) { return;  }
+
+        if(CurrentChoice.A != null && CurrentChoice.B == null)
         {
-           //Debug.Log("New choice: " + CurrentChoice.A.Flag.ToString());
-           SubtitleManager.Instance.SetText(Constants.Text_Type.ChoiceA, CurrentChoice.A.Text);
+           ChoiceAControl = InputManager.ChoiceA.ToString();
+           result += ChoiceAControl + ": " + CurrentChoice.A.Text;
+            
         }
-        if (CurrentChoice.B != null)
+        else if (CurrentChoice.A == null && CurrentChoice.B != null)
         {
-            //Debug.Log("New choice: " + CurrentChoice.B.Flag.ToString());
-            SubtitleManager.Instance.SetText(Constants.Text_Type.ChoiceB, CurrentChoice.B.Text);
+            ChoiceBControl = InputManager.ChoiceB.ToString();
+            result += ChoiceBControl + ": " + CurrentChoice.B.Text;
         }
+        else if(CurrentChoice.A != null && CurrentChoice.B != null)
+        {
+            ChoiceAControl = InputManager.ChoiceA.ToString();
+            ChoiceBControl = InputManager.ChoiceB.ToString();
+
+            result += ChoiceAControl + ": " + CurrentChoice.A.Text;
+            result += "\n\n";
+            result += ChoiceBControl + ": " + CurrentChoice.B.Text;
+        }
+
+        SubtitleManager.Instance.SetText(result);
+
+
     }
 
     public string GetSpeakingName()
