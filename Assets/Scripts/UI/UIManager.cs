@@ -42,14 +42,8 @@ public class UIManager : MonoBehaviour
     public void SwitchToStartPanel() 
     {
         AllOff();
-        StartCoroutine(WaitStartPanel());
-        
-    }
-
-    IEnumerator WaitStartPanel()
-    {
-        yield return new WaitForSeconds(WaitTime);
         Start_Panel.SetActive(true);
+
     }
 
     public void SwitchToTextPanel()
@@ -103,16 +97,18 @@ public class UIManager : MonoBehaviour
 
         PreviousButton.SetActive(GameState.Instance.IsPreviousAvailable());
         NextButton.SetActive(GameState.Instance.IsNextAvailable());
-        SongLabel.SetActive(GameState.Instance.IsMusicPlaying());
-        SongTitle.text = GameState.Instance.FetchCurrentSong();
+        //SongLabel.SetActive(GameState.Instance.IsMusicPlaying());
+        
 
         if (GameState.Instance.IsMusicPlaying())
         {
             ToggleText.text = "Music On";
+            SongTitle.text = GameState.Instance.FetchCurrentSong();
         }
         else
         {
             ToggleText.text = "Music Off";
+            SongTitle.text = "None";
         }
 
         

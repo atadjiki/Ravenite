@@ -77,8 +77,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117942419954082257}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.6, y: 2.8, z: -1.2}
+  m_LocalRotation: {x: 0.06287345, y: 0.7032211, z: -0.063057594, w: 0.7053728}
+  m_LocalPosition: {x: -1.062, y: 2.49, z: 0.236}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9109599348380543222}
@@ -100,7 +100,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 39.729996
+  m_FocalLength: 24.077858
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -109,7 +109,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 33.612705
+  field of view: 52.98179
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -529,7 +529,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3192481302518999642}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
@@ -538,7 +538,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 50
+  m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -771,14 +771,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4805306238874890429}
-  m_LocalRotation: {x: -0.023353709, y: 0.5847152, z: 0.016843228, w: 0.81072754}
-  m_LocalPosition: {x: -0.15, y: 2.44, z: -0.89}
+  m_LocalRotation: {x: 0.13252497, y: 0.42072123, z: -0.062276788, w: 0.8952946}
+  m_LocalPosition: {x: 1.28, y: 2.68, z: -0.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4805306239794367797}
   m_Father: {fileID: 9109599348380543222}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -3.3, y: 71.6, z: 0}
+  m_LocalEulerAnglesHint: {x: 16.84, y: 50.34, z: 0}
 --- !u!114 &4805306238874890419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_VerticalAxis:
-    Value: 0
+    Value: 10
     m_MaxSpeed: 50
     m_AccelTime: 0.1
     m_DecelTime: 0.1
@@ -1194,7 +1194,7 @@ MonoBehaviour:
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_HorizontalAxis:
-    Value: 140
+    Value: 90
     m_MaxSpeed: 50
     m_AccelTime: 0.1
     m_DecelTime: 0.1
@@ -2462,6 +2462,7 @@ MonoBehaviour:
   Ledger: {fileID: 4805306239602981412}
   Phono: {fileID: 8520624974096420234}
   Start: {fileID: 4805306238874890419}
+  Credits: {fileID: 6414232805268022720}
   zoom_in_speed: 3
   zoom_out_speed: 3
   fov_max: 20
