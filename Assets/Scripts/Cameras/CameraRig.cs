@@ -138,4 +138,9 @@ public class CameraRig : MonoBehaviour
         }
     }
 
+    public void TurnOffCameraAiming()
+    {
+        
+    }
+
 }

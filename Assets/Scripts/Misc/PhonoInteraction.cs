@@ -8,6 +8,6 @@ public class PhonoInteraction : MonoBehaviour
     {
         CameraRig.Instance.TogglePhonoCamera();
         UIManager.Instance.ToggleMusicSelectUI();
-        //AudioManager.Instance.StartMusic();
+        AudioManager.Instance.PlayClick();
     }
 }
