@@ -6,7 +6,7 @@
     //list of names
     public enum Character_Names
     {
-        A,B,C, Player
+        Character1, Character2, Character3, Player
     }
 
     public enum Dialogue_Speaking
@@ -17,11 +17,6 @@
     public enum Choice
     {
         A,B
-    }
-
-    public enum Text_Type
-    {
-        Dialogue, ChoiceA, ChoiceB
     }
 
     public enum Conversation_Mode

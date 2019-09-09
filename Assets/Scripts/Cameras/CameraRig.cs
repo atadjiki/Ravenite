@@ -23,7 +23,7 @@ public class CameraRig : MonoBehaviour
 
     public float LerpTime = 2;
     public float Step = 0.1f;
-    public float Current_Step = 0;
+   
     public float Horizontal = 140;
     public float Vertical = 0;
 
@@ -168,11 +168,16 @@ public class CameraRig : MonoBehaviour
         {
             StartCoroutine(LerpLookAt());
         }
+       
     }
 
     IEnumerator LerpLookAt()
     {
-        while(Current_Step < LerpTime)
+
+        float Current_Step = 0;
+
+        Debug.Log("Looking at character");
+        while (Current_Step < LerpTime)
         {
 
             Main.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.Value =

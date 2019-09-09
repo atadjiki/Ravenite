@@ -148,7 +148,14 @@ public class ConversationManager : MonoBehaviour
 
     public bool AreConversationsAvailable()
     {
-        return Index == -1 || Index + 1 < Conversations.Length - 1;
+        if (Index < Conversations.Length - 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public void NextConversation()
