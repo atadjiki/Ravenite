@@ -232,12 +232,25 @@ public class GameState : MonoBehaviour
         }
     }
 
+    public void TogglePosterMode()
+    {
+        if(InConversation == false && CameraRig.Instance.Poster.enabled == false)
+        {
+            CameraRig.Instance.SwitchToPoster();
+            AudioManager.Instance.PlayClick();
+            UIManager.Instance.AllOff();
+        }
+        else
+        {
+            SwitchToMainView();
+        }
+    }
+
     public void ToggleCredits()
     {
 
         if (InConversation == false && CameraRig.Instance.Credits.enabled == false)
         {
-            Debug.Log("Toggle credits");
             CameraRig.Instance.ToggleCreditsCamera();
             AudioManager.Instance.PlayClick();
             UIManager.Instance.SwitchToCreditsPanel();

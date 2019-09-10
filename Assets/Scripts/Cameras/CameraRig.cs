@@ -15,6 +15,7 @@ public class CameraRig : MonoBehaviour
     public CinemachineVirtualCamera Phono;
     public CinemachineVirtualCamera Start;
     public CinemachineVirtualCamera Credits;
+    public CinemachineVirtualCamera Poster;
 
     public float zoom_in_speed = 0.5f;
     public float zoom_out_speed = 1f;
@@ -45,7 +46,7 @@ public class CameraRig : MonoBehaviour
     private void Build()
     {
         Main.m_Lens.FieldOfView = fov_min;
-        DisableAll();
+        AllOff();
         SwitchToStart();
     }
 
@@ -56,6 +57,7 @@ public class CameraRig : MonoBehaviour
         Phono.enabled = false;
         Main.enabled = false;
         Credits.enabled = false;
+        Poster.enabled = false;
     }
 
     public void SwitchToMain()
@@ -88,11 +90,10 @@ public class CameraRig : MonoBehaviour
         Credits.enabled = true;
     }
 
-    public void DisableAll()
+    public void SwitchToPoster()
     {
-        Main.enabled = false;
-        Ledger.enabled = false;
-        Start.enabled = false;
+        AllOff();
+        Poster.enabled = true;
     }
 
     public void ToggleLedgerCamera()
