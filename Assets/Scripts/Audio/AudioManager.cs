@@ -122,7 +122,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayCarriage()
     {
-        FXSource.clip = Typewriter;
+        FXSource.clip = Carriage;
         FXSource.Play();
     }
 

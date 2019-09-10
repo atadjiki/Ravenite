@@ -81,6 +81,7 @@ public class SubtitleManager : MonoBehaviour
             yield return new WaitForSeconds(wait_time);
         }
 
+        //AudioManager.Instance.PlayCarriage();
         waiting = false;
         
     }
