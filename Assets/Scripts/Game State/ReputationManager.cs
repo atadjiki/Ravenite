@@ -203,11 +203,11 @@ public class ReputationManager : MonoBehaviour
         Debug.Log("Flags\n" + flags);
     }
 
-    public void AddChoiceFlag(Flags.Choices Flag)
+    public System.Tuple<Constants.Faction, Constants.Modifier>AddChoiceFlag(Flags.Choices Flag)
     {
         Choices.Add(Flag);
         Debug.Log("Flag added: " + Flag.ToString());
-        ProcessFlag(Flag);
+        return ProcessFlag(Flag);
     }
 
     public float GetNormalizedValue(Constants.Faction Faction)
@@ -246,34 +246,44 @@ public class ReputationManager : MonoBehaviour
         }
     }
 
-    public void ProcessFlag(Flags.Choices Flag)
+    public System.Tuple<Constants.Faction, Constants.Modifier> ProcessFlag(Flags.Choices Flag)
     {
+
+        System.Tuple<Constants.Faction, Constants.Modifier> FlagInfo;
+
+
         if (Flag == Flags.Choices.TestChoiceA)
         {
-            //can add snowball logic here
-            SetState(Constants.Faction.Neighborhood, Constants.Modifier.Decrement);
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Neighborhood, Constants.Modifier.Decrement);
         }
         else if (Flag == Flags.Choices.TestChoiceB)
         {
-
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Neighborhood, Constants.Modifier.Decrement);
         }
         else if (Flag == Flags.Choices.TestChoiceA1)
         {
-            SetState(Constants.Faction.Cops, Constants.Modifier.Increment);
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Neighborhood, Constants.Modifier.Decrement);
         }
         else if (Flag == Flags.Choices.TestChoiceA2)
         {
-            SetState(Constants.Faction.Rivals, Constants.Modifier.Decrement);
-            SetState(Constants.Faction.Cops, Constants.Modifier.Decrement);
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Neighborhood, Constants.Modifier.Decrement);
         }
         else if (Flag == Flags.Choices.TestChoiceB1)
         {
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Neighborhood, Constants.Modifier.Decrement);
 
-           
         }
         else if (Flag == Flags.Choices.TestChoiceB2)
         {
-
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Neighborhood, Constants.Modifier.Decrement);
         }
+        else
+        {
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.None, Constants.Modifier.None);
+        }
+
+        SetState(FlagInfo.Item1, FlagInfo.Item2);
+
+        return FlagInfo;
     }
 }

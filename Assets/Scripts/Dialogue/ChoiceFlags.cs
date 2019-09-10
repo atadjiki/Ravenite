@@ -2,6 +2,6 @@
 {
     public enum Choices
     {
-        TestChoiceA, TestChoiceB, TestChoiceA1, TestChoiceA2, TestChoiceB1, TestChoiceB2
+        TestChoiceA, TestChoiceB, TestChoiceA1, TestChoiceA2, TestChoiceB1, TestChoiceB2, None
     }
 }

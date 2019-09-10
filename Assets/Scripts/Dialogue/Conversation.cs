@@ -17,6 +17,10 @@ public class Conversation : MonoBehaviour
     public int LineIndex = 0; //index of current line in current set
     public int TreeIndex = 0;
 
+    public Flags.Choices FinalFlag = Flags.Choices.None;
+    public Constants.Faction FinalFaction = Constants.Faction.Player;
+    public Constants.Modifier FinalModifier = Constants.Modifier.None;
+
     private ChoiceTree[] ChoiceTrees;
     
 

@@ -59,6 +59,8 @@ public class GameState : MonoBehaviour
         InConversation = false;
         DespawnCharacterModel();
         AudioManager.Instance.PlayDoorClose();
+        ConversationManager.Instance.StashLatestConversation();
+        LedgerUpdater.Instance.SetConversationNotes();
 
         if (ConversationManager.Instance.AreConversationsAvailable())
         {
@@ -105,14 +107,14 @@ public class GameState : MonoBehaviour
     public void Next()
     {
 
-        if (InConversation == false && WaitTimerStarted == false)
+        if (InConversation == false && WaitTimerStarted == false && CameraRig.Instance.Main.enabled)
         {
             StartNextConversation();
             UIManager.Instance.SwitchToTextPanel();
             AudioManager.Instance.PlayClick();
         }
         else if(ConversationManager.Instance.Mode == Constants.Conversation_Mode.Dialogue
-            && InConversation && SubtitleManager.Instance.IsWaiting() == false)
+            && InConversation && SubtitleManager.Instance.IsWaiting() == false && CameraRig.Instance.Main.enabled)
         {
             ConversationManager.Instance.NextLine();
         }
@@ -130,12 +132,15 @@ public class GameState : MonoBehaviour
             Debug.Log("Can't skip, waiting for choice!");
         }
         else if(ConversationManager.Instance.Mode == Constants.Conversation_Mode.Choice
-            && InConversation && SubtitleManager.Instance.IsWaiting() == false)
+            && InConversation && SubtitleManager.Instance.IsWaiting() == false && CameraRig.Instance.Main.enabled)
         {
             if (ConversationManager.Instance.NextNode(Choice))
             {
-                ReputationManager.Instance.AddChoiceFlag(ConversationManager.Instance.CurrentChoice.Flag);
-                
+                System.Tuple<Constants.Faction, Constants.Modifier> result = ReputationManager.Instance.AddChoiceFlag(ConversationManager.Instance.CurrentChoice.Flag);
+
+                ConversationManager.Instance.CurrentConversation.FinalFaction = result.Item1;
+                ConversationManager.Instance.CurrentConversation.FinalModifier = result.Item2;
+                ConversationManager.Instance.CurrentConversation.FinalFlag = ConversationManager.Instance.CurrentChoice.Flag;
             }
 
             AudioManager.Instance.PlayClick();

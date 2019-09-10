@@ -13,6 +13,8 @@ public class ConversationManager : MonoBehaviour
 
     public Constants.Conversation_Mode Mode;
 
+    public List<Conversation> PreviousConversations;
+
     //Singleton vars
     private static ConversationManager _instance;
 
@@ -35,11 +37,12 @@ public class ConversationManager : MonoBehaviour
 
     private void Build()
     {
-
         Conversations = GetComponentsInChildren<Conversation>();
         Index = -1;
 
         Debug.Log("Registered " + Conversations.Length + " conversations");
+
+        PreviousConversations = new List<Conversation>();
     }
 
     public bool NextLine()
@@ -106,7 +109,6 @@ public class ConversationManager : MonoBehaviour
         if(CurrentConversation.AreChoicesAvailable() == false && CurrentConversation.AreDialogueSetsAvailable() == false)
         {
             GameState.Instance.ConversationFinished();
-            NextConversation();
             flag = false;
         }
         else if (CurrentConversation.AreChoicesAvailable() == false && CurrentConversation.AreDialogueSetsAvailable() == true)
@@ -217,6 +219,14 @@ public class ConversationManager : MonoBehaviour
         else
         {
             return CurrentConversation.WithCharacter.ToString();
+        }
+    }
+
+    public void StashLatestConversation()
+    {
+        if(PreviousConversations.Contains(CurrentConversation) == false)
+        {
+            PreviousConversations.Add(CurrentConversation);
         }
     }
 }
