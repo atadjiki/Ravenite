@@ -2,6 +2,19 @@
 {
     public enum Choices
     {
-        TestChoiceA, TestChoiceB, TestChoiceA1, TestChoiceA2, TestChoiceB1, TestChoiceB2, None
+        //Internal Politics
+        HeardWhatElizaHadToSay, ToldElizaYoureBusy, GaveElizaChance, ToldElizaNo,
+
+        //Neighborhood Politics
+        ManipulatedIsaac, RejectedIsaac, GaveConsoloation, GaveNothing,
+
+        //Police Politics
+        HelpThatcher, RejectThatcher,
+
+        //Missions 
+        Mission_MayorsCooperation, Mission_StealGinRecipe, Mission_RigElections, Mission_ExtortRailManager, 
+
+
+        None
     }
 }

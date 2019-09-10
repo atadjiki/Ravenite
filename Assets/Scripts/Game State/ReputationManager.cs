@@ -102,36 +102,6 @@ public class ReputationManager : MonoBehaviour
         }
     }
 
-    public void SetState(Constants.Faction type, int value)
-    {
-        if(value > value_range || value < (-1 * value_range))
-        {
-            Debug.Log("Value not in range!");
-            return;
-        }
-
-        if(type == Constants.Faction.Cops)
-        {
-            Cop_State = value;
-            Previous_Cops = value;
-            LedgerUpdater.Instance.SetFill(Constants.Faction.Cops);
-
-        }
-        else if(type == Constants.Faction.Neighborhood)
-        {
-            Neighborhood_State = value;
-            Previous_Neighborhood = value;
-            LedgerUpdater.Instance.SetFill(Constants.Faction.Neighborhood);
-
-        }
-        else if(type == Constants.Faction.Rivals)
-        {
-            Rivals_State = value;
-            Previous_Rivals = value;
-            LedgerUpdater.Instance.SetFill(Constants.Faction.Rivals);
-        }
-    }
-
     public void SetState(Constants.Faction type, Constants.Modifier action)
     {
 
@@ -254,31 +224,77 @@ public class ReputationManager : MonoBehaviour
         System.Tuple<Constants.Faction, Constants.Modifier> FlagInfo;
 
 
-        if (Flag == Flags.Choices.TestChoiceA)
+        if (Flag == Flags.Choices.HeardWhatElizaHadToSay)
+        {
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Neighborhood, Constants.Modifier.Increment);
+        }
+
+        else if (Flag == Flags.Choices.ToldElizaYoureBusy)
         {
             FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Neighborhood, Constants.Modifier.Decrement);
         }
-        else if (Flag == Flags.Choices.TestChoiceB)
+
+        else if (Flag == Flags.Choices.GaveElizaChance)
         {
-            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Neighborhood, Constants.Modifier.Decrement);
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Rivals, Constants.Modifier.Decrement);
         }
-        else if (Flag == Flags.Choices.TestChoiceA1)
+
+        else if (Flag == Flags.Choices.ToldElizaNo)
         {
-            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Neighborhood, Constants.Modifier.Decrement);
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Rivals, Constants.Modifier.Increment);
         }
-        else if (Flag == Flags.Choices.TestChoiceA2)
-        {
-            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Neighborhood, Constants.Modifier.Decrement);
-        }
-        else if (Flag == Flags.Choices.TestChoiceB1)
+
+        else if (Flag == Flags.Choices.ManipulatedIsaac)
         {
             FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Neighborhood, Constants.Modifier.Decrement);
 
         }
-        else if (Flag == Flags.Choices.TestChoiceB2)
+
+        else if (Flag == Flags.Choices.RejectedIsaac)
         {
-            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Neighborhood, Constants.Modifier.Decrement);
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Neighborhood, Constants.Modifier.Increment);
         }
+
+        else if (Flag == Flags.Choices.GaveConsoloation)
+        {
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Neighborhood, Constants.Modifier.Increment);
+        }
+
+        else if (Flag == Flags.Choices.GaveNothing)
+        {
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Rivals, Constants.Modifier.Increment);
+        }
+
+        else if (Flag == Flags.Choices.HelpThatcher)
+        {
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Cops, Constants.Modifier.Increment);
+        }
+
+        else if (Flag == Flags.Choices.RejectThatcher)
+        {
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Cops, Constants.Modifier.Decrement);
+        }
+
+        else if (Flag == Flags.Choices.Mission_MayorsCooperation)
+        {
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Rivals, Constants.Modifier.Decrement);
+        }
+
+        else if (Flag == Flags.Choices.Mission_StealGinRecipe)
+        {
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Rivals, Constants.Modifier.Decrement);
+        }
+
+        else if (Flag == Flags.Choices.Mission_RigElections)
+        {
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Rivals, Constants.Modifier.Decrement);
+        }
+
+        else if (Flag == Flags.Choices.Mission_ExtortRailManager)
+        {
+            FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.Rivals, Constants.Modifier.Decrement);
+        }
+
         else
         {
             FlagInfo = new System.Tuple<Constants.Faction, Constants.Modifier>(Constants.Faction.None, Constants.Modifier.None);

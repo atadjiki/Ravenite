@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &253923898852434270
+--- !u!1 &195691855575811157
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3663500418710367766}
-  - component: {fileID: 4327263014739142047}
+  - component: {fileID: 5846315966575837181}
+  - component: {fileID: 4259175835900358849}
   m_Layer: 0
-  m_Name: I have been patient thus far but press the matter and I shall cease to be.
-    Leave - at once.
+  m_Name: 'I comprehend your meaning, ma''am. It shall be taken care of. '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3663500418710367766
+--- !u!4 &5846315966575837181
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253923898852434270}
+  m_GameObject: {fileID: 195691855575811157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 414511771716680097}
-  m_RootOrder: 0
+  m_Father: {fileID: 7764932761592525491}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4327263014739142047
+--- !u!114 &4259175835900358849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253923898852434270}
+  m_GameObject: {fileID: 195691855575811157}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: I have been patient thus far but press the matter and I shall cease to be.
-    Leave - at once.
-  Next: {fileID: 5057315585987217791}
-  Speaking: 1
---- !u!1 &348160729403881898
+  Text: 'I comprehend your meaning, ma''am. It shall be taken care of. '
+  Next: {fileID: 6109828618181166510}
+  Speaking: 0
+--- !u!1 &882578767212793661
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,47 +54,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 414511771716680097}
-  - component: {fileID: 6582361524242346229}
+  - component: {fileID: 7764932761592525491}
+  - component: {fileID: 4100667561391988031}
   m_Layer: 0
-  m_Name: 'I have told you the truth. She shall never love you. '
+  m_Name: We have had a devil of a time getting the rail manager of the Union Pacific
+    depot to cooperative in delivering our shipments.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &414511771716680097
+--- !u!4 &7764932761592525491
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348160729403881898}
+  m_GameObject: {fileID: 882578767212793661}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3663500418710367766}
-  - {fileID: 5171136970958128411}
-  m_Father: {fileID: 6133937679426559517}
-  m_RootOrder: 4
+  - {fileID: 1468085998884396440}
+  - {fileID: 3616911585868398760}
+  - {fileID: 5846315966575837181}
+  - {fileID: 1093924421002454973}
+  m_Father: {fileID: 8910186709119561639}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6582361524242346229
+--- !u!114 &4100667561391988031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 348160729403881898}
+  m_GameObject: {fileID: 882578767212793661}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: 'I have told you the truth. She shall never love you. '
-  Next: {fileID: 4327263014739142047}
+  Text: We have had a devil of a time getting the rail manager of the Union Pacific
+    depot to cooperative in delivering our shipments.
+  Next: {fileID: 5075933733499055980}
   Speaking: 1
---- !u!1 &1051886208540680989
+--- !u!1 &1431277119611499190
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,45 +106,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2408003921271224290}
-  - component: {fileID: 4076334749082871000}
+  - component: {fileID: 3141930763599844910}
+  - component: {fileID: 7332848601275044612}
   m_Layer: 0
-  m_Name: We have an informant in our midst.
+  m_Name: Please, I beg you. This has become my family's home. We do not wish to leave
+    it.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2408003921271224290
+--- !u!4 &3141930763599844910
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051886208540680989}
+  m_GameObject: {fileID: 1431277119611499190}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2647288846731173949}
+  m_Father: {fileID: 7678631955001775278}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4076334749082871000
+--- !u!114 &7332848601275044612
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051886208540680989}
+  m_GameObject: {fileID: 1431277119611499190}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: We have an informant in our midst.
-  Next: {fileID: 3137435832188275707}
-  Speaking: 1
---- !u!1 &1341183813213685797
+  Text: Please, I beg you. This has become my family's home. We do not wish to leave
+    it.
+  Next: {fileID: 3366884294650031902}
+  Speaking: 0
+--- !u!1 &1859241103305904553
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,55 +154,199 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3375593279224799369}
-  - component: {fileID: 484517165039536441}
+  - component: {fileID: 525732267364392387}
+  - component: {fileID: 4516620953489926501}
   m_Layer: 0
-  m_Name: Conversation_Community_Politics
+  m_Name: I see. You wish for me to stop it.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3375593279224799369
+--- !u!4 &525732267364392387
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341183813213685797}
+  m_GameObject: {fileID: 1859241103305904553}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2432319428773945052}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4516620953489926501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859241103305904553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: I see. You wish for me to stop it.
+  Next: {fileID: 4337843648015404911}
+  Speaking: 1
+--- !u!1 &2580614439765806720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4356870482409973107}
+  - component: {fileID: 7277942566357536603}
+  m_Layer: 0
+  m_Name: 'Skew the ballots, bribe voters - do what you have to. Buy me the city council
+    and I''ll extinguish the legislation. '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4356870482409973107
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2580614439765806720}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2856277192486570358}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7277942566357536603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2580614439765806720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: 'Skew the ballots, bribe voters - do what you have to. Buy me the city council
+    and I''ll extinguish the legislation. '
+  Next: {fileID: 4283999558893090672}
+  Speaking: 1
+--- !u!1 &2801541713378527252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2856277192486570358}
+  - component: {fileID: 8140215234282537637}
+  m_Layer: 0
+  m_Name: 'As you know, next week is the city council election. We know that Stuart
+    Box is likely to win, but he''s bad for business. '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2856277192486570358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2801541713378527252}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4356870482409973107}
+  - {fileID: 7637122744029970781}
+  m_Father: {fileID: 8910186709119561639}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8140215234282537637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2801541713378527252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: 'As you know, next week is the city council election. We know that Stuart
+    Box is likely to win, but he''s bad for business. '
+  Next: {fileID: 7277942566357536603}
+  Speaking: 1
+--- !u!1 &2931280838093135071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7958659790022937978}
+  - component: {fileID: 2919003538347755236}
+  m_Layer: 0
+  m_Name: Conversation_Police_Politics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7958659790022937978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931280838093135071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6649704103922843733}
-  - {fileID: 381975828871449581}
-  - {fileID: 2647288846731173949}
-  - {fileID: 6133937679426559517}
+  - {fileID: 2432319428773945052}
+  - {fileID: 6599209330161426292}
+  - {fileID: 8910186709119561639}
+  - {fileID: 7678631955001775278}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &484517165039536441
+--- !u!114 &2919003538347755236
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341183813213685797}
+  m_GameObject: {fileID: 2931280838093135071}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d94495607632c74a9848081f6f18afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WithCharacter: 1
+  WithCharacter: 2
   FinalFlag: 6
   FinalFaction: 3
   FinalModifier: 2
-  Summary: Isaac wants to break into the Raven bootlegging business to impress Eliza.
-    He wants to make enough money to ask for her hand in marriage. Mrs. Welch knows
-    her niece, Eliza, isn't interested.
-  Goal: Let the player decide if they will manipulate Isaac or not.
-  CurrentNode: {fileID: 9038196460305121830}
---- !u!1 &2105717960213605045
+  Summary: Stacy tells Mrs. Raven there's a problem in the city and asks for the mob's
+    help to solve it in exchange for allowing them cover for shipments to the Union
+    Pacific Depot.
+  Goal: Let the player decide whether they should help Stacy or not.
+  CurrentNode: {fileID: 3992707376742142389}
+--- !u!1 &3615479671976683051
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,384 +354,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2039344333421127612}
-  - component: {fileID: 2104093908720503762}
+  - component: {fileID: 7678631955001775278}
+  - component: {fileID: 1029240126384538416}
   m_Layer: 0
-  m_Name: You are generous. Thank you - I shall not fail you - or Eliza
+  m_Name: I'm afraid your request is impossible. The Women's Temperance Association
+    are among some of my closest friends.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2039344333421127612
+--- !u!4 &7678631955001775278
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105717960213605045}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2647288846731173949}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2104093908720503762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105717960213605045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: You are generous. Thank you - I shall not fail you - or Eliza
-  Next: {fileID: 0}
-  Speaking: 0
---- !u!1 &2985757163710762301
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8832248444398390402}
-  - component: {fileID: 7991553363978316537}
-  m_Layer: 0
-  m_Name: Uh, no, not exactly ma'am - I mean, Mrs. Raven. It's no secret that i'm
-    ardently in love with your niece, Eliza Kirkwood.
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8832248444398390402
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2985757163710762301}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6649704103922843733}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7991553363978316537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2985757163710762301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: Uh, no, not exactly ma'am - I mean, Mrs. Raven. It's no secret that i'm ardently
-    in love with your niece, Eliza Kirkwood.
-  Next: {fileID: 4537722567826370940}
-  Speaking: 0
---- !u!1 &3341213893503991518
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2866720894506137892}
-  - component: {fileID: 6213820549173328265}
-  m_Layer: 0
-  m_Name: I mean to change my position. I wish to give your family my services and
-    earn my way within your family.
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2866720894506137892
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3341213893503991518}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6649704103922843733}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6213820549173328265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3341213893503991518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: I mean to change my position. I wish to give your family my services and earn
-    my way within your family.
-  Next: {fileID: 2862353625008596744}
-  Speaking: 0
---- !u!1 &3454358189709978153
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4341976022462739920}
-  - component: {fileID: 2862353625008596744}
-  m_Layer: 0
-  m_Name: I mean to work for Eliza's hand.
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4341976022462739920
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3454358189709978153}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6649704103922843733}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2862353625008596744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3454358189709978153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: I mean to work for Eliza's hand.
-  Next: {fileID: 4326916264212494794}
-  Speaking: 0
---- !u!1 &4261738975932190593
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8837318950476452792}
-  - component: {fileID: 5360769141363002242}
-  m_Layer: 0
-  m_Name: What is your point, Cantwell?
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8837318950476452792
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4261738975932190593}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6649704103922843733}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5360769141363002242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4261738975932190593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: What is your point, Cantwell?
-  Next: {fileID: 6213820549173328265}
-  Speaking: 1
---- !u!1 &4621842481414948806
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1672450806218358633}
-  - component: {fileID: 7267649768952023887}
-  m_Layer: 0
-  m_Name: This is...incredibly generous. I shall not press the issue now but I shall
-    not give up. I shall win her hand.
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1672450806218358633
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4621842481414948806}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3375103780531902164}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7267649768952023887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4621842481414948806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: This is...incredibly generous. I shall not press the issue now but I shall
-    not give up. I shall win her hand.
-  Next: {fileID: 0}
-  Speaking: 0
---- !u!1 &4860260761018572569
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3508387726028810865}
-  - component: {fileID: 3137435832188275707}
-  m_Layer: 0
-  m_Name: You are a fresh face - look young and impressionable. Listen carefully,
-    watch closely. Discover the rat in the barrel. Do this and I'll consider allowing
-    you to render us future services.
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3508387726028810865
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4860260761018572569}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2647288846731173949}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3137435832188275707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4860260761018572569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: You are a fresh face - look young and impressionable. Listen carefully, watch
-    closely. Discover the rat in the barrel. Do this and I'll consider allowing you
-    to render us future services.
-  Next: {fileID: 2104093908720503762}
-  Speaking: 1
---- !u!1 &5267717312465007515
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6133937679426559517}
-  - component: {fileID: 6410558890986138017}
-  m_Layer: 0
-  m_Name: You seem a sincere and fine young man. Yet you are soft, schooled in letters
-    but not in the ways of our business.
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6133937679426559517
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5267717312465007515}
+  m_GameObject: {fileID: 3615479671976683051}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8451250462430306123}
-  - {fileID: 75364364093497375}
-  - {fileID: 6920162323033062450}
-  - {fileID: 3375103780531902164}
-  - {fileID: 414511771716680097}
-  m_Father: {fileID: 3375593279224799369}
+  - {fileID: 3141930763599844910}
+  - {fileID: 5020485173342929835}
+  - {fileID: 1011683721459648079}
+  m_Father: {fileID: 7958659790022937978}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6410558890986138017
+--- !u!114 &1029240126384538416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5267717312465007515}
+  m_GameObject: {fileID: 3615479671976683051}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: You seem a sincere and fine young man. Yet you are soft, schooled in letters
-    but not in the ways of our business.
-  Next: {fileID: 8530567010003825750}
+  Text: I'm afraid your request is impossible. The Women's Temperance Association
+    are among some of my closest friends.
+  Next: {fileID: 7332848601275044612}
   Speaking: 1
---- !u!1 &5308295827654831985
+--- !u!1 &4004617178881285986
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -591,446 +405,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4847236230953570407}
-  - component: {fileID: 1167397005962434164}
-  m_Layer: 0
-  m_Name: Take this small donation on behalf of the Raven family for your library
-    renovation initiative. It should be more than enough to cover the cost.
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4847236230953570407
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5308295827654831985}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3375103780531902164}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1167397005962434164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5308295827654831985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: Take this small donation on behalf of the Raven family for your library renovation
-    initiative. It should be more than enough to cover the cost.
-  Next: {fileID: 7267649768952023887}
-  Speaking: 1
---- !u!1 &5367745887290107229
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 75364364093497375}
-  - component: {fileID: 5720328108142900187}
-  m_Layer: 0
-  m_Name: 'You cannot be sure! Please, I bet you. She is the light I have set my eyes
-    on. '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &75364364093497375
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5367745887290107229}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6133937679426559517}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5720328108142900187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5367745887290107229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: 'You cannot be sure! Please, I bet you. She is the light I have set my eyes
-    on. '
-  Next: {fileID: 6835461853809527750}
-  Speaking: 0
---- !u!1 &5502439981648760623
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2647288846731173949}
-  - component: {fileID: 5633870681809845503}
-  m_Layer: 0
-  m_Name: 'I see. Well then. Of late, a few of our shipments have gone awry and ended
-    up in the wrong hands. '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2647288846731173949
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5502439981648760623}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2408003921271224290}
-  - {fileID: 3508387726028810865}
-  - {fileID: 2039344333421127612}
-  - {fileID: 9187818405812610088}
-  m_Father: {fileID: 3375593279224799369}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5633870681809845503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5502439981648760623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: 'I see. Well then. Of late, a few of our shipments have gone awry and ended
-    up in the wrong hands. '
-  Next: {fileID: 4076334749082871000}
-  Speaking: 1
---- !u!1 &5982344704221836781
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3375103780531902164}
-  - component: {fileID: 7366540076797312192}
-  m_Layer: 0
-  m_Name: I cannot yield in this matter. However, I am not completely without feeling.
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3375103780531902164
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5982344704221836781}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4847236230953570407}
-  - {fileID: 1672450806218358633}
-  m_Father: {fileID: 6133937679426559517}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7366540076797312192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5982344704221836781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: I cannot yield in this matter. However, I am not completely without feeling.
-  Next: {fileID: 1167397005962434164}
-  Speaking: 1
---- !u!1 &6493316510898060591
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8451250462430306123}
-  - component: {fileID: 8530567010003825750}
-  m_Layer: 0
-  m_Name: Eliza would never have you. You are not the sort that appeals to her.
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8451250462430306123
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6493316510898060591}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6133937679426559517}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8530567010003825750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6493316510898060591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: Eliza would never have you. You are not the sort that appeals to her.
-  Next: {fileID: 5720328108142900187}
-  Speaking: 1
---- !u!1 &7110576462138869830
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6649704103922843733}
-  - component: {fileID: 9038196460305121830}
-  m_Layer: 0
-  m_Name: Well, my word - the city librarian, isaac Cantwell. We don't often see your
-    sort here. I'm assuming you're here to purchase spirits. Gin perhaps?
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6649704103922843733
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7110576462138869830}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8832248444398390402}
-  - {fileID: 2375465511916534915}
-  - {fileID: 8837318950476452792}
-  - {fileID: 2866720894506137892}
-  - {fileID: 4341976022462739920}
-  m_Father: {fileID: 3375593279224799369}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9038196460305121830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7110576462138869830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: Well, my word - the city librarian, isaac Cantwell. We don't often see your
-    sort here. I'm assuming you're here to purchase spirits. Gin perhaps?
-  Next: {fileID: 7991553363978316537}
-  Speaking: 1
---- !u!1 &7865803453257694867
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2375465511916534915}
-  - component: {fileID: 4537722567826370940}
-  m_Layer: 0
-  m_Name: However, a librarian's salary serves as a poor persuasion for a fine lady
-    such as her.
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2375465511916534915
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7865803453257694867}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6649704103922843733}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4537722567826370940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7865803453257694867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: However, a librarian's salary serves as a poor persuasion for a fine lady
-    such as her.
-  Next: {fileID: 5360769141363002242}
-  Speaking: 0
---- !u!1 &8147909949924683906
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9187818405812610088}
-  - component: {fileID: 1666605613719654873}
-  m_Layer: 0
-  m_Name: You had better.
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9187818405812610088
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8147909949924683906}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2647288846731173949}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1666605613719654873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8147909949924683906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: You had better.
-  Next: {fileID: 0}
-  Speaking: 1
---- !u!1 &8524672914742056285
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 381975828871449581}
-  - component: {fileID: 4326916264212494794}
-  m_Layer: 0
-  m_Name: Choice1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &381975828871449581
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8524672914742056285}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3375593279224799369}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4326916264212494794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8524672914742056285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0febb9a784f6bdd439ee2269e71b8fb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: 
-  Next: {fileID: 5633870681809845503}
-  Alternate: {fileID: 6410558890986138017}
-  A: Manipulate Isaac
-  B: Turn Isaac Away
-  Flag: 6
---- !u!1 &8801282297321852199
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6920162323033062450}
-  - component: {fileID: 6835461853809527750}
+  - component: {fileID: 8910186709119561639}
+  - component: {fileID: 2973411045558138277}
   m_Layer: 0
   m_Name: Choice2
   m_TagString: Untagged
@@ -1038,39 +414,42 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6920162323033062450
+--- !u!4 &8910186709119561639
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8801282297321852199}
+  m_GameObject: {fileID: 4004617178881285986}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6133937679426559517}
+  m_Children:
+  - {fileID: 2856277192486570358}
+  - {fileID: 7764932761592525491}
+  m_Father: {fileID: 7958659790022937978}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6835461853809527750
+--- !u!114 &2973411045558138277
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8801282297321852199}
+  m_GameObject: {fileID: 4004617178881285986}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0febb9a784f6bdd439ee2269e71b8fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Text: 
-  Next: {fileID: 7366540076797312192}
-  Alternate: {fileID: 6582361524242346229}
-  A: 'Give consolation gift. '
-  B: Give Isaac nothing.
-  Flag: 6
---- !u!1 &9005399996008814328
+  Next: {fileID: 8140215234282537637}
+  Alternate: {fileID: 4100667561391988031}
+  A: Rig city council election
+  B: Extort Union Pacific manager
+  FlagA: 12
+  FlagB: 13
+--- !u!1 &4639411229450490805
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1078,43 +457,564 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5171136970958128411}
-  - component: {fileID: 5057315585987217791}
+  - component: {fileID: 4826759469595188995}
+  - component: {fileID: 1150613442922249978}
   m_Layer: 0
-  m_Name: I shall not forget this. I will have Eliza and you shall regret rejecting
-    my offer.
+  m_Name: This...this is personal.
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5171136970958128411
+--- !u!4 &4826759469595188995
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9005399996008814328}
+  m_GameObject: {fileID: 4639411229450490805}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 414511771716680097}
-  m_RootOrder: 1
+  m_Father: {fileID: 2432319428773945052}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5057315585987217791
+--- !u!114 &1150613442922249978
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9005399996008814328}
+  m_GameObject: {fileID: 4639411229450490805}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: I shall not forget this. I will have Eliza and you shall regret rejecting
-    my offer.
+  Text: This...this is personal.
+  Next: {fileID: 788669409729171143}
+  Speaking: 0
+--- !u!1 &6041372811358823953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2432319428773945052}
+  - component: {fileID: 3992707376742142389}
+  m_Layer: 0
+  m_Name: Officer Thatcher, what brings you to my door this evening?
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2432319428773945052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6041372811358823953}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 340711712207461112}
+  - {fileID: 2236503174722506317}
+  - {fileID: 525732267364392387}
+  - {fileID: 8112768241298878821}
+  - {fileID: 4826759469595188995}
+  m_Father: {fileID: 7958659790022937978}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3992707376742142389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6041372811358823953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Officer Thatcher, what brings you to my door this evening?
+  Next: {fileID: 5494872860149816248}
+  Speaking: 1
+--- !u!1 &6080410769525734840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7637122744029970781}
+  - component: {fileID: 4283999558893090672}
+  m_Layer: 0
+  m_Name: Deal. Please excuse me...I have some election matters to attend to.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7637122744029970781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6080410769525734840}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2856277192486570358}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4283999558893090672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6080410769525734840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Deal. Please excuse me...I have some election matters to attend to.
+  Next: {fileID: 0}
+  Speaking: 0
+--- !u!1 &6250337234283472522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 340711712207461112}
+  - component: {fileID: 5494872860149816248}
+  m_Layer: 0
+  m_Name: Mrs. Raven, I need your help. The Women's Temperance Association has taken
+    up the eugenics initiative. They mean to pass legislation.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &340711712207461112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250337234283472522}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2432319428773945052}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5494872860149816248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250337234283472522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Mrs. Raven, I need your help. The Women's Temperance Association has taken
+    up the eugenics initiative. They mean to pass legislation.
+  Next: {fileID: 2626986973876717398}
+  Speaking: 0
+--- !u!1 &6460637140432566899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5020485173342929835}
+  - component: {fileID: 3366884294650031902}
+  m_Layer: 0
+  m_Name: I'm sorry, Thatcher. I truly like you - you're a good man and a good officer.
+    But I can't.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5020485173342929835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460637140432566899}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7678631955001775278}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3366884294650031902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460637140432566899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: I'm sorry, Thatcher. I truly like you - you're a good man and a good officer.
+    But I can't.
+  Next: {fileID: 1682424563169701349}
+  Speaking: 1
+--- !u!1 &6564917286373245580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3616911585868398760}
+  - component: {fileID: 3119324611058152455}
+  m_Layer: 0
+  m_Name: Convince the rail manager to assist in our endevours - with persuasion of
+    course. Do this, and I'll kill the legislation.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3616911585868398760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6564917286373245580}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7764932761592525491}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3119324611058152455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6564917286373245580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Convince the rail manager to assist in our endevours - with persuasion of
+    course. Do this, and I'll kill the legislation.
+  Next: {fileID: 4259175835900358849}
+  Speaking: 1
+--- !u!1 &6681016389565762176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468085998884396440}
+  - component: {fileID: 5075933733499055980}
+  m_Layer: 0
+  m_Name: We cannot hope to operate our business without it.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1468085998884396440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6681016389565762176}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7764932761592525491}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5075933733499055980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6681016389565762176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: We cannot hope to operate our business without it.
+  Next: {fileID: 3119324611058152455}
+  Speaking: 1
+--- !u!1 &6907541123585291875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2236503174722506317}
+  - component: {fileID: 2626986973876717398}
+  m_Layer: 0
+  m_Name: My family cannot wish to stay here if it succeeds.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2236503174722506317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6907541123585291875}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2432319428773945052}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2626986973876717398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6907541123585291875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: My family cannot wish to stay here if it succeeds.
+  Next: {fileID: 4516620953489926501}
+  Speaking: 0
+--- !u!1 &7406105360525841458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1093924421002454973}
+  - component: {fileID: 6109828618181166510}
+  m_Layer: 0
+  m_Name: Thank you.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1093924421002454973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7406105360525841458}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7764932761592525491}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6109828618181166510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7406105360525841458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Thank you.
+  Next: {fileID: 0}
+  Speaking: 0
+--- !u!1 &7632916839419320018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8112768241298878821}
+  - component: {fileID: 4337843648015404911}
+  m_Layer: 0
+  m_Name: I do. We have done business before, but it was purely business.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8112768241298878821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632916839419320018}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2432319428773945052}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4337843648015404911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632916839419320018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: I do. We have done business before, but it was purely business.
+  Next: {fileID: 1150613442922249978}
+  Speaking: 0
+--- !u!1 &8359584286833311166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6599209330161426292}
+  - component: {fileID: 788669409729171143}
+  m_Layer: 0
+  m_Name: Choice1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6599209330161426292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359584286833311166}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7958659790022937978}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &788669409729171143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8359584286833311166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0febb9a784f6bdd439ee2269e71b8fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: 
+  Next: {fileID: 2973411045558138277}
+  Alternate: {fileID: 1029240126384538416}
+  A: Help Thatcher
+  B: Reject Thatcher's request
+  FlagA: 8
+  FlagB: 9
+--- !u!1 &9212484687362956875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1011683721459648079}
+  - component: {fileID: 1682424563169701349}
+  m_Layer: 0
+  m_Name: I refuse to leave this city - not for you or your women's club. My family
+    has to maintain our rights.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1011683721459648079
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9212484687362956875}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7678631955001775278}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1682424563169701349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9212484687362956875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: I refuse to leave this city - not for you or your women's club. My family
+    has to maintain our rights.
   Next: {fileID: 0}
   Speaking: 0

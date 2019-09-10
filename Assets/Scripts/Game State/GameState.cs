@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,7 +18,7 @@ public class GameState : MonoBehaviour
     [SerializeField]
     private static float ConvoWaitMin = 9;
     [SerializeField]
-    private static float ConvoWaitMax = 20;
+    private static float ConvoWaitMax = 14;
 
     public GameObject CharacterModel;
 
@@ -48,7 +49,11 @@ public class GameState : MonoBehaviour
         CameraRig.Instance.SwitchToMain();
         AudioManager.Instance.PlayClick();
         UIManager.Instance.AllOff();
-        ConvoWaitTimer();
+
+        if (ConversationManager.Instance.AreConversationsAvailable())
+        {
+            ConvoWaitTimer();
+        }
 
     }
 
@@ -68,6 +73,22 @@ public class GameState : MonoBehaviour
             ConvoWaitTimer();
         }
 
+    }
+
+    public void Pause()
+    {
+
+        if(CameraRig.Instance.Start.enabled == false)
+        {
+            CameraRig.Instance.SwitchToStart();
+            UIManager.Instance.SwitchToStartPanel();
+        }
+        else
+        {
+            SwitchToMainView();
+        }
+
+       
     }
 
     //Start Next Conversation
@@ -108,11 +129,10 @@ public class GameState : MonoBehaviour
     public void NextLine()
     {
 
-        if (InConversation == false && WaitTimerStarted == false && CameraRig.Instance.Main.enabled)
+        if (InConversation == false && WaitTimerStarted == false && CameraRig.Instance.Main.enabled && ConversationManager.Instance.AreConversationsAvailable())
         {
             StartNextConversation();
             UIManager.Instance.SwitchToTextPanel();
-            AudioManager.Instance.PlayClick();
         }
         else if (InConversation && SubtitleManager.Instance.IsWaiting() == false && CameraRig.Instance.Main.enabled)
         {
@@ -125,17 +145,16 @@ public class GameState : MonoBehaviour
 
         if (InConversation && SubtitleManager.Instance.IsWaiting() == false && CameraRig.Instance.Main.enabled)
         {
-            ConversationManager.Instance.Next(Choice);
-
-            if (ConversationManager.Instance.GetFlag() != Flags.Choices.None)
+            if (ConversationManager.Instance.GetFlag(Choice) != Flags.Choices.None)
             {
-                System.Tuple<Constants.Faction, Constants.Modifier> result = ReputationManager.Instance.AddChoiceFlag(ConversationManager.Instance.GetFlag());
+                System.Tuple<Constants.Faction, Constants.Modifier> result = ReputationManager.Instance.AddChoiceFlag(ConversationManager.Instance.GetFlag(Choice));
 
                 ConversationManager.Instance.CurrentConversation.FinalFaction = result.Item1;
                 ConversationManager.Instance.CurrentConversation.FinalModifier = result.Item2;
-                ConversationManager.Instance.CurrentConversation.FinalFlag = ConversationManager.Instance.GetFlag();
+                ConversationManager.Instance.CurrentConversation.FinalFlag = ConversationManager.Instance.GetFlag(Choice);
             }
-            AudioManager.Instance.PlayClick();
+
+            ConversationManager.Instance.Next(Choice);
         }
     }
 
@@ -156,9 +175,8 @@ public class GameState : MonoBehaviour
         }
         else
         {
-            WaitTime = Random.Range(ConvoWaitMin, ConvoWaitMax);
+            WaitTime = UnityEngine.Random.Range(ConvoWaitMin, ConvoWaitMax);
         }
-
 
         Debug.Log(WaitTime + " seconds until next conversation is available");
 
@@ -335,5 +353,10 @@ public class GameState : MonoBehaviour
     {
         AudioManager.Instance.PlayLamp();
         GameObject.FindObjectOfType<LampInteraction>().PlayEffect();
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }

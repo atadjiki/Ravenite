@@ -9,8 +9,9 @@ public class Choice : Node
     public string A;
     public string B;
 
-    public Flags.Choices Flag;
+    public Flags.Choices FlagA;
+    public Flags.Choices FlagB;
 
-    
+
 
 }

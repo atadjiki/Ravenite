@@ -68,7 +68,7 @@ public class LedgerUpdater : MonoBehaviour
         for(int i = 0; i < ConversationManager.Instance.PreviousConversations.Count; i++)
         {
             LedgerInfo[i].gameObject.SetActive(true);
-            LedgerInfo[i].Character.text = ConversationManager.Instance.PreviousConversations[i].WithCharacter.ToString();
+            LedgerInfo[i].Character.text = CharacterManager.Instance.GetFirstCharacterName(ConversationManager.Instance.PreviousConversations[i].WithCharacter);
             LedgerInfo[i].Flag.text = ConversationManager.Instance.PreviousConversations[i].FinalFaction.ToString();
            
             if(ConversationManager.Instance.PreviousConversations[i].FinalModifier == Constants.Modifier.Increment)

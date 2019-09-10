@@ -42,7 +42,7 @@ public class ConversationManager : MonoBehaviour
     {
         if(CurrentConversation.CurrentNode.Next == null)
         {
-            GameState.Instance.ConversationFinished();
+           GameState.Instance.ConversationFinished();
         }
         else
         {
@@ -209,11 +209,15 @@ public class ConversationManager : MonoBehaviour
         }
     }
 
-    public Flags.Choices GetFlag()
+    public Flags.Choices GetFlag(Constants.Choice Choice)
     {
-        if (IsChoice())
+        if (IsChoice() && Choice == Constants.Choice.A)
         {
-            return CurrentConversation.CurrentNode.gameObject.GetComponent<Choice>().Flag;
+            return CurrentConversation.CurrentNode.gameObject.GetComponent<Choice>().FlagA;
+        }
+        else if (IsChoice() && Choice == Constants.Choice.B)
+        {
+            return CurrentConversation.CurrentNode.gameObject.GetComponent<Choice>().FlagB;
         }
         else
         {

@@ -12,6 +12,7 @@ public class InputManager : MonoBehaviour
     public static KeyCode LedgerView = KeyCode.L;
     public static KeyCode MusicView = KeyCode.M;
     public static KeyCode Zoom = KeyCode.LeftShift;
+    public static KeyCode Pause = KeyCode.P;
 
     // Update is called once per frame
     void Update()
@@ -58,6 +59,11 @@ public class InputManager : MonoBehaviour
             else
             {
                 GameState.Instance.CameraZoomOut();
+            }
+
+            if (Input.GetKeyDown(Pause))
+            {
+                GameState.Instance.Pause();
             }
 
         }

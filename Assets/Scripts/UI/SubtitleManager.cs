@@ -19,6 +19,7 @@ public class SubtitleManager : MonoBehaviour
     public float wait_time = 1.0f;
     private bool waiting = false;
     public float return_amount = 5;
+    public float play_every_frames = 5;
 
     private void Awake()
     {
@@ -65,13 +66,24 @@ public class SubtitleManager : MonoBehaviour
         {
             int count = 0;
             string typed = "";
+            float current_frames = 0;
 
             while (count < text.Length)
             {
+                if(current_frames > play_every_frames)
+                {
+                    AudioManager.Instance.PlayTypeWriter();
+                    current_frames = 0;
+                }
+                else
+                {
+                    current_frames++;
+                }
+                
+
                 typed += text[count];
                 count++;
                 textMesh.text = typed;
-                AudioManager.Instance.PlayTypeWriter();
                 yield return new WaitForSeconds(type_delay);
             }
 

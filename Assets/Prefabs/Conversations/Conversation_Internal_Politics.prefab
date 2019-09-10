@@ -718,7 +718,8 @@ MonoBehaviour:
   Alternate: {fileID: 5467916898009137354}
   A: Hear what Eliza has to say
   B: Tell Eliza you're busy
-  Flag: 6
+  FlagA: 0
+  FlagB: 1
 --- !u!1 &4675967900210408362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,7 +1107,8 @@ MonoBehaviour:
   Alternate: {fileID: 8719703615629708112}
   A: Get the Mayor's cooperation.
   B: Steal the rival mob's gin recipe.
-  Flag: 6
+  FlagA: 10
+  FlagB: 11
 --- !u!1 &6511553584825549420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,7 +1393,8 @@ MonoBehaviour:
   Alternate: {fileID: 0}
   A: Give Eliza a Chance
   B: Tell Eliza no
-  Flag: 6
+  FlagA: 2
+  FlagB: 3
 --- !u!1 &8260643225930614466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,7 +1411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3212337642821552005
 Transform:
   m_ObjectHideFlags: 0
