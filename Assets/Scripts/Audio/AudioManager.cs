@@ -20,6 +20,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip Lamp;
 
     public AudioClip Typewriter;
+    public AudioClip Carriage;
 
     public Record[] Songs;
     private Record CurrentSong;
@@ -114,6 +115,12 @@ public class AudioManager : MonoBehaviour
     }
 
     public void PlayTypeWriter()
+    {
+        FXSource.clip = Typewriter;
+        FXSource.Play();
+    }
+
+    public void PlayCarriage()
     {
         FXSource.clip = Typewriter;
         FXSource.Play();
