@@ -123,7 +123,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1903699675370726826}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4224801700561187058
 MonoBehaviour:
@@ -263,6 +263,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 6506013220422021782}
   - {fileID: 2661055178790527612}
   - {fileID: 3825724028709096281}
   - {fileID: 4424995213503296787}
@@ -284,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: You have done well by us. There is great love between us, but I confess myself
     surprised by your request.
-  Next: {fileID: 4224801700561187058}
+  Next: {fileID: 8058223091081990020}
   Speaking: 1
 --- !u!1 &1986799584809357444
 GameObject:
@@ -1009,8 +1010,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: It's also a problem. We can't allow them upend all we've worked for. Find
-    a way into their operations.
+  Text: Steal the recipe. If we can offer the same gin they do, they'll no longer
+    serve as competition.
   Next: {fileID: 6623553216950059935}
   Speaking: 1
 --- !u!1 &6283094660699685987
@@ -1235,7 +1236,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1903699675370726826}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7786263874257441328
 MonoBehaviour:
@@ -1282,7 +1283,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1903699675370726826}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6080711429885671569
 MonoBehaviour:
@@ -1532,7 +1533,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1903699675370726826}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5278616413326933856
 MonoBehaviour:
@@ -1546,7 +1547,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: I cannot promise to hand over all I have built. I'm sorry Eliza, the answer
-    is no.
+  Text: I see. Well then.
   Next: {fileID: 5286889465357641534}
+  Speaking: 1
+--- !u!1 &9179297331591087989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6506013220422021782}
+  - component: {fileID: 8058223091081990020}
+  m_Layer: 0
+  m_Name: 'I cannot promise to hand over all I have built. I''m sorry, Eliza. The
+    answer is no. '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6506013220422021782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9179297331591087989}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1903699675370726826}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8058223091081990020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9179297331591087989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: 'I cannot promise to hand over all I have built. I''m sorry, Eliza. The answer
+    is no. '
+  Next: {fileID: 4224801700561187058}
   Speaking: 1
