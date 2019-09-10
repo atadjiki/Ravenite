@@ -102,20 +102,6 @@ public class GameState : MonoBehaviour
         InConversation = true;
     }
 
-    public void StartNextDialogueSet()
-    {
-        UIManager.Instance.SwitchToTextPanel();
-        AudioManager.Instance.PlayClick();
-        CameraRig.Instance.LookAtCharacter();
-    }
-
-    public void StartNextChoiceTree()
-    {
-        UIManager.Instance.SwitchToTextPanel();
-        AudioManager.Instance.PlayClick();
-        CameraRig.Instance.LookAtCharacter();
-    }
-
     public void SpawnCharacterModel()
     {
         CharacterModel = Instantiate<GameObject>(CharacterManager.Instance.GetCharacter(ConversationManager.Instance.CurrentConversation.WithCharacter).CharacterModel);

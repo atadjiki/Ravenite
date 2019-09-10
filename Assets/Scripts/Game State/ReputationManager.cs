@@ -49,7 +49,6 @@ public class ReputationManager : MonoBehaviour
         }
 
         Build();
-        //Debug.Log(this.gameObject.name + " Initialized");
     }
 
     private void Build()
