@@ -1976,7 +1976,8 @@ MonoBehaviour:
   m_text: START
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 557c4e8da9b9f2841a2dbd0e4f72b208, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -4701177175679348056, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3003,82 +3004,6 @@ MonoBehaviour:
   B: {fileID: 181886929}
   Text: Chop?
   Flag: 0
---- !u!114 &1571987144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  rotation:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-    max: 360
-  skyIntensityMode:
-    m_OverrideState: 0
-    m_Value: 0
-  exposure:
-    m_OverrideState: 0
-    m_Value: 11.42
-  multiplier:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  upperHemisphereLuxValue:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  desiredLuxValue:
-    m_OverrideState: 0
-    m_Value: 20000
-  updateMode:
-    m_OverrideState: 0
-    m_Value: 0
-  updatePeriod:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-  includeSunInBaking:
-    m_OverrideState: 0
-    m_Value: 0
-  sunSize:
-    m_OverrideState: 0
-    m_Value: 0.04
-    min: 0
-    max: 1
-  sunSizeConvergence:
-    m_OverrideState: 0
-    m_Value: 5
-    min: 1
-    max: 10
-  atmosphereThickness:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-    max: 5
-  skyTint:
-    m_OverrideState: 0
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  groundColor:
-    m_OverrideState: 0
-    m_Value: {r: 0.369, g: 0.349, b: 0.341, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  enableSunDisk:
-    m_OverrideState: 0
-    m_Value: 0
 --- !u!1 &1574336415
 GameObject:
   m_ObjectHideFlags: 0
@@ -3503,7 +3428,7 @@ MonoBehaviour:
   m_text: THE RAVENITE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 557c4e8da9b9f2841a2dbd0e4f72b208, type: 2}
-  m_sharedMaterial: {fileID: -1633479717879543008, guid: ec1009e0c44812a41b4a1e73cf3eb47b,
+  m_sharedMaterial: {fileID: -4701177175679348056, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3535,7 +3460,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 33
   m_textAlignment: 257
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3581,7 +3506,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -3601,6 +3526,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777936607}
   m_CullTransparentMesh: 0
+--- !u!114 &1891072336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  rotation:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 360
+  skyIntensityMode:
+    m_OverrideState: 0
+    m_Value: 0
+  exposure:
+    m_OverrideState: 0
+    m_Value: 11.42
+  multiplier:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  upperHemisphereLuxValue:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  desiredLuxValue:
+    m_OverrideState: 0
+    m_Value: 20000
+  updateMode:
+    m_OverrideState: 0
+    m_Value: 0
+  updatePeriod:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+  includeSunInBaking:
+    m_OverrideState: 0
+    m_Value: 0
+  sunSize:
+    m_OverrideState: 0
+    m_Value: 0.04
+    min: 0
+    max: 1
+  sunSizeConvergence:
+    m_OverrideState: 0
+    m_Value: 5
+    min: 1
+    max: 10
+  atmosphereThickness:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 5
+  skyTint:
+    m_OverrideState: 0
+    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  groundColor:
+    m_OverrideState: 0
+    m_Value: {r: 0.369, g: 0.349, b: 0.341, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  enableSunDisk:
+    m_OverrideState: 0
+    m_Value: 0
 --- !u!1 &1981787079
 GameObject:
   m_ObjectHideFlags: 0
@@ -3833,7 +3834,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2015229064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4035,7 +4036,7 @@ MonoBehaviour:
   TypewriterSound: 1
   type_delay_min: 0.03
   type_delay_max: 0.09
-  wait_time: 1
+  wait_time: 3
 --- !u!114 &40357209407874195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4252,7 +4253,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 52.98179
+    FieldOfView: 53
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -4343,7 +4344,6 @@ MonoBehaviour:
   fov_min: 53
   LerpTime: 2
   Step: 0.1
-  Current_Step: 0
   Horizontal: 140
   Vertical: 0
 --- !u!1 &379576673739076059
@@ -5795,7 +5795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: dab0766de4a4b5349b80ce1a86555414, type: 2}
   m_StaticLightingSkyUniqueID: 2
-  m_SkySettings: {fileID: 1571987144}
+  m_SkySettings: {fileID: 1891072336}
   m_SkySettingsFromProfile: {fileID: 5758136461106579282, guid: dab0766de4a4b5349b80ce1a86555414,
     type: 2}
 --- !u!114 &712982716668420430
@@ -7710,7 +7710,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6018688276731643156}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
@@ -8341,11 +8341,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2079126625096212501}
     m_Modifications:
-    - target: {fileID: 4158633861631512141, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_Name
-      value: Interactibles
-      objectReference: {fileID: 0}
     - target: {fileID: 4158633861631512146, guid: db5d986360cd64d4f890fb3b0a8f1917,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8401,144 +8396,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4008144983581099303, guid: db5d986360cd64d4f890fb3b0a8f1917,
+    - target: {fileID: 4158633861631512141, guid: db5d986360cd64d4f890fb3b0a8f1917,
         type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
-        type: 2}
-    - target: {fileID: 4008144983581099303, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -4701177175679348056, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
-        type: 2}
-    - target: {fileID: 4008144982500324535, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
-        type: 2}
-    - target: {fileID: 4008144982500324535, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -4701177175679348056, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
-        type: 2}
-    - target: {fileID: 4008144982855539850, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
-        type: 2}
-    - target: {fileID: 4008144982855539850, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -4701177175679348056, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
-        type: 2}
-    - target: {fileID: 4008144983321228111, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
-        type: 2}
-    - target: {fileID: 4008144983321228111, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -4701177175679348056, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
-        type: 2}
-    - target: {fileID: 4008144983555081984, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
-        type: 2}
-    - target: {fileID: 4008144983555081984, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -4701177175679348056, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
-        type: 2}
-    - target: {fileID: 4008144983819489000, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
-        type: 2}
-    - target: {fileID: 4008144983819489000, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -4701177175679348056, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
-        type: 2}
-    - target: {fileID: 4008144983826891108, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
-        type: 2}
-    - target: {fileID: 4008144983826891108, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -4701177175679348056, guid: 557c4e8da9b9f2841a2dbd0e4f72b208,
-        type: 2}
-    - target: {fileID: 5034926155547482002, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
+      propertyPath: m_Name
+      value: Interactibles
       objectReference: {fileID: 0}
-    - target: {fileID: 5034926155547482002, guid: db5d986360cd64d4f890fb3b0a8f1917,
+    - target: {fileID: 1707538633488265456, guid: db5d986360cd64d4f890fb3b0a8f1917,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.0048
-      objectReference: {fileID: 0}
-    - target: {fileID: 5034926155547482002, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.00221
-      objectReference: {fileID: 0}
-    - target: {fileID: 5034926155547482002, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.00029
-      objectReference: {fileID: 0}
-    - target: {fileID: 5034926155547482002, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5034926155547482002, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.00008373166
-      objectReference: {fileID: 0}
-    - target: {fileID: 5034926155547482002, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.9988469
-      objectReference: {fileID: 0}
-    - target: {fileID: 5034926155547482002, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.04797814
-      objectReference: {fileID: 0}
-    - target: {fileID: 5034926155547482002, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.001743192
-      objectReference: {fileID: 0}
-    - target: {fileID: 5034926155547482002, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -180.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7752038525580904088, guid: db5d986360cd64d4f890fb3b0a8f1917,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
+      propertyPath: startDelay.scalar
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db5d986360cd64d4f890fb3b0a8f1917, type: 3}
@@ -9306,7 +9172,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 20
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -10101,7 +9967,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &6034689885137843681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10880,8 +10746,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9108620184675765919}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.6, y: 2.8, z: -1.2}
+  m_LocalRotation: {x: 0.12993176, y: 0.4191147, z: -0.061385162, w: 0.89648896}
+  m_LocalPosition: {x: 1.28, y: 2.68, z: -0.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 117262478601570232}
@@ -10903,7 +10769,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 39.729996
+  m_FocalLength: 23.999998
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -10912,7 +10778,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 33.612705
+  field of view: 53.130108
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -11091,8 +10957,6 @@ MonoBehaviour:
   Started: 0
   InConversation: 0
   WaitTimerStarted: 0
-  ConvoWaitMin: 4
-  ConvoWaitMax: 10
   CharacterModel: {fileID: 0}
 --- !u!1 &9208548205838402974
 GameObject:

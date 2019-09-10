@@ -14,9 +14,9 @@ public class GameState : MonoBehaviour
     public bool WaitTimerStarted = false;
 
     [SerializeField]
-    private float ConvoWaitMin = 4;
+    private static float ConvoWaitMin = 9;
     [SerializeField]
-    private float ConvoWaitMax = 10;
+    private static float ConvoWaitMax = 20;
 
     public GameObject CharacterModel;
 
@@ -33,15 +33,12 @@ public class GameState : MonoBehaviour
         }
 
         Build();
-        //Debug.Log(this.gameObject.name + " Initialized");
     }
 
     void Build()
     {
         StartMenu();
     }
-
-   
 
     //Start Game
     public void StartGame()
@@ -74,23 +71,24 @@ public class GameState : MonoBehaviour
     public void StartNextConversation()
     {
         ConversationManager.Instance.NextConversation();
-        AudioManager.Instance.PlayClick();
         SpawnCharacterModel();
         CameraRig.Instance.LookAtCharacter();
         AudioManager.Instance.PlayDoorOpen();
-        
+
         InConversation = true;
     }
 
     public void StartNextDialogueSet()
     {
         UIManager.Instance.SwitchToTextPanel();
+        AudioManager.Instance.PlayClick();
         CameraRig.Instance.LookAtCharacter();
     }
 
     public void StartNextChoiceTree()
     {
         UIManager.Instance.SwitchToTextPanel();
+        AudioManager.Instance.PlayClick();
         CameraRig.Instance.LookAtCharacter();
     }
 
@@ -107,27 +105,20 @@ public class GameState : MonoBehaviour
     public void Next()
     {
 
-        if (GameState.Instance.InConversation == false)
+        if (InConversation == false && WaitTimerStarted == false)
         {
-            GameState.Instance.StartNextConversation();
+            StartNextConversation();
             UIManager.Instance.SwitchToTextPanel();
+            AudioManager.Instance.PlayClick();
         }
         else if(ConversationManager.Instance.Mode == Constants.Conversation_Mode.Dialogue
-            && GameState.Instance.InConversation && SubtitleManager.Instance.IsWaiting() == false)
+            && InConversation && SubtitleManager.Instance.IsWaiting() == false)
         {
-            NextLine();
+            ConversationManager.Instance.NextLine();
         }
         else if(SubtitleManager.Instance.IsWaiting())
         {
             Debug.Log("Can't skip, waiting for dialogue!");
-        }
-    }
-
-    public void NextLine()
-    {
-        if (ConversationManager.Instance.NextLine())
-        {
-            AudioManager.Instance.PlayClick();
         }
     }
 
@@ -144,14 +135,12 @@ public class GameState : MonoBehaviour
             if (ConversationManager.Instance.NextNode(Choice))
             {
                 ReputationManager.Instance.AddChoiceFlag(ConversationManager.Instance.CurrentChoice.Flag);
-                AudioManager.Instance.PlayClick();
+                
             }
+
+            AudioManager.Instance.PlayClick();
         }
-
-        
     }
-
-
     //Begin Timer for Next Conversation
     public void ConvoWaitTimer()
     {
