@@ -40,9 +40,13 @@ public class ConversationManager : MonoBehaviour
 
     public void Next(Constants.Choice Choice)
     {
-        if(CurrentConversation.CurrentNode.Next == null)
+        if(CurrentConversation.CurrentNode.Next == null && AreConversationsAvailable())
         {
-           GameState.Instance.ConversationFinished();
+            GameState.Instance.ConversationFinished();
+        }
+        else if (CurrentConversation.CurrentNode.Next == null && !AreConversationsAvailable())
+        {
+            GameState.Instance.AllConversationsFinished();
         }
         else
         {

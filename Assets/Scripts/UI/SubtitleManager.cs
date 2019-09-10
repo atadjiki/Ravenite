@@ -14,11 +14,11 @@ public class SubtitleManager : MonoBehaviour
 
     public bool TypewriterEffect = false;
     public bool TypewriterSound = false;
-    public float type_delay_min = 0.03f;
-    public float type_delay_max = 0.09f;
+    public float type_delay_min = 0.01f;
+    public float type_delay_max = 0.02f;
     public float wait_time = 1.0f;
     private bool waiting = false;
-    public float return_amount = 5;
+    public float return_amount = 6;
     public float play_every_frames = 5;
 
     private void Awake()
