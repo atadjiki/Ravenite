@@ -48,6 +48,244 @@ MonoBehaviour:
     to do the same.
   Next: {fileID: 3340437807211653889}
   Speaking: 0
+--- !u!1 &830585231535836033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4004380835286766781}
+  - component: {fileID: 7907012885264427366}
+  m_Layer: 0
+  m_Name: I understand. Is there anything I might do to further gain your confidence?
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4004380835286766781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830585231535836033}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7249544915636155183}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7907012885264427366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830585231535836033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: I understand. Is there anything I might do to further gain your confidence?
+  Next: {fileID: 5286889465357641534}
+  Speaking: 0
+--- !u!1 &1077749133056695473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2661055178790527612}
+  - component: {fileID: 4224801700561187058}
+  m_Layer: 0
+  m_Name: Is there nothing I might do?
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2661055178790527612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077749133056695473}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1903699675370726826}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4224801700561187058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077749133056695473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Is there nothing I might do?
+  Next: {fileID: 7786263874257441328}
+  Speaking: 0
+--- !u!1 &1719697477541154667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 219610435341262807}
+  - component: {fileID: 8711958811801162369}
+  m_Layer: 0
+  m_Name: I've tasted their gin - it's excellent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &219610435341262807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719697477541154667}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7520329827422424558}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8711958811801162369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719697477541154667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: I've tasted their gin - it's excellent
+  Next: {fileID: 1968686110524261168}
+  Speaking: 1
+--- !u!1 &1962028468315495655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8557710451648631974}
+  - component: {fileID: 7380404194160185228}
+  m_Layer: 0
+  m_Name: There is nothing he holds dear more than his daughter. You two have met.
+    Develop your relationship with her. Earn her trust.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8557710451648631974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962028468315495655}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1705612283957133956}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7380404194160185228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962028468315495655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: There is nothing he holds dear more than his daughter. You two have met. Develop
+    your relationship with her. Earn her trust.
+  Next: {fileID: 6623553216950059935}
+  Speaking: 1
+--- !u!1 &1983836460169442042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1903699675370726826}
+  - component: {fileID: 5442577731832191180}
+  m_Layer: 0
+  m_Name: You have done well by us. There is great love between us, but I confess
+    myself surprised by your request.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1903699675370726826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983836460169442042}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2661055178790527612}
+  - {fileID: 3825724028709096281}
+  - {fileID: 4424995213503296787}
+  - {fileID: 7446156864054804620}
+  m_Father: {fileID: 3212337642821552005}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5442577731832191180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983836460169442042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: You have done well by us. There is great love between us, but I confess myself
+    surprised by your request.
+  Next: {fileID: 4224801700561187058}
+  Speaking: 1
 --- !u!1 &1986799584809357444
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +332,52 @@ MonoBehaviour:
   Text: You wish to take over the family business?
   Next: {fileID: 4117834381506247308}
   Speaking: 1
+--- !u!1 &2507589653258573297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7683732151981574706}
+  - component: {fileID: 6623553216950059935}
+  m_Layer: 0
+  m_Name: I understand, Auntie. I'll do it.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7683732151981574706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2507589653258573297}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1705612283957133956}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6623553216950059935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2507589653258573297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: I understand, Auntie. I'll do it.
+  Next: {fileID: 9100786411170826142}
+  Speaking: 0
 --- !u!1 &2512270008894131463
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,6 +426,156 @@ MonoBehaviour:
     that time comes.
   Next: {fileID: 7159114991175079288}
   Speaking: 0
+--- !u!1 &2556108688234723620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1705612283957133956}
+  - component: {fileID: 526440950318937792}
+  m_Layer: 0
+  m_Name: Mayor Fielding has been uncooperative to our overtures since taking office.
+    Yet I believe he can be persuaded to accept our influence.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1705612283957133956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556108688234723620}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8557710451648631974}
+  - {fileID: 7683732151981574706}
+  - {fileID: 32398480087745574}
+  m_Father: {fileID: 3212337642821552005}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &526440950318937792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556108688234723620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Mayor Fielding has been uncooperative to our overtures since taking office.
+    Yet I believe he can be persuaded to accept our influence.
+  Next: {fileID: 7380404194160185228}
+  Speaking: 1
+--- !u!1 &2565443599874717424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7520329827422424558}
+  - component: {fileID: 8719703615629708112}
+  m_Layer: 0
+  m_Name: You are well aware that the Box family has taken hold in the southern-most-neighborhood
+    of the country.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7520329827422424558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2565443599874717424}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 219610435341262807}
+  - {fileID: 7173899118369788681}
+  - {fileID: 3019138369641614590}
+  m_Father: {fileID: 3212337642821552005}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8719703615629708112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2565443599874717424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: You are well aware that the Box family has taken hold in the southern-most-neighborhood
+    of the country.
+  Next: {fileID: 8711958811801162369}
+  Speaking: 1
+--- !u!1 &3017921810010952615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7173899118369788681}
+  - component: {fileID: 1968686110524261168}
+  m_Layer: 0
+  m_Name: It's also a problem. We can't allow them upend all we've worked for. Find
+    a way into their operations.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7173899118369788681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3017921810010952615}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7520329827422424558}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1968686110524261168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3017921810010952615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: It's also a problem. We can't allow them upend all we've worked for. Find
+    a way into their operations.
+  Next: {fileID: 7901331139690742477}
+  Speaking: 1
 --- !u!1 &3637861911553853307
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,6 +772,55 @@ MonoBehaviour:
   Text: Oh? What is it?
   Next: {fileID: 3282804114910859884}
   Speaking: 1
+--- !u!1 &5067365750451273668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7249544915636155183}
+  - component: {fileID: 94041873427513018}
+  m_Layer: 0
+  m_Name: I know I can do it.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7249544915636155183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5067365750451273668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8027899190098432668}
+  - {fileID: 3290098956915927103}
+  - {fileID: 4004380835286766781}
+  m_Father: {fileID: 3212337642821552005}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &94041873427513018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5067365750451273668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: I know I can do it.
+  Next: {fileID: 4876369254111866746}
+  Speaking: 0
 --- !u!1 &5078100178045348604
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,6 +867,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: You consider yourself capable? You shall make difficult decisions daily, others
     will suffer or thrive based off your choices.
+  Next: {fileID: 94041873427513018}
+  Speaking: 1
+--- !u!1 &5596128219229854529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 32398480087745574}
+  - component: {fileID: 9100786411170826142}
+  m_Layer: 0
+  m_Name: Don't disappoint me...and leave the Fischer report with John on your way
+    out.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &32398480087745574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5596128219229854529}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1705612283957133956}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9100786411170826142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5596128219229854529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Don't disappoint me...and leave the Fischer report with John on your way out.
   Next: {fileID: 0}
   Speaking: 1
 --- !u!1 &5926130872779323425
@@ -434,6 +964,54 @@ MonoBehaviour:
     I was hoping...
   Next: {fileID: 1237975303024206957}
   Speaking: 0
+--- !u!1 &6083078697647135134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3019138369641614590}
+  - component: {fileID: 7901331139690742477}
+  m_Layer: 0
+  m_Name: Steal the recipe. If we can offer the same gin they do, they'll no longer
+    serve as competition.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3019138369641614590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6083078697647135134}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7520329827422424558}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7901331139690742477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6083078697647135134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: It's also a problem. We can't allow them upend all we've worked for. Find
+    a way into their operations.
+  Next: {fileID: 6623553216950059935}
+  Speaking: 1
 --- !u!1 &6283094660699685987
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +1058,103 @@ MonoBehaviour:
   Text: Auntie, this is very important to me. Please listen.
   Next: {fileID: 3089273209036430591}
   Speaking: 0
+--- !u!1 &6341691597308321659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9109633231143366319}
+  - component: {fileID: 5286889465357641534}
+  m_Layer: 0
+  m_Name: Choice3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9109633231143366319
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6341691597308321659}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3212337642821552005}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5286889465357641534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6341691597308321659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0febb9a784f6bdd439ee2269e71b8fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: 
+  Next: {fileID: 526440950318937792}
+  Alternate: {fileID: 8719703615629708112}
+  A: Get the Mayor's cooperation.
+  B: Steal the rival mob's gin recipe.
+  Flag: 6
+--- !u!1 &6511553584825549420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3290098956915927103}
+  - component: {fileID: 2627982741383674267}
+  m_Layer: 0
+  m_Name: I can't deny that you have done well by our family. I'll consider it but
+    I feel you still have a lot to prove you're capable.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3290098956915927103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6511553584825549420}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7249544915636155183}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2627982741383674267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6511553584825549420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: I can't deny that you have done well by our family. I'll consider it but I
+    feel you still have a lot to prove you're capable.
+  Next: {fileID: 7907012885264427366}
+  Speaking: 1
 --- !u!1 &6863840334219162537
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,6 +1203,100 @@ MonoBehaviour:
     future.
   Next: {fileID: 8218891797865909595}
   Speaking: 0
+--- !u!1 &7075338664454623982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3825724028709096281}
+  - component: {fileID: 7786263874257441328}
+  m_Layer: 0
+  m_Name: 'You shall always have a place in this organization. We value your work.
+    However, it takes more than asking to gain my trust. '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3825724028709096281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7075338664454623982}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1903699675370726826}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7786263874257441328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7075338664454623982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: 'You shall always have a place in this organization. We value your work. However,
+    it takes more than asking to gain my trust. '
+  Next: {fileID: 6080711429885671569}
+  Speaking: 1
+--- !u!1 &7143219949531292339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4424995213503296787}
+  - component: {fileID: 6080711429885671569}
+  m_Layer: 0
+  m_Name: Then let me try! I will do anything - you need only name it.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4424995213503296787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7143219949531292339}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1903699675370726826}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6080711429885671569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7143219949531292339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Then let me try! I will do anything - you need only name it.
+  Next: {fileID: 5278616413326933856}
+  Speaking: 0
 --- !u!1 &7831208658311946540
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +1343,55 @@ MonoBehaviour:
   Text: Yes, Auntie. However, I did have another matter I wanted to discuss.
   Next: {fileID: 3089273209036430591}
   Speaking: 0
+--- !u!1 &8077393208080610317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8027899190098432668}
+  - component: {fileID: 4876369254111866746}
+  m_Layer: 0
+  m_Name: Choice2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8027899190098432668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077393208080610317}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7249544915636155183}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4876369254111866746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8077393208080610317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0febb9a784f6bdd439ee2269e71b8fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: 
+  Next: {fileID: 2627982741383674267}
+  Alternate: {fileID: 0}
+  A: Give Eliza a Chance
+  B: Tell Eliza no
+  Flag: 6
 --- !u!1 &8260643225930614466
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +1424,11 @@ Transform:
   - {fileID: 7333020924887791541}
   - {fileID: 9110339024791858318}
   - {fileID: 973164644229379784}
+  - {fileID: 7249544915636155183}
+  - {fileID: 9109633231143366319}
+  - {fileID: 1705612283957133956}
+  - {fileID: 7520329827422424558}
+  - {fileID: 1903699675370726826}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -677,3 +1500,50 @@ MonoBehaviour:
     with business.
   Next: {fileID: 4113205483703130856}
   Speaking: 0
+--- !u!1 &8627525551102107534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7446156864054804620}
+  - component: {fileID: 5278616413326933856}
+  m_Layer: 0
+  m_Name: I see. Well then.
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7446156864054804620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8627525551102107534}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1903699675370726826}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5278616413326933856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8627525551102107534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: I cannot promise to hand over all I have built. I'm sorry Eliza, the answer
+    is no.
+  Next: {fileID: 5286889465357641534}
+  Speaking: 1
