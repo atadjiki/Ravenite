@@ -175,7 +175,7 @@ public class AudioManager : MonoBehaviour
         CurrentSong = Songs[SongIndex];
         Music.clip = CurrentSong.Clip;
         Music.Play();
-        Debug.Log("Playing: " + CurrentSong.Title);
+        //Debug.Log("Playing: " + CurrentSong.Title);
     }
 
     public bool IsPreviousAvailable()

@@ -29,7 +29,7 @@ public class CharacterManager : MonoBehaviour
     void Build()
     {
         Characters = GetComponentsInChildren<Character>();
-        Debug.Log("Registered " + Characters.Length + " characters");
+        //Debug.Log("Registered " + Characters.Length + " characters");
     }
 
     public Character GetCharacter(Constants.Character_Names Name)
@@ -43,5 +43,53 @@ public class CharacterManager : MonoBehaviour
         }
 
         return null;
+    }
+
+    public string GetFullCharacterName(Constants.Character_Names Name)
+    {
+        if (Name == Constants.Character_Names.Eliza_Kirkwood)
+        {
+            return "Eliza Kirkwood";
+        }
+        else if (Name == Constants.Character_Names.Isaac_Cantwell)
+        {
+            return "Isaac Cantwell";
+        }
+        else if (Name == Constants.Character_Names.Stacy_Thatcher)
+        {
+            return "Stacy Thatcher";
+        }
+        else if (Name == Constants.Character_Names.Player)
+        {
+            return "Me";
+        }
+        else
+        {
+            return "";
+        }
+    }
+
+    public string GetFirstCharacterName(Constants.Character_Names Name)
+    {
+        if (Name == Constants.Character_Names.Eliza_Kirkwood)
+        {
+            return "Eliza";
+        }
+        else if (Name == Constants.Character_Names.Isaac_Cantwell)
+        {
+            return "Isaac";
+        }
+        else if (Name == Constants.Character_Names.Stacy_Thatcher)
+        {
+            return "Stacy";
+        }
+        else if (Name == Constants.Character_Names.Player)
+        {
+            return "Me";
+        }
+        else
+        {
+            return "";
+        }
     }
 }

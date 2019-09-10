@@ -12,6 +12,7 @@ public class GameState : MonoBehaviour
     public bool Started = false;
     public bool InConversation = false;
     public bool WaitTimerStarted = false;
+    public bool debug = true;
 
     [SerializeField]
     private static float ConvoWaitMin = 9;
@@ -66,7 +67,7 @@ public class GameState : MonoBehaviour
         {
             ConvoWaitTimer();
         }
-        
+
     }
 
     //Start Next Conversation
@@ -104,7 +105,7 @@ public class GameState : MonoBehaviour
         Destroy(CharacterModel);
     }
 
-    public void Next()
+    public void NextLine()
     {
 
         if (InConversation == false && WaitTimerStarted == false && CameraRig.Instance.Main.enabled)
@@ -113,39 +114,32 @@ public class GameState : MonoBehaviour
             UIManager.Instance.SwitchToTextPanel();
             AudioManager.Instance.PlayClick();
         }
-        else if(ConversationManager.Instance.Mode == Constants.Conversation_Mode.Dialogue
-            && InConversation && SubtitleManager.Instance.IsWaiting() == false && CameraRig.Instance.Main.enabled)
+        else if (InConversation && SubtitleManager.Instance.IsWaiting() == false && CameraRig.Instance.Main.enabled)
         {
-            ConversationManager.Instance.NextLine();
-        }
-        else if(SubtitleManager.Instance.IsWaiting())
-        {
-            Debug.Log("Can't skip, waiting for dialogue!");
+            ConversationManager.Instance.Next(Constants.Choice.None);
         }
     }
 
     public void NextChoice(Constants.Choice Choice)
     {
 
-        if (SubtitleManager.Instance.IsWaiting())
+        if (InConversation && SubtitleManager.Instance.IsWaiting() == false && CameraRig.Instance.Main.enabled)
         {
-            Debug.Log("Can't skip, waiting for choice!");
-        }
-        else if(ConversationManager.Instance.Mode == Constants.Conversation_Mode.Choice
-            && InConversation && SubtitleManager.Instance.IsWaiting() == false && CameraRig.Instance.Main.enabled)
-        {
-            if (ConversationManager.Instance.NextNode(Choice))
+            ConversationManager.Instance.Next(Choice);
+
+            if (ConversationManager.Instance.GetFlag() != Flags.Choices.None)
             {
-                System.Tuple<Constants.Faction, Constants.Modifier> result = ReputationManager.Instance.AddChoiceFlag(ConversationManager.Instance.CurrentChoice.Flag);
+                System.Tuple<Constants.Faction, Constants.Modifier> result = ReputationManager.Instance.AddChoiceFlag(ConversationManager.Instance.GetFlag());
 
                 ConversationManager.Instance.CurrentConversation.FinalFaction = result.Item1;
                 ConversationManager.Instance.CurrentConversation.FinalModifier = result.Item2;
-                ConversationManager.Instance.CurrentConversation.FinalFlag = ConversationManager.Instance.CurrentChoice.Flag;
+                ConversationManager.Instance.CurrentConversation.FinalFlag = ConversationManager.Instance.GetFlag();
             }
-
             AudioManager.Instance.PlayClick();
         }
     }
+
+
     //Begin Timer for Next Conversation
     public void ConvoWaitTimer()
     {
@@ -155,7 +149,16 @@ public class GameState : MonoBehaviour
     private IEnumerator WaitTimer()
     {
         WaitTimerStarted = true;
-        float WaitTime = Random.Range(ConvoWaitMin, ConvoWaitMax);
+        float WaitTime;
+        if (debug)
+        {
+            WaitTime = 0;
+        }
+        else
+        {
+            WaitTime = Random.Range(ConvoWaitMin, ConvoWaitMax);
+        }
+
 
         Debug.Log(WaitTime + " seconds until next conversation is available");
 
@@ -193,7 +196,7 @@ public class GameState : MonoBehaviour
                 UIManager.Instance.SwitchToPromptPanel();
             }
         }
-        
+
     }
 
     public void SwitchToMainView()
@@ -217,13 +220,13 @@ public class GameState : MonoBehaviour
 
     public void TogglePhonoMode()
     {
-        if(InConversation == false && CameraRig.Instance.Phono.enabled == false)
+        if (InConversation == false && CameraRig.Instance.Phono.enabled == false)
         {
             CameraRig.Instance.TogglePhonoCamera();
             AudioManager.Instance.PlayClick();
             UIManager.Instance.SwitchToMusicSelectPanel();
         }
-        else 
+        else
         {
             SwitchToMainView();
         }
@@ -231,7 +234,7 @@ public class GameState : MonoBehaviour
 
     public void ToggleCredits()
     {
-       
+
         if (InConversation == false && CameraRig.Instance.Credits.enabled == false)
         {
             Debug.Log("Toggle credits");
@@ -247,7 +250,7 @@ public class GameState : MonoBehaviour
 
     public void ToggleLedgerMode()
     {
-        if(CameraRig.Instance.Ledger.enabled == false)
+        if (CameraRig.Instance.Ledger.enabled == false)
         {
             CameraRig.Instance.ToggleLedgerCamera();
             AudioManager.Instance.PlayLedgerOpen();
@@ -259,7 +262,7 @@ public class GameState : MonoBehaviour
             AudioManager.Instance.PlayLedgerClose();
         }
 
-        
+
     }
 
     public void CameraZoomIn()
@@ -286,12 +289,12 @@ public class GameState : MonoBehaviour
 
     public void ToggleMusic()
     {
-       AudioManager.Instance.ToggleMusic();
+        AudioManager.Instance.ToggleMusic();
     }
 
     public bool IsMusicPlaying()
     {
-       return  AudioManager.Instance.MusicOn;
+        return AudioManager.Instance.MusicOn;
     }
 
     public bool IsPreviousAvailable()

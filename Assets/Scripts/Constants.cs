@@ -6,7 +6,7 @@
     //list of names
     public enum Character_Names
     {
-        Character1, Character2, Character3, Player
+        Eliza_Kirkwood, Isaac_Cantwell, Stacy_Thatcher, Player
     }
 
     public enum Dialogue_Speaking

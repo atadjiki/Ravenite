@@ -175,8 +175,6 @@ public class CameraRig : MonoBehaviour
     {
 
         float Current_Step = 0;
-
-        Debug.Log("Looking at character");
         while (Current_Step < LerpTime)
         {
 

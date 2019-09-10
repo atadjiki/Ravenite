@@ -48,9 +48,20 @@ public class SubtitleManager : MonoBehaviour
     {
 
         waiting = true;
-        float type_delay = Random.Range(type_delay_min, type_delay_max);
 
-        if (TypewriterEffect)
+        float type_delay;
+
+        if (GameState.Instance.debug)
+        {
+            type_delay = 0;
+        }
+        else
+        {
+            type_delay = Random.Range(type_delay_min, type_delay_max);
+        }
+         
+
+        if (TypewriterEffect && !GameState.Instance.debug)
         {
             int count = 0;
             string typed = "";

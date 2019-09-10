@@ -205,6 +205,8 @@ public class ReputationManager : MonoBehaviour
 
     public System.Tuple<Constants.Faction, Constants.Modifier>AddChoiceFlag(Flags.Choices Flag)
     {
+
+        
         Choices.Add(Flag);
         Debug.Log("Flag added: " + Flag.ToString());
         return ProcessFlag(Flag);

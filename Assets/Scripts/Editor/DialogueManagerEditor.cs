@@ -10,17 +10,17 @@ public class DialogueManagerEditor : Editor
         DrawDefaultInspector();
         if (GUILayout.Button("Next Line"))
         {
-            ConversationManager.Instance.NextLine();
+            GameState.Instance.NextLine();
         }
 
         if (GUILayout.Button("Choice A"))
         {
-            ConversationManager.Instance.NextNode(Constants.Choice.A);
+            GameState.Instance.NextChoice(Constants.Choice.A);
         }
 
         if (GUILayout.Button("Choice B"))
         {
-            ConversationManager.Instance.NextNode(Constants.Choice.B);
+            GameState.Instance.NextChoice(Constants.Choice.B);
         }
     }
 }

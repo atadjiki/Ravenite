@@ -21,7 +21,7 @@ public class InputManager : MonoBehaviour
         {
             if (Input.GetKeyDown(Advance))
             {
-                GameState.Instance.Next();
+                GameState.Instance.NextLine();
             }
 
             if (Input.GetKeyDown(ChoiceA))

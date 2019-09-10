@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class ConversationManager : MonoBehaviour
@@ -8,10 +7,6 @@ public class ConversationManager : MonoBehaviour
     private int Index;
 
     public Conversation CurrentConversation;
-    public Dialogue CurrentDialogue;
-    public Choice CurrentChoice;
-
-    public Constants.Conversation_Mode Mode;
 
     public List<Conversation> PreviousConversations;
 
@@ -40,100 +35,54 @@ public class ConversationManager : MonoBehaviour
         Conversations = GetComponentsInChildren<Conversation>();
         Index = -1;
 
-        Debug.Log("Registered " + Conversations.Length + " conversations");
-
         PreviousConversations = new List<Conversation>();
     }
 
-    public bool NextLine()
+    public void Next(Constants.Choice Choice)
     {
-        if (CurrentConversation.IsDialogueAvailable())
+        if(CurrentConversation.CurrentNode.Next == null)
         {
-            if (Mode == Constants.Conversation_Mode.Dialogue)
-            {
-                CurrentConversation.NextLine();
-                SetCurrentDialogue();
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            GameState.Instance.ConversationFinished();
         }
         else
         {
-            
-            if(Mode == Constants.Conversation_Mode.Dialogue && CurrentConversation.AreChoicesAvailable())
+            if (Choice == Constants.Choice.None)
             {
-                Debug.Log("No dialogue available! Switching to choice mode");
-                Mode = Constants.Conversation_Mode.Choice;
-                SetCurrentChoices();
-            }
-            else if(Mode == Constants.Conversation_Mode.Dialogue && CurrentConversation.AreChoiceTreesAvailable())
-            {
-                Debug.Log("No dialogue available! Switching to the next choice tree");
-                Mode = Constants.Conversation_Mode.Choice;
-                CurrentConversation.NextChoiceTree();
-                SetCurrentChoices();
-                GameState.Instance.StartNextChoiceTree();
-            }
-            else if(Mode == Constants.Conversation_Mode.Dialogue && CurrentConversation.AreChoicesAvailable() == false)
-            {
-                GameState.Instance.ConversationFinished();
-                Debug.Log("No dialogue available! Ending conversation");
-            }
-
-            return false;
-        }
-    }
-
-    public bool NextNode(Constants.Choice choice)
-    {
-        bool flag = false;
-
-        if (CurrentConversation.AreChoicesAvailable())
-        {
-            if (Mode == Constants.Conversation_Mode.Choice)
-            {
-                CurrentConversation.NextNode(choice);
-                SetCurrentChoices();
-                flag = true;
+                NextLine();
             }
             else
             {
-                flag = false;
+                NextChoice(Choice);
             }
         }
 
-        //do another check to validate the choice tree
-        if(CurrentConversation.AreChoicesAvailable() == false && CurrentConversation.AreDialogueSetsAvailable() == false)
-        {
-            GameState.Instance.ConversationFinished();
-            flag = false;
-        }
-        else if (CurrentConversation.AreChoicesAvailable() == false && CurrentConversation.AreDialogueSetsAvailable() == true)
-        {
-            //move to next dialogue set
-            CurrentConversation.NextDialogueSet(choice);
-            Mode = Constants.Conversation_Mode.Dialogue;
-            flag = false;
-            GameState.Instance.StartNextDialogueSet();
-            SetCurrentDialogue();
-            
-        }
-
-        return flag;
-
+        
     }
 
-    public void ChoiceAPressed()
+    private void NextLine()
     {
-        NextNode(Constants.Choice.A);
+        if (IsDialogue())
+        {
+            CurrentConversation.CurrentNode = CurrentConversation.CurrentNode.Next;
+            ResolveUI();
+        }
     }
 
-    public void ChoiceBPressed()
+    private void NextChoice(Constants.Choice Choice)
     {
-        NextNode(Constants.Choice.B);
+        if (IsChoice())
+        {
+            if (Choice == Constants.Choice.B)
+            {
+                CurrentConversation.CurrentNode = CurrentConversation.CurrentNode.gameObject.GetComponent<Choice>().Alternate;
+            }
+            else if(Choice == Constants.Choice.A)
+            {
+                CurrentConversation.CurrentNode = CurrentConversation.CurrentNode.Next;
+            }
+
+            ResolveUI();
+        }
     }
 
     public bool AreConversationsAvailable()
@@ -154,7 +103,7 @@ public class ConversationManager : MonoBehaviour
         {
             Index++;
             CurrentConversation = Conversations[Index];
-            SetCurrentDialogue();
+            ResolveUI();
         }
         else
         {
@@ -163,46 +112,52 @@ public class ConversationManager : MonoBehaviour
         }
     }
 
+    public void ResolveUI()
+    {
+        if (IsDialogue())
+        {
+            SetCurrentDialogue();
+        }
+        else if (IsChoice())
+        {
+            SetCurrentChoices();
+        }
+    }
+
     private void SetCurrentDialogue()
     {
-
-        CurrentDialogue = CurrentConversation.GetCurrentDialogue();
-
-        if(CurrentDialogue == null) { return;  }
-
-        SubtitleManager.Instance.SetText(GetSpeakingName() + ": " + CurrentDialogue.Text);
+        SubtitleManager.Instance.SetText(GetSpeakingName() + ": " + CurrentConversation.CurrentNode.Text);
     }
 
     private void SetCurrentChoices()
     {
-
-        CurrentChoice = CurrentConversation.GetCurrentChoice();
+        Choice CurrentChoice = CurrentConversation.CurrentNode.gameObject.GetComponent<Choice>();
 
         string result = "";
         string ChoiceAControl;
         string ChoiceBControl;
 
-        if (CurrentChoice == null) { return;  }
+        if (CurrentChoice == null) { return; }
 
-        if(CurrentChoice.A != null && CurrentChoice.B == null)
+        if (CurrentChoice.A != null && CurrentChoice.B == null)
         {
-           ChoiceAControl = InputManager.ChoiceA.ToString();
-           result += ChoiceAControl + ": " + CurrentChoice.A.Text;
-            
+            ChoiceAControl = InputManager.ChoiceA.ToString();
+            result += ChoiceAControl + ": " + CurrentChoice.A;
+
         }
         else if (CurrentChoice.A == null && CurrentChoice.B != null)
         {
             ChoiceBControl = InputManager.ChoiceB.ToString();
-            result += ChoiceBControl + ": " + CurrentChoice.B.Text;
+            result += ChoiceBControl + ": " + CurrentChoice.B;
         }
-        else if(CurrentChoice.A != null && CurrentChoice.B != null)
+        else if (CurrentChoice.A != null && CurrentChoice.B != null)
         {
             ChoiceAControl = InputManager.ChoiceA.ToString();
             ChoiceBControl = InputManager.ChoiceB.ToString();
 
-            result += ChoiceAControl + ": " + CurrentChoice.A.Text;
+            result += ChoiceAControl + ": " + CurrentChoice.A;
             result += "\n\n";
-            result += ChoiceBControl + ": " + CurrentChoice.B.Text;
+            result += ChoiceBControl + ": " + CurrentChoice.B;
         }
 
         SubtitleManager.Instance.SetText(result);
@@ -212,21 +167,58 @@ public class ConversationManager : MonoBehaviour
 
     public string GetSpeakingName()
     {
-        if(CurrentDialogue.Speaking == Constants.Dialogue_Speaking.Player)
+        if (CurrentConversation.CurrentNode.gameObject.GetComponent<Dialogue>().Speaking == Constants.Dialogue_Speaking.Player)
         {
-            return "Player";
+            return CharacterManager.Instance.GetFirstCharacterName(Constants.Character_Names.Player);
         }
         else
         {
-            return CurrentConversation.WithCharacter.ToString();
+            return CharacterManager.Instance.GetFirstCharacterName(CurrentConversation.WithCharacter);
         }
     }
 
     public void StashLatestConversation()
     {
-        if(PreviousConversations.Contains(CurrentConversation) == false)
+        if (PreviousConversations.Contains(CurrentConversation) == false)
         {
             PreviousConversations.Add(CurrentConversation);
         }
     }
+
+    public bool IsChoice()
+    {
+        if (CurrentConversation.CurrentNode.gameObject.GetComponent<Choice>() != null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool IsDialogue()
+    {
+        if (CurrentConversation.CurrentNode.gameObject.GetComponent<Dialogue>() != null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public Flags.Choices GetFlag()
+    {
+        if (IsChoice())
+        {
+            return CurrentConversation.CurrentNode.gameObject.GetComponent<Choice>().Flag;
+        }
+        else
+        {
+            return Flags.Choices.None;
+        }
+    }
+
 }
