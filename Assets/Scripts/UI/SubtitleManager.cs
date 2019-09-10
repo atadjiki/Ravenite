@@ -33,7 +33,7 @@ public class SubtitleManager : MonoBehaviour
 
     public void SetText(string text)
     {
-        TextBox.text = "";
+        Clear();
         StartCoroutine(Typewriter(TextBox, text));
         
     }

@@ -42,18 +42,6 @@ public class ConversationManager : MonoBehaviour
         Debug.Log("Registered " + Conversations.Length + " conversations");
     }
 
-    public void SetDefaultDialogue()
-    {
-        if (Mode == Constants.Conversation_Mode.Dialogue)
-        {
-            SetCurrentDialogue();
-        }
-        else if (Mode == Constants.Conversation_Mode.Choice)
-        {
-            SetCurrentChoices();
-        }
-    }
-
     public bool NextLine()
     {
         if (CurrentConversation.IsDialogueAvailable())
@@ -164,8 +152,6 @@ public class ConversationManager : MonoBehaviour
         {
             Index++;
             CurrentConversation = Conversations[Index];
-            
-            SetCurrentChoices();
             SetCurrentDialogue();
         }
         else
