@@ -114,7 +114,7 @@ public class ConversationManager : MonoBehaviour
         else if (CurrentConversation.AreChoicesAvailable() == false && CurrentConversation.AreDialogueSetsAvailable() == true)
         {
             //move to next dialogue set
-            CurrentConversation.NextDialogueSet();
+            CurrentConversation.NextDialogueSet(choice);
             Mode = Constants.Conversation_Mode.Dialogue;
             flag = false;
             GameState.Instance.StartNextDialogueSet();

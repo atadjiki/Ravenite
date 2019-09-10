@@ -16,7 +16,7 @@
 
     public enum Choice
     {
-        A,B
+        A,B,None
     }
 
     public enum Conversation_Mode

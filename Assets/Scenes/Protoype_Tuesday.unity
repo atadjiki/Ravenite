@@ -1207,7 +1207,7 @@ Transform:
   m_Children:
   - {fileID: 365084049}
   m_Father: {fileID: 4423860145885632690}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &448090018
 MonoBehaviour:
@@ -1221,6 +1221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac3884fa6603c04e8b6464ff8c68d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Choice: 2
   Dialogue:
   - {fileID: 365084050}
 --- !u!114 &451639354
@@ -1238,82 +1239,6 @@ MonoBehaviour:
   record: {fileID: 1908005432}
   twistyboi: {fileID: 1205552846}
   needle: {fileID: 1670437684}
---- !u!114 &467488266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  rotation:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-    max: 360
-  skyIntensityMode:
-    m_OverrideState: 0
-    m_Value: 0
-  exposure:
-    m_OverrideState: 0
-    m_Value: 11.42
-  multiplier:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  upperHemisphereLuxValue:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-  desiredLuxValue:
-    m_OverrideState: 0
-    m_Value: 20000
-  updateMode:
-    m_OverrideState: 0
-    m_Value: 0
-  updatePeriod:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-  includeSunInBaking:
-    m_OverrideState: 0
-    m_Value: 0
-  sunSize:
-    m_OverrideState: 0
-    m_Value: 0.04
-    min: 0
-    max: 1
-  sunSizeConvergence:
-    m_OverrideState: 0
-    m_Value: 5
-    min: 1
-    max: 10
-  atmosphereThickness:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-    max: 5
-  skyTint:
-    m_OverrideState: 0
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  groundColor:
-    m_OverrideState: 0
-    m_Value: {r: 0.369, g: 0.349, b: 0.341, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  enableSunDisk:
-    m_OverrideState: 0
-    m_Value: 0
 --- !u!4 &482546005 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1307024405152592139, guid: 36968c423bfafad44a2a24aba2354ad7,
@@ -1946,8 +1871,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac3884fa6603c04e8b6464ff8c68d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Choice: 0
   Dialogue:
   - {fileID: 1557386456}
+--- !u!114 &639274715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df29e7cc05fbec4aa43e06ea875565d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  rotation:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+    max: 360
+  skyIntensityMode:
+    m_OverrideState: 0
+    m_Value: 0
+  exposure:
+    m_OverrideState: 0
+    m_Value: 11.42
+  multiplier:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  upperHemisphereLuxValue:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+  desiredLuxValue:
+    m_OverrideState: 0
+    m_Value: 20000
+  updateMode:
+    m_OverrideState: 0
+    m_Value: 0
+  updatePeriod:
+    m_OverrideState: 0
+    m_Value: 0
+    min: 0
+  includeSunInBaking:
+    m_OverrideState: 0
+    m_Value: 0
+  sunSize:
+    m_OverrideState: 0
+    m_Value: 0.04
+    min: 0
+    max: 1
+  sunSizeConvergence:
+    m_OverrideState: 0
+    m_Value: 5
+    min: 1
+    max: 10
+  atmosphereThickness:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 5
+  skyTint:
+    m_OverrideState: 0
+    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  groundColor:
+    m_OverrideState: 0
+    m_Value: {r: 0.369, g: 0.349, b: 0.341, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
+  enableSunDisk:
+    m_OverrideState: 0
+    m_Value: 0
 --- !u!1 &663916595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,6 +1997,53 @@ MonoBehaviour:
   B: {fileID: 0}
   Text: Chop
   Flag: 0
+--- !u!1 &783872289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 783872290}
+  - component: {fileID: 783872291}
+  m_Layer: 0
+  m_Name: DialogueSet1B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &783872290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783872289}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1063200210}
+  m_Father: {fileID: 4423860145885632690}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &783872291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783872289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dac3884fa6603c04e8b6464ff8c68d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Choice: 1
+  Dialogue:
+  - {fileID: 1063200211}
 --- !u!1 &806431495
 GameObject:
   m_ObjectHideFlags: 0
@@ -2451,6 +2500,51 @@ MonoBehaviour:
   B: {fileID: 0}
   Text: Test Choice A1
   Flag: 2
+--- !u!1 &1063200209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1063200210}
+  - component: {fileID: 1063200211}
+  m_Layer: 0
+  m_Name: Line 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1063200210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063200209}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 783872290}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1063200211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063200209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7cf5fbce86e42749bc2e3ce81f37346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speaking: 0
+  Text: Fawk
 --- !u!1 &1117586143
 GameObject:
   m_ObjectHideFlags: 0
@@ -2773,6 +2867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac3884fa6603c04e8b6464ff8c68d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Choice: 0
   Dialogue:
   - {fileID: 2036591596}
 --- !u!1 &1290364779
@@ -2819,6 +2914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac3884fa6603c04e8b6464ff8c68d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Choice: 0
   Dialogue:
   - {fileID: 595074515}
 --- !u!1 &1332595543
@@ -3165,6 +3261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac3884fa6603c04e8b6464ff8c68d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Choice: 0
   Dialogue:
   - {fileID: 299792231}
   - {fileID: 7152434}
@@ -3624,7 +3721,7 @@ Transform:
   m_Children:
   - {fileID: 44856888}
   m_Father: {fileID: 4423860145885632690}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1620624669
 MonoBehaviour:
@@ -3697,6 +3794,8 @@ MonoBehaviour:
   FinalFlag: 6
   FinalFaction: 3
   FinalModifier: 2
+  Summary: 
+  Goal: 
 --- !u!1 &1670437684 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3232711627359424693, guid: d15f4e364c037ab4e8fda79ea11d6553,
@@ -4829,7 +4928,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 52.99997
+    FieldOfView: 53
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -6525,7 +6624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Profile: {fileID: 11400000, guid: dab0766de4a4b5349b80ce1a86555414, type: 2}
   m_StaticLightingSkyUniqueID: 2
-  m_SkySettings: {fileID: 467488266}
+  m_SkySettings: {fileID: 639274715}
   m_SkySettingsFromProfile: {fileID: 5758136461106579282, guid: dab0766de4a4b5349b80ce1a86555414,
     type: 2}
 --- !u!114 &712982716668420430
@@ -8730,7 +8829,7 @@ GameObject:
   - component: {fileID: 4056484137137432685}
   - component: {fileID: 8164845205109692727}
   m_Layer: 0
-  m_Name: DialogueSet1
+  m_Name: DialogueSet1A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9618,6 +9717,7 @@ Transform:
   - {fileID: 4056484137137432685}
   - {fileID: 242061083}
   - {fileID: 1290364780}
+  - {fileID: 783872290}
   - {fileID: 1620624668}
   - {fileID: 448090017}
   m_Father: {fileID: 4423860146934714714}
@@ -9661,6 +9761,8 @@ MonoBehaviour:
   FinalFlag: 6
   FinalFaction: 3
   FinalModifier: 2
+  Summary: 
+  Goal: 
 --- !u!114 &4423860146217423876
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -11470,6 +11572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac3884fa6603c04e8b6464ff8c68d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Choice: 2
   Dialogue:
   - {fileID: 4467776571416270552}
   - {fileID: 8863384858658617251}
@@ -11796,7 +11899,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 24.068293
+  m_FocalLength: 24.068275
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -11805,7 +11908,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 52.99997
+  field of view: 53
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

@@ -21,6 +21,9 @@ public class Conversation : MonoBehaviour
     public Constants.Faction FinalFaction = Constants.Faction.Player;
     public Constants.Modifier FinalModifier = Constants.Modifier.None;
 
+    public string Summary;
+    public string Goal;
+
     private ChoiceTree[] ChoiceTrees;
     
 
@@ -70,12 +73,32 @@ public class Conversation : MonoBehaviour
         Debug.Log("New Choice Tree: " + CurrentChoiceTree.name);
     }
 
-    public void NextDialogueSet()
+    public void NextDialogueSet(Constants.Choice Choice)
     {
+        Constants.Choice c = Constants.Choice.None;
+
         if(AreDialogueSetsAvailable())
         {
             SetIndex++;
             CurrentDialogueSet = DialogueSets[SetIndex];
+        }
+
+        if(CurrentDialogueSet.Choice != Choice)
+        {
+            if (AreDialogueSetsAvailable())
+            {
+                SetIndex++;
+                CurrentDialogueSet = DialogueSets[SetIndex];
+            }
+        }
+
+        if (CurrentDialogueSet.Choice != Choice)
+        {
+            if (AreDialogueSetsAvailable())
+            {
+                SetIndex++;
+                CurrentDialogueSet = DialogueSets[SetIndex];
+            }
         }
 
         InitializeDialogueLine();
