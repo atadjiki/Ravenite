@@ -7,6 +7,7 @@ using Constants;
 public class Building : MonoBehaviour
 {
     [SerializeField] private Buildings.Type type = Buildings.Type.Neutral;
+    [SerializeField] private Buildings.Flag flag = Buildings.Flag.Unselectable;
 
     private Renderer _renderer;
 
@@ -14,11 +15,17 @@ public class Building : MonoBehaviour
     {
         _renderer = GetComponent<Renderer>();
         _renderer.material = MaterialManager.Instance.GetMaterial(Materials.BuildingToMaterial(type));
+
+        if(type != Buildings.Type.Neutral)
+        {
+            
+        }
+        TerritoryManager.Instance.SetTilesByBuilding(this);
     }
 
     private void OnMouseOver()
     {
-        if(MapViewManager.Instance.IsRotating() == false)
+        if(flag == Buildings.Flag.Selectable && MapViewManager.Instance.IsRotating() == false)
         {
             _renderer.material = MaterialManager.Instance.GetMaterial(Materials.Asset.Building_Selected);
         }
@@ -26,6 +33,9 @@ public class Building : MonoBehaviour
 
     private void OnMouseExit()
     {
-        _renderer.material = MaterialManager.Instance.GetMaterial(Materials.BuildingToMaterial(type));
+        if(flag == Buildings.Flag.Selectable)
+        {
+            _renderer.material = MaterialManager.Instance.GetMaterial(Materials.BuildingToMaterial(type));
+        }
     }
 }

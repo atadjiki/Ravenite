@@ -3,6 +3,7 @@
     public class Buildings
     {
         public enum Type { Player, Enemy, Police, Neutral }
+        public enum Flag { Selectable, Unselectable }
     }
 
     public class Materials
