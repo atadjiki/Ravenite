@@ -44,7 +44,11 @@ public class TerritoryManager : MonoBehaviour
 
         foreach(TerritoryTile tile in overlapping)
         {
-            tile.gameObject.GetComponent<Renderer>().material = building.gameObject.GetComponent<Renderer>().material;
+            Color buildingColor = building.gameObject.GetComponent<Renderer>().material.color;
+            float modifier = 0.7f;
+
+            // You can cache a reference to the renderer to avoid searching for it.
+            tile.gameObject.GetComponent<Renderer>().material.SetColor("_BaseColor", new Color(buildingColor.r * modifier, buildingColor.g * modifier, buildingColor.b * modifier, modifier));
         }
     }
 }
